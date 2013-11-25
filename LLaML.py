@@ -167,8 +167,12 @@ class ParentWindowMgr(QMainWindow):
         audioToolBar.addWidget(self.timeLcd)
         
         self.setCentralWidget(MainWindowWidget())
-        self.waveform = DrawAudioWaveForm(self.centralWidget())
-        #audioToolBar.addWidget(self.waveform)
+        
+        #self.scrollWaveArea = QScrollArea()
+        #self.scrollWaveArea.setWidget(self.centralWidget())
+        #self.scrollWaveArea.show()
+        DrawAudioWaveForm(self.centralWidget())
+        #self.waveform = DrawAudioWaveForm(self.centralWidget())
         
         self.statusbar()
         self.setupWindow()
@@ -184,6 +188,9 @@ class ParentWindowMgr(QMainWindow):
 class MainWindowWidget(QWidget):
     def __init__(self):
         super(MainWindowWidget, self).__init__()
+        self.windowSize = self.size()
+        self.width = self.windowSize.width()
+        self.height = self.windowSize.height()
     
     def paintEvent(self, event):
         canvas = QPainter()
@@ -192,6 +199,11 @@ class MainWindowWidget(QWidget):
         canvas.drawRect(event.rect())
         canvas.setPen(Qt.red)
         canvas.end() 
+    
+    def resizeEvent(self, event):
+        self.windowSize = self.size()
+        self.height = self.windowSize.height()
+        self.width = self.windowSize.width()
         
         
 class DrawAudioWaveForm(QWidget):
@@ -199,7 +211,15 @@ class DrawAudioWaveForm(QWidget):
     def __init__(self, parent):
         super(DrawAudioWaveForm, self).__init__(parent)
         self._parent = parent
-        self.pts = [[0,1], [5, 30], [200, 300]]      
+        self.pts = [[0,1], [5, 30], [200, 300]]
+    
+    def resizeEvent(self, event):
+        self.scroll(20, 0)
+        print("this resizeEvent hit")
+        size = self._parent.size()
+        self.width = size.width() * 5
+        self.height = size.height()
+        self.setGeometry(0, 0, self.width, self.height)
         
     def paintEvent(self, event):
         canvas = QPainter()
