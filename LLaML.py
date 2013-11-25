@@ -1,5 +1,15 @@
 #!/usr/bin/python
- 
+
+"""
+Color palette in use:
+
+#112233 -> dark blue
+#446699
+#6688bb
+#5588dd
+#bbddff -> light blue
+
+"""
 # Import PySide classes
 from __future__ import print_function
 import sys
@@ -14,9 +24,9 @@ class AboutDialog(QDialog):
     global _lightICON
     global _lightPM
     
-    def __init__(self, parent):
+    def __init__(self):
         super(AboutDialog, self).__init__()
-        self.TITLE = """<b><h2>Lights, Lights, and More Lights v{0}</h2></b>""".format(__version__)
+        self.TITLE = """<b><h3>Lights, Lights, and More Lights v{0}</h3></b>""".format(__version__)
         self.ABOUT = """
         <p>LLaML (pronounced "YAML") is a program that was created 
         to manage the synchronization of lights and music.
@@ -34,8 +44,8 @@ class AboutDialog(QDialog):
         closeBT.clicked.connect(self.accept)
         title = QLabel(self.TITLE)
         title.setWordWrap(1)
-        message = QLabel(self.ABOUT)
-        message.setWordWrap(1)
+        body = QLabel(self.ABOUT)
+        body.setWordWrap(1)
         pixmap = _lightPM
         pixmap = pixmap.scaled(50, 50)
         image = QLabel(self)
@@ -50,7 +60,7 @@ class AboutDialog(QDialog):
         
         # Add bottom grid.
         bottomGrid = QGridLayout()
-        bottomGrid.addWidget(message, 0, 0)
+        bottomGrid.addWidget(body, 0, 0)
         bottomGrid.addWidget(closeBT, 1, 0)
         
         # Create grid for button placement.
@@ -119,7 +129,7 @@ class ParentWindowMgr(QMainWindow):
         
         _aboutHelpM = QAction(QIcon(''), '&About', self)
         _aboutHelpM.setStatusTip("About LLaLM")
-        _aboutHelpM.triggered.connect(lambda parent=self: AboutDialog(parent))
+        _aboutHelpM.triggered.connect(AboutDialog)
         
         _wwwSiteHelpM = QAction(QIcon(''), 'LLaML Website', self)
         _wwwSiteHelpM.setStatusTip("Go to LLaML website")
@@ -148,24 +158,78 @@ class ParentWindowMgr(QMainWindow):
         
         audioToolBar = self.addToolBar('Audio')
         audioControls = AudioMenu(self, audioToolBar)
-        #print(dir(audioToolBar))
         audioToolBar.setIconSize(QSize(15, 15))
         audioToolBar.setMovable(False)
-
+        
+        # Create timer widget...
+        self.timeLcd = QLCDNumber()
+        self.timeLcd.display("00:00")
+        audioToolBar.addWidget(self.timeLcd)
+        
+        self.setCentralWidget(MainWindowWidget())
+        self.waveform = DrawAudioWaveForm(self.centralWidget())
+        #audioToolBar.addWidget(self.waveform)
+        
         self.statusbar()
-        self.setgui()
-
+        self.setupWindow()
+        
     def statusbar(self):
         self.statusBar().showMessage('Ready')
     
-    def setgui(self):
+    def setupWindow(self):
         self.setGeometry(200, 200, 500, 200)
         self.setWindowTitle("Lights, Lights, and More Lights (LLaML)")
+
+
+class MainWindowWidget(QWidget):
+    def __init__(self):
+        super(MainWindowWidget, self).__init__()
+    
+    def paintEvent(self, event):
+        canvas = QPainter()
+        canvas.begin(self)
+        canvas.setBrush((QColor("#446699")))
+        canvas.drawRect(event.rect())
+        canvas.setPen(Qt.red)
+        canvas.end() 
+        
+        
+class DrawAudioWaveForm(QWidget):
+    '''Uses Pyside/Qt to draw audio waveforms.'''
+    def __init__(self, parent):
+        super(DrawAudioWaveForm, self).__init__(parent)
+        self._parent = parent
+        self.pts = [[0,1], [5, 30], [200, 300]]      
+        
+    def paintEvent(self, event):
+        canvas = QPainter()
+        canvas.begin(self)
+        canvas.setBrush(Qt.green)
+        canvas.drawRect(event.rect())
+        canvas.setPen(Qt.red)
+        self.drawWaveAudio(canvas)
+        canvas.end()
+    
+    def poly(self, pts):
+        return QPolygonF(map(lambda p: QPointF(*p), pts))
+    
+    def drawWaveAudio(self, canvas):
+        pts = self.pts[:]
+        size = self.size()
+        x = 5
+        y = size.width()/50
+        canvas.setPen(Qt.red)
+        canvas.drawPoint(x, y)
+        canvas.drawPolyline(self.poly(pts))
+        
+    
     
 # Create a Qt application
 app = QApplication(sys.argv)
 app.setWindowIcon(QIcon('greenLightSM.png'))
 app.setApplicationName("LLaML")
+
+#ex = DrawAudioWaveForm(app)
 
 # Loading images once to pass around to the various classes 
 # that need it.
@@ -195,18 +259,9 @@ path = Phonon.createPath(newAudio, output)
 
 # Start playing audio -- this is a test.
 newAudio.play()
-print("aefaefaef", newAudio.currentTime)
-totalTime = QTimer.singleShot(1000, newAudio.metaData)
-current = QTimer.singleShot(1000, newAudio.currentTime)
 
-def printDebug():
-    global totalTime
-    global current
-    print("Does THIS work?", totalTime, current)
-
-QTimer.singleShot(2000, printDebug)
 # Close the splash screen if the user has not already closed it out.
-QTimer().singleShot(3000, splash.close)
+QTimer().singleShot(2000, splash.close)
 
 # Enter Qt application main loop
 sys.exit(app.exec_())
