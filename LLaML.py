@@ -198,23 +198,41 @@ class AboutDialog(QDialog):
         return result
 
 
-class AudioToolBar():
-    """
+class AudioToolBar(QToolBar):
+    '''
     Need to pass in parent Widget and an existing ToolBarWidget.
-    """
-    def __init__(self, parent, toolbarObj):
+    '''
+    def __init__(self, parent):
+        super(AudioToolBar, self).__init__(parent)
+        self._parent = parent
+        #self._toolbarObj = toolbarObj
+
+        # Add a toolbar to the parent widget
+        self._parent.addToolBar('Audio Tool Bar')
+
         # Make the images avaiable in Qt format.
         self.playIMG = QIcon(QPixmap('images/play_blue.png'))
         self.pauseIMG = QIcon(QPixmap('images/pause_blue.png'))
         self.stopIMG = QIcon(QPixmap('images/stop_blue.png'))
 
+        self.playMenuBT = None
+        self.pauseMenuBT = None
+        self.stopMenuBT = None
+
+        self.addStandardButtons()
+
+    def addStandardButtons(self):
+        '''
+        Adds the standard set of buttons one would expect to see in an
+        audio toolbar.
+        '''
         # Create the menu object and create icons
-        self.playMenuBT = QAction(self.playIMG, "Play", parent)
-        self.pauseMenuBT = QAction(self.pauseIMG, "Pause", parent)
-        self.stopMenuBT = QAction(self.stopIMG, "Stop", parent)
-        _play = toolbarObj.addAction(self.playMenuBT)
-        toolbarObj.addAction(self.pauseMenuBT)
-        toolbarObj.addAction(self.stopMenuBT)
+        self.playMenuBT = QAction(self.playIMG, "Play", self._parent)
+        self.pauseMenuBT = QAction(self.pauseIMG, "Pause", self._parent)
+        self.stopMenuBT = QAction(self.stopIMG, "Stop", self._parent)
+        _play = self.addAction(self.playMenuBT)
+        _pause = self.addAction(self.pauseMenuBT)
+        _stop = self.addAction(self.stopMenuBT)
 
 
 class ParentWindowMgr(QMainWindow):
@@ -233,16 +251,24 @@ class ParentWindowMgr(QMainWindow):
         _openFileM.setShortcut('Ctrl+O')
         _openFileM.setStatusTip("Open an existing project file")
 
-        _closeProjectFileM = QAction(QIcon(''), '&Close', self)
+        _saveFileM = QAction(QIcon(''), '&Save Project', self)
+        _saveFileM.setStatusTip("Save the currently opened project")
+
+        _saveAsFileM = QAction(QIcon(''), 'Save Project As', self)
+        _saveAsFileM.setStatusTip("Save the currently project something other " +
+                                  "what it is currently saved as.")
+
+        _closeProjectFileM = QAction(QIcon(''), '&Close Project', self)
         _closeProjectFileM.setShortcut('Ctrl+W')
         _closeProjectFileM.setStatusTip("Close the current project")
 
         # TODO:  Plumb in recent menu correctly!
-        _recentProjectFileM = QAction(QIcon(''), 'Recent Projects', self)
-        _recentProjectFileM.setStatusTip("Select from a list of previously opened projects")
+        _recentProjectFileM = QAction(QIcon(''), '&Recent Projects', self)
+        _recentProjectFileM.setStatusTip("Select from a list of previously opened" +
+                                         "projects")
 
         _exitFileM = QAction(QIcon(''), 'E&xit', self)
-        _exitFileM.setShortcut('Alt+f4')
+        _exitFileM.setShortcut('Ctrl+Q')
         _exitFileM.setStatusTip("Exit LLaML")
         _exitFileM.triggered.connect(sys.exit)
 
@@ -264,7 +290,7 @@ class ParentWindowMgr(QMainWindow):
         _pauseAudioM.setStatusTip("Pause the currently playing audio file")
 
         _stopAudioM = QAction(QIcon(''), '&Stop', self)
-        _stopAudioM.setShortcut('Ctrl+S')
+        _stopAudioM.setShortcut('Ctrl+T')
         _stopAudioM.setStatusTip("Stop the currently playing audio file, and rewind")
 
         _audioInfoAudioM = QAction(QIcon(''), 'Audio &Info', self)
@@ -284,7 +310,8 @@ class ParentWindowMgr(QMainWindow):
 
         # View menu
         _waveformWidgetViewM = QAction(QIcon(''), 'View &Waveform', self)
-        _waveformWidgetViewM.setStatusTip("Toggle viewing of waveform widget (can help performance)")
+        _waveformWidgetViewM.setStatusTip("Toggle viewing of waveform widget " +
+                                          "(can help performance)")
 
         _zoneWidgetViewM = QAction(QIcon(''), 'View &Zone Manager', self)
         _zoneWidgetViewM.setStatusTip("See the Zone Widget")
@@ -298,13 +325,16 @@ class ParentWindowMgr(QMainWindow):
         _aboutHelpM.triggered.connect(AboutDialog)
 
         _systemCheckHelpM = QAction(QIcon(''), 'System Check', self)
-        _systemCheckHelpM.setStatusTip("Perform a system check to ensure everything is working correclty")
+        _systemCheckHelpM.setStatusTip("Perform a system check to ensure everything" +
+                                       "is working correclty")
 
         _wwwSiteHelpM = QAction(QIcon(''), 'LLaML Website', self)
         _wwwSiteHelpM.setStatusTip("Go to LLaML website")
 
+        # Create the actual menubar that contains the various menus.
         menubar = self.menuBar()
 
+        # FILE
         fileMenu = menubar.addMenu("&File")
         fileMenu.addAction(_newProjectFileM)
         fileMenu.addAction(_openFileM)
@@ -313,9 +343,11 @@ class ParentWindowMgr(QMainWindow):
         fileMenu.addSeparator()
         fileMenu.addAction(_exitFileM)
 
+        # EDIT
         editMenu = menubar.addMenu("&Edit")
         editMenu.addAction(_preferencesEditM)
 
+        # AUDIO
         audioMenu = menubar.addMenu("&Audio")
         audioMenu.addAction(_loadAudioM)
         audioMenu.addSeparator()
@@ -332,26 +364,29 @@ class ParentWindowMgr(QMainWindow):
         audioMenu.addSeparator()
         audioMenu.addAction(_settingsAudioM)
 
+        # VIEW
         viewMenu = menubar.addMenu("&View")
         viewMenu.addAction(_waveformWidgetViewM)
         viewMenu.addAction(_zoneWidgetViewM)
         viewMenu.addAction(_statusBarViewM)
 
+        # HELP
         helpMenu = menubar.addMenu("&Help")
         helpMenu.addAction(_aboutHelpM)
         helpMenu.addAction(_wwwSiteHelpM)
         helpMenu.addSeparator()
         helpMenu.addAction(_systemCheckHelpM)
 
-        audioToolBar = self.addToolBar('Audio')
-        audioControls = AudioToolBar(self, audioToolBar)
-        audioToolBar.setIconSize(QSize(15, 15))
-        audioToolBar.setMovable(False)
+        # Create the audio toolbar.
+        #audioToolBar = self.addToolBar('Audio')
+        audioControls = AudioToolBar(self)
+        audioControls.setIconSize(QSize(15, 15))
+        audioControls.setMovable(False)
 
-        # Create timer widget...
+        # Create timer widget.
         self.timeLcd = QLCDNumber()
         self.timeLcd.display("00:00")
-        audioToolBar.addWidget(self.timeLcd)
+        audioControls.addWidget(self.timeLcd)
 
         self.setCentralWidget(MainWidget())
 
@@ -361,10 +396,10 @@ class ParentWindowMgr(QMainWindow):
 
         #self.waveform = DrawAudioWaveForm(self.centralWidget())
 
-        self._statusbar()
+        self._showStatusbar()
         self._setupWindow()
 
-    def _statusbar(self):
+    def _showStatusbar(self):
         self.statusBar().showMessage('Ready')
 
     def _setupWindow(self):
@@ -474,7 +509,9 @@ class DrawWave(object):
         # Create a buffer for the PNG image data from matplotlib.
 
     def otherStuff(self):
-        self.Time = numpy.linspace(0, len(self.signal)/self.framerate, num=len(self.signal))
+        self.Time = numpy.linspace(0,
+                                   len(self.signal)/self.framerate,
+                                   num=len(self.signal))
         self.drawWave()
 
     def drawWave(self):
@@ -528,7 +565,7 @@ class LoadAudioWAV(object):
 
     def setAudioFile(self):
         self.audio = Phonon.MediaSource('new.wav')
-        self.audio.setCurrentSource(audio)
+        self.audio.setCurrentSource(self.audio)
 
     def playWAV(self):
         # Start playing audio -- this is a test.
