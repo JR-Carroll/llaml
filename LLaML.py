@@ -202,22 +202,72 @@ class AudioToolBar(QToolBar):
     '''
     Need to pass in parent Widget and an existing ToolBarWidget.
     '''
-    def __init__(self, parent):
+    def __init__(self, parent, *args, **kwargs):
         super(AudioToolBar, self).__init__(parent)
+
+        # Capture the parent to which this widget is bound.
         self._parent = parent
-        #self._toolbarObj = toolbarObj
 
-        # Add a toolbar to the parent widget
-        self._parent.addToolBar('Audio Tool Bar')
+        # Kwargs passed in can toggle size and movability of this toolbar.
+        # Allows user to override.
+        _size = kwargs.get('iconSize', QSize(15, 15))
+        _movable = kwargs.get('movable', True)
 
-        # Make the images avaiable in Qt format.
+        # Set toolbar parameters.
+        self.setIconSize(_size)
+        self.setMovable(_movable)
+
+        # Group mappings (overrideable via kwargs) are:
+        # 1 = File Menu Group
+        # 2 = Meta Control Group
+        # 3 = Audio Control group
+        self._groups = kwargs.get('groups', [1, 2, 3])
+
+
+        # List of images avaiable in Qt format.
         self.playIMG = QIcon(QPixmap('images/play_blue.png'))
         self.pauseIMG = QIcon(QPixmap('images/pause_blue.png'))
         self.stopIMG = QIcon(QPixmap('images/stop_blue.png'))
+        self.newProjectIMG = QIcon(QPixmap('images/new_project.png'))
+        self.openProjectIMG = QIcon(QPixmap('images/open_doc.png'))
+        self.saveProjectIMG = QIcon(QPixmap('images/disk_black.png'))
+        self.waveformWidgetIMG = QIcon(QPixmap('images/waveform.png'))
+        self.zoneManagerIMG = QIcon(QPixmap('images/table_row.png'))
+        self.scheduleWidgetIMG = QIcon(QPixmap('images/calendar_select_none.png'))
+        self.editPlaylistIMG = QIcon(QPixmap('images/playlist.png'))
+        self.randomizeSongsIMG = QIcon(QPixmap('images/arrow_switch_bluegreen.png'))
 
-        self.playMenuBT = None
-        self.pauseMenuBT = None
-        self.stopMenuBT = None
+        # Create the actual buttons with the images/actions associated.
+        self.newProjectBT = QAction(self.newProjectIMG, "Create a New Project", self)
+        self.openProjectBT = QAction(self.openProjectIMG, "Open an Existing Project", self)
+        self.saveProjectBT = QAction(self.saveProjectIMG, "Save Project", self)
+        self.playMenuBT = QAction(self.playIMG, "Play", self)
+        self.pauseMenuBT = QAction(self.pauseIMG, "Pause", self)
+        self.stopMenuBT = QAction(self.stopIMG, "Stop", self)
+        self.randomizeSongsBT = QAction(self.randomizeSongsIMG, "Randomize Songs in Playlist", self)
+        self.waveformWidgetBT = QAction(self.waveformWidgetIMG, "Toggle Waveform Display", self)
+        self.zoneManagerBT = QAction(self.zoneManagerIMG, "Toggle Zone Manager", self)
+        self.scheduleWidgetBT = QAction(self.scheduleWidgetIMG, "Toggle Scheduler Display", self)
+        self.editPlaylistBT = QAction(self.editPlaylistIMG, "Edit the Playlist", self)
+
+        self.combobox = QComboBox(self._parent)
+        self.combobox.addItem("Im To Sexy For Shit.mp3")
+        self.combobox.addItem("Hey Mickey Yo So Fine.wav")
+        self.combobox.addItem("Somewhere over the rainbow")
+        self.combobox.addItem("I like big BUTTS and I can not lie")
+        self.combobox.addItem("HIV Song")
+        self.combobox.addItem("Electric Slide")
+
+        # Meta-button groupings.  Used for toggling on/off groups.
+        self._fileGroup = [self.newProjectBT, self.openProjectBT, self.saveProjectBT]
+        self._audioGroup = [self.editPlaylistBT, self.combobox, self.playMenuBT,
+                            self.pauseMenuBT, self.stopMenuBT, self.randomizeSongsBT]
+        self._metaControlGroup = [self.waveformWidgetBT, self.zoneManagerBT,
+                                  self.scheduleWidgetBT]
+
+        self._groupingManager = {1: self._fileGroup,
+                                 2: self._metaControlGroup,
+                                 3: self._audioGroup}
 
         self.addStandardButtons()
 
@@ -226,13 +276,15 @@ class AudioToolBar(QToolBar):
         Adds the standard set of buttons one would expect to see in an
         audio toolbar.
         '''
-        # Create the menu object and create icons
-        self.playMenuBT = QAction(self.playIMG, "Play", self._parent)
-        self.pauseMenuBT = QAction(self.pauseIMG, "Pause", self._parent)
-        self.stopMenuBT = QAction(self.stopIMG, "Stop", self._parent)
-        _play = self.addAction(self.playMenuBT)
-        _pause = self.addAction(self.pauseMenuBT)
-        _stop = self.addAction(self.stopMenuBT)
+
+        for icons in self._groups:
+            _tmp = self._groupingManager.get(icons)
+            for button in _tmp:
+                if button == self.combobox:
+                    self.addWidget(self.combobox)
+                else:
+                    self.addAction(button)
+            self.addSeparator()
 
 
 class ParentWindowMgr(QMainWindow):
@@ -277,9 +329,9 @@ class ParentWindowMgr(QMainWindow):
         _preferencesEditM.setStatusTip("Edit LLaML preferences and default behaviors")
 
         # Audio Menu
-        _loadAudioM = QAction(QIcon(''), '&Load Audio', self)
-        _loadAudioM.setShortcut('Ctrl+L')
-        _loadAudioM.setStatusTip("Load audio file into project")
+        #_loadAudioM = QAction(QIcon(''), '&Load Audio', self)
+        #_loadAudioM.setShortcut('Ctrl+L')
+        #_loadAudioM.setStatusTip("Load audio file into project")
 
         _playAudioM = QAction(QIcon(''), '&Play', self)
         _playAudioM.setShortcut('Ctrl+P')
@@ -320,21 +372,25 @@ class ParentWindowMgr(QMainWindow):
         _statusBarViewM.setStatusTip("Toggle the statusbar view")
 
         # Help menu
-        _aboutHelpM = QAction(QIcon(''), '&About', self)
+        _instructionsHelpM = QAction("Help Manual", self)
+        _instructionsHelpM.setStatusTip("Part of the RTFM process")
+
+        _aboutHelpM = QAction(QIcon(''), '&About LLaML', self)
         _aboutHelpM.setStatusTip("About LLaLM")
         _aboutHelpM.triggered.connect(AboutDialog)
+
+        _wwwSiteHelpM = QAction('LLaML Website', self)
+        _wwwSiteHelpM.setStatusTip("Go to LLaML website")
+        _wwwSiteHelpM.triggered.connect(self.openLLaMLWWW)
 
         _systemCheckHelpM = QAction(QIcon(''), 'System Check', self)
         _systemCheckHelpM.setStatusTip("Perform a system check to ensure everything" +
                                        "is working correclty")
 
-        _wwwSiteHelpM = QAction(QIcon(''), 'LLaML Website', self)
-        _wwwSiteHelpM.setStatusTip("Go to LLaML website")
-
         # Create the actual menubar that contains the various menus.
         menubar = self.menuBar()
 
-        # FILE
+        # FILE DROPDOWN
         fileMenu = menubar.addMenu("&File")
         fileMenu.addAction(_newProjectFileM)
         fileMenu.addAction(_openFileM)
@@ -343,14 +399,14 @@ class ParentWindowMgr(QMainWindow):
         fileMenu.addSeparator()
         fileMenu.addAction(_exitFileM)
 
-        # EDIT
+        # EDIT DROPDOWN
         editMenu = menubar.addMenu("&Edit")
         editMenu.addAction(_preferencesEditM)
 
-        # AUDIO
+        # AUDIO DROPDOWN
         audioMenu = menubar.addMenu("&Audio")
-        audioMenu.addAction(_loadAudioM)
-        audioMenu.addSeparator()
+        #audioMenu.addAction(_loadAudioM)
+        #audioMenu.addSeparator()
         audioMenu.addAction(_playAudioM)
         audioMenu.addAction(_pauseAudioM)
         audioMenu.addAction(_stopAudioM)
@@ -364,14 +420,15 @@ class ParentWindowMgr(QMainWindow):
         audioMenu.addSeparator()
         audioMenu.addAction(_settingsAudioM)
 
-        # VIEW
+        # VIEW DROPDOWN
         viewMenu = menubar.addMenu("&View")
         viewMenu.addAction(_waveformWidgetViewM)
         viewMenu.addAction(_zoneWidgetViewM)
         viewMenu.addAction(_statusBarViewM)
 
-        # HELP
+        # HELP DROPDOWN
         helpMenu = menubar.addMenu("&Help")
+        helpMenu.addAction(_instructionsHelpM)
         helpMenu.addAction(_aboutHelpM)
         helpMenu.addAction(_wwwSiteHelpM)
         helpMenu.addSeparator()
@@ -379,14 +436,15 @@ class ParentWindowMgr(QMainWindow):
 
         # Create the audio toolbar.
         #audioToolBar = self.addToolBar('Audio')
-        audioControls = AudioToolBar(self)
-        audioControls.setIconSize(QSize(15, 15))
-        audioControls.setMovable(False)
+        self.audioControls = AudioToolBar(self)
+        self.addToolBar(self.audioControls)
+        self.audioControls.setIconSize(QSize(15, 15))
+        self.audioControls.setMovable(False)
 
         # Create timer widget.
         self.timeLcd = QLCDNumber()
         self.timeLcd.display("00:00")
-        audioControls.addWidget(self.timeLcd)
+        #audioControls.addTool(self.timeLcd)
 
         self.setCentralWidget(MainWidget())
 
@@ -408,6 +466,11 @@ class ParentWindowMgr(QMainWindow):
 
     def openProject(self):
         pass
+
+    @staticmethod
+    def openLLaMLWWW():
+        QDesktopServices.openUrl("http://www.google.com")
+
 
 
 
