@@ -17,280 +17,27 @@ PEH-GCA = Pokemon Exception Handling - Gotta Catch'um All
 from __future__ import print_function
 import sys
 import time
-import matplotlib.pyplot as plot
-import wave
-import numpy
-import StringIO
 
 from PySide.QtCore import *
 from PySide.QtGui import *
-from PySide.phonon import *
+#from PySide.phonon import *
 
-__version__ = "0.1a"
+from audiotoolbar import AudioToolBar
+from aboutdialog import AboutDialog
+from audiodisplay import *
+from audio import *
 
-class AboutDialog(QDialog):
-    def __init__(self, *args, **kwargs):
-        super(AboutDialog, self).__init__()
+# Create a Qt application
+app = QApplication(sys.argv)
+app.setWindowIcon(QIcon('greenLightSM.png'))
+app.setApplicationName("LLaML")
 
-        self.pixmap = None
-
-        # Attributes for the app name and app details to be displayed in the
-        # About dialog.
-        self.TITLE = """<b><h3>Lights, Lights, and More Lights v{0}</h3></b>""".format(__version__)
-        self.ABOUT = """
-        <p>LLaML (pronounced "YAML") is a program that was created
-        to manage the synchronization of lights and music.
-        </p>
-        <p>
-        <b>Creator</b>: J. R. Carroll, 2013
-        <br /><b>Email</b>:  <a href="mailto:jrc.csus@gmail.com">jrc.csus@gmail.com</a>
-        </p>
-        """
-
-        # Create QLabels from attribute strings.
-        self.Qtitle = QLabel(self.TITLE)
-        self._toggleWordWrap(self.Qtitle, wrap="yes")
-        self.Qbody = QLabel(self.ABOUT)
-        self._toggleWordWrap(self.Qbody, wrap="yes")
-
-        # Set window defaults.
-        self._setWindowTitle(title="About LLaML {0}".format(__version__))
-        self._setAppImage(_lightPM)
-        # Lock in the window size.
-        #
-        # TODO:  Test on smaller/larger resolutions to ensure this won't be a
-        # problem.
-        self.setFixedSize(300, 200)
-
-        # Build/show the About Dialog.
-        self.execUI()
-        self.showWindow()
-
-    def execUI(self):
-        # Create OK button.
-        OKBtn = self._addButton(string="OK")
-
-        # Create Application image used in About Dialog and scale it.
-        image = QLabel(self)
-        image.setPixmap(self.pixmap.scaled(50, 50))
-
-        # Create a top grid for the title and image.
-        topGrid = QGridLayout()
-        topGrid.addWidget(image, 1, 1, 1, 1)
-        topGrid.addWidget(self.Qtitle, 1, 2, 1, 3)
-        #topGrid.addSpacing(80)
-
-        # Add bottom grid.
-        bottomGrid = QGridLayout()
-        bottomGrid.addWidget(self.Qbody, 0, 0)
-        bottomGrid.addWidget(OKBtn, 1, 0)
-
-        # Create grid for button placement.
-        grid = QGridLayout(self)
-        grid.addLayout(topGrid, 0, 0)
-        grid.addLayout(bottomGrid, 1, 0)
-
-    def _setAppImage(self, pixmap):
-        '''
-        Set the application image used in the About Dialog.
-
-        Args:
-            pixmap : a Qt pixmap -- typically a png.  See Qt docs.
-        Return:
-            None
-        '''
-        assert isinstance(pixmap, QPixmap)
-        self.pixmap = pixmap
-        return None
-
-    def _setWindowTitle(self, **kwargs):
-        # Explicit str conversion to ensure str type for title!
-        title = str(kwargs.get('title', "About LLaML"))
-        self.setWindowTitle(title)
-        return None
-
-    def _addButton(self, *args, **kwargs):
-        '''
-        Creates a new button for the dialog window.
-
-        Buttons are assigned to the class itself by string label.
-
-        For instance, a button with the string "OK" assigned to it, has an attribute
-        of the class self.OK_button.  Whereas, "sToP" would be self.sToP_button.
-
-        Default behavior with no arguments passed is to create a confrmation "OK"
-        button.
-
-        It is up to the implementor to add the button to a layout for display
-        purposes.
-
-        kwargs:
-            string : the string that goes into the button.
-            action : the Qt button behavior on button press.
-
-        Return:
-            Button : if successful, returns the button hook.
-            False  : if unsuccessful, returns False.
-        '''
-        result = False
-        try:
-            # Explicit str conversion here to ensure resulting value is a string.
-            # This allows the user to pass whatever silliness they want!
-            btnString = str(kwargs.get("string", "OK"))
-            btnName = btnString + "_button"
-            btnAction = kwargs.get("action", self.accept)
-            # Create the button and assigned click behavior.
-            _button = QPushButton("{}".format(btnString))
-            _button.clicked.connect(btnAction)
-            setattr(self, btnName, _button)
-            result = _button
-        except:
-            # PEH-GCA
-            #
-            # TODO:  Add in logging here and silenting pass else deal with more
-            # gracefully.
-            raise
-        return result
-
-
-    def _toggleWordWrap(self, label, wrap="no"):
-        '''
-        Wrapper for toggling word-wrapping within a QLabel object.
-
-        Args:
-            label : the QLabel object of interest.
-            wrap  : either "yes"/"no" or 0/1; mappings are done internally for
-                    consistenancy.
-        Return:
-            None
-        '''
-        assert isinstance(label, QLabel)
-        wordWrapMap = {'yes' : 1,
-                       'no': 2}
-        _wrap = wrap
-
-        if wrap.lower() == 'yes':
-            _wrap = 1
-        elif wrap.lower() == 'no':
-            _wrap = 0
-
-        label.setWordWrap(_wrap)
-        return None
-
-    def showWindow(self):
-        '''
-        Wrapped for showing the About Dialog (formerly self.exec_).
-
-        Args:
-            None
-        Return:
-            True | False
-        '''
-        result = False
-        try:
-            self.exec_()
-            result = True
-        except:
-            # PEH-GCA
-            #
-            # TODO:  Add in better exception handling here.
-            raise
-        return result
-
-
-class AudioToolBar(QToolBar):
-    '''
-    Need to pass in parent Widget and an existing ToolBarWidget.
-    '''
-    def __init__(self, parent, *args, **kwargs):
-        super(AudioToolBar, self).__init__(parent)
-
-        # Capture the parent to which this widget is bound.
-        self._parent = parent
-
-        # Kwargs passed in can toggle size and movability of this toolbar.
-        # Allows user to override.
-        _size = kwargs.get('iconSize', QSize(15, 15))
-        _movable = kwargs.get('movable', True)
-
-        # Set toolbar parameters.
-        self.setIconSize(_size)
-        self.setMovable(_movable)
-
-        # Group mappings (overrideable via kwargs) are:
-        # 1 = File Menu Group
-        # 2 = Meta Control Group
-        # 3 = Audio Control group
-        self._groups = kwargs.get('groups', [1, 2, 3])
-
-
-        # List of images avaiable in Qt format.
-        self.playIMG = QIcon(QPixmap('images/play_blue.png'))
-        self.pauseIMG = QIcon(QPixmap('images/pause_blue.png'))
-        self.stopIMG = QIcon(QPixmap('images/stop_blue.png'))
-        self.newProjectIMG = QIcon(QPixmap('images/new_project.png'))
-        self.openProjectIMG = QIcon(QPixmap('images/open_doc.png'))
-        self.saveProjectIMG = QIcon(QPixmap('images/disk_black.png'))
-        self.waveformWidgetIMG = QIcon(QPixmap('images/waveform.png'))
-        self.zoneManagerIMG = QIcon(QPixmap('images/table_row.png'))
-        self.scheduleWidgetIMG = QIcon(QPixmap('images/calendar_select_none.png'))
-        self.editPlaylistIMG = QIcon(QPixmap('images/playlist.png'))
-        self.randomizeSongsIMG = QIcon(QPixmap('images/arrow_switch_bluegreen.png'))
-
-        # Create the actual buttons with the images/actions associated.
-        self.newProjectBT = QAction(self.newProjectIMG, "Create a New Project", self)
-        self.openProjectBT = QAction(self.openProjectIMG, "Open an Existing Project", self)
-        self.saveProjectBT = QAction(self.saveProjectIMG, "Save Project", self)
-        self.playMenuBT = QAction(self.playIMG, "Play", self)
-        self.pauseMenuBT = QAction(self.pauseIMG, "Pause", self)
-        self.stopMenuBT = QAction(self.stopIMG, "Stop", self)
-        self.randomizeSongsBT = QAction(self.randomizeSongsIMG, "Randomize Songs in Playlist", self)
-        self.waveformWidgetBT = QAction(self.waveformWidgetIMG, "Toggle Waveform Display", self)
-        self.zoneManagerBT = QAction(self.zoneManagerIMG, "Toggle Zone Manager", self)
-        self.scheduleWidgetBT = QAction(self.scheduleWidgetIMG, "Toggle Scheduler Display", self)
-        self.editPlaylistBT = QAction(self.editPlaylistIMG, "Edit the Playlist", self)
-
-        self.combobox = QComboBox(self._parent)
-        self.combobox.addItem("Im To Sexy For Shit.mp3")
-        self.combobox.addItem("Hey Mickey Yo So Fine.wav")
-        self.combobox.addItem("Somewhere over the rainbow")
-        self.combobox.addItem("I like big BUTTS and I can not lie")
-        self.combobox.addItem("HIV Song")
-        self.combobox.addItem("Electric Slide")
-
-        # Meta-button groupings.  Used for toggling on/off groups.
-        self._fileGroup = [self.newProjectBT, self.openProjectBT, self.saveProjectBT]
-        self._audioGroup = [self.editPlaylistBT, self.combobox, self.playMenuBT,
-                            self.pauseMenuBT, self.stopMenuBT, self.randomizeSongsBT]
-        self._metaControlGroup = [self.waveformWidgetBT, self.zoneManagerBT,
-                                  self.scheduleWidgetBT]
-
-        self._groupingManager = {1: self._fileGroup,
-                                 2: self._metaControlGroup,
-                                 3: self._audioGroup}
-
-        self.addStandardButtons()
-
-    def addStandardButtons(self):
-        '''
-        Adds the standard set of buttons one would expect to see in an
-        audio toolbar.
-        '''
-
-        for icons in self._groups:
-            _tmp = self._groupingManager.get(icons)
-            for button in _tmp:
-                if button == self.combobox:
-                    self.addWidget(self.combobox)
-                else:
-                    self.addAction(button)
-            self.addSeparator()
-
+# Loading images once to pass around to the various classes
+# that need it.  Images HAVE to be loaded AFTER the QApplication
+# and need to be passed around to the various Qt widgets as lambdas.
+from resources import _lightICON, _lightPM
 
 class ParentWindowMgr(QMainWindow):
-    global _lightICON
-    global _lightPM
-
     def __init__(self):
         super(ParentWindowMgr, self).__init__()
 
@@ -302,6 +49,8 @@ class ParentWindowMgr(QMainWindow):
         _openFileM = QAction(QIcon(''), '&Open Project', self)
         _openFileM.setShortcut('Ctrl+O')
         _openFileM.setStatusTip("Open an existing project file")
+        _openFileM.triggered.connect(self.openFileWindow)
+        self._openFileName = None
 
         _saveFileM = QAction(QIcon(''), '&Save Project', self)
         _saveFileM.setStatusTip("Save the currently opened project")
@@ -329,10 +78,6 @@ class ParentWindowMgr(QMainWindow):
         _preferencesEditM.setStatusTip("Edit LLaML preferences and default behaviors")
 
         # Audio Menu
-        #_loadAudioM = QAction(QIcon(''), '&Load Audio', self)
-        #_loadAudioM.setShortcut('Ctrl+L')
-        #_loadAudioM.setStatusTip("Load audio file into project")
-
         _playAudioM = QAction(QIcon(''), '&Play', self)
         _playAudioM.setShortcut('Ctrl+P')
         _playAudioM.setStatusTip("Play audio file from last position")
@@ -377,7 +122,7 @@ class ParentWindowMgr(QMainWindow):
 
         _aboutHelpM = QAction(QIcon(''), '&About LLaML', self)
         _aboutHelpM.setStatusTip("About LLaLM")
-        _aboutHelpM.triggered.connect(AboutDialog)
+        _aboutHelpM.triggered.connect(lambda: AboutDialog(image=_lightPM))
 
         _wwwSiteHelpM = QAction('LLaML Website', self)
         _wwwSiteHelpM.setStatusTip("Go to LLaML website")
@@ -405,8 +150,6 @@ class ParentWindowMgr(QMainWindow):
 
         # AUDIO DROPDOWN
         audioMenu = menubar.addMenu("&Audio")
-        #audioMenu.addAction(_loadAudioM)
-        #audioMenu.addSeparator()
         audioMenu.addAction(_playAudioM)
         audioMenu.addAction(_pauseAudioM)
         audioMenu.addAction(_stopAudioM)
@@ -448,12 +191,6 @@ class ParentWindowMgr(QMainWindow):
 
         self.setCentralWidget(MainWidget())
 
-        #self.scrollWaveArea = QScrollArea()
-        #self.scrollWaveArea.setWidget(self.centralWidget())
-        #self.scrollWaveArea.show()
-
-        #self.waveform = DrawAudioWaveForm(self.centralWidget())
-
         self._showStatusbar()
         self._setupWindow()
 
@@ -471,7 +208,15 @@ class ParentWindowMgr(QMainWindow):
     def openLLaMLWWW():
         QDesktopServices.openUrl("http://www.google.com")
 
+    def openFileWindow(self):
+        '''Opens the standard Qt file dialog window.
 
+        Only permits *.lam file types (that's LAM not One am).'''
+        self.openFileName = QFileDialog.getOpenFileName(self,
+                                                        "Open LLaML Project",
+                                                        "/",
+                                                        "Project files (*.lam)")
+        print(self.openFileName)
 
 
 class MainWidget(QWidget):
@@ -504,100 +249,6 @@ class MainWidget(QWidget):
         self.c.updateWidget.emit(self.width, self.height)
 
 
-class Communicate(QObject):
-    '''Setup hook to detect signals emitted from other QWidgets'''
-    updateWidget = Signal((int, int))
-
-
-class DrawAudioWaveForm(QWidget):
-    '''Uses Pyside/Qt to draw audio waveforms.'''
-    def __init__(self, parent):
-        super(DrawAudioWaveForm, self).__init__(parent)
-        # Initialize width/height dimensions attribute.
-        self.width, self.height = None, None
-        # Handler to parent container/widget.
-        self._parent = parent
-        # Sample points to draw for polyline
-        self.pts = [[0,1], [5, 30], [200, 300]]
-        self.AudioImage = DrawWave()
-        self._rawData = self.AudioImage._bufferedIMG.getvalue()
-        self._rawIMG = QImage.fromData(self._rawData)
-        self.pixmap = QPixmap.fromImage(self._rawIMG)
-        self.image = QLabel(self)
-        self.image.setPixmap(self.pixmap)
-
-    def setDimensions(self, width, height):
-        '''Set widget dimensions.
-
-        This is hooked into the Qt signaling system, so as the
-        parent widget resizes, new signals are emitted onto this method/handler
-        and the widget redrawn.
-        '''
-        self.width, self.height = width, height
-        self.resizeEvent(None)
-
-    def resizeEvent(self, event):
-        '''Respond to resize events and adjust the geometry of the widget.'''
-        self.scroll(20, 0)
-        # At the point of adjusting the geometry of the widget, this assumes that
-        # the waveform will occupy the top 1/8th of the available space, and has
-        # a width of one less than total (totalWidth - 1).
-        self.setGeometry(0, 0, (self.width-1), (self.height/8))
-
-    def paintEvent(self, event):
-        '''Draw the waveform.'''
-        canvas = QPainter()
-        canvas.begin(self)
-        canvas.setBrush(Qt.green)
-        canvas.drawRect(event.rect())
-        canvas.setPen(Qt.red)
-        #self.drawWaveAudio(canvas)
-        canvas.end()
-
-    #def poly(self, pts):
-        #return QPolygonF(map(lambda p: QPointF(*p), pts))
-
-    #def drawWaveAudio(self, canvas):
-        #print("This was called...")
-
-
-class DrawWave(object):
-    def __init__(self):
-        self.openedWave = wave.open('new.wav', 'r')
-        self.signal = self.openedWave.readframes(-1)
-        self.signal = numpy.fromstring(self.signal, 'Int16')
-        self.framerate = self.openedWave.getframerate()
-        self._bufferedIMG = StringIO.StringIO()
-        self.otherStuff()
-        # Create a buffer for the PNG image data from matplotlib.
-
-    def otherStuff(self):
-        self.Time = numpy.linspace(0,
-                                   len(self.signal)/self.framerate,
-                                   num=len(self.signal))
-        self.drawWave()
-
-    def drawWave(self):
-        plot.figure(1, figsize=(13, 2))
-        plot.plot(self.signal[::480])
-        plot.grid()
-        plot.axis('off')
-        plot.savefig(self._bufferedIMG, format='png')
-        # After sending img data to buffer, seek to 0.
-        self._bufferedIMG.seek(0)
-
-# Create a Qt application
-app = QApplication(sys.argv)
-app.setWindowIcon(QIcon('greenLightSM.png'))
-app.setApplicationName("LLaML")
-
-#ex = DrawAudioWaveForm(app)
-
-# Loading images once to pass around to the various classes
-# that need it.
-_lightICON = QIcon('greenLight.png')
-_lightPM = QPixmap('greenLight.png')
-
 # Splash screen setup.
 font = QFont('Serif', 30)
 splash = QSplashScreen(_lightPM)
@@ -607,63 +258,6 @@ splash.show()
 
 # Create main application window.
 LLaMLWindow = ParentWindowMgr()
-
-
-class LoadAudioWAV(object):
-    '''Set up the audio - platform independent.'''
-    def __init__(self):
-        # Set the nominal priority with the system.
-        mediaDevice = Phonon.Category(Phonon.MusicCategory)
-        # Set up the audio object/handler
-        self.audio = Phonon.MediaObject()
-        self.output = Phonon.AudioOutput()
-        path = Phonon.createPath(self.audio, self.output)
-        # The audio file.
-        self.audio = None
-        # If not playing (aka stopped) then False
-        self.playing = False
-
-    def confirmValidWAV(self):
-        '''Confirm that the audio file is a valid WAVE format.'''
-
-    def setAudioFile(self):
-        self.audio = Phonon.MediaSource('new.wav')
-        self.audio.setCurrentSource(self.audio)
-
-    def playWAV(self):
-        # Start playing audio -- this is a test.
-        self.audio.play()
-
-    def stopWAV(self):
-        '''Stop playing the WAVE file and return True.
-
-        If no WAVE file is playing, this returns False'''
-        stopped = False
-        if self.playing:
-            self.audio.stop()
-            stopped = True
-            # Reset playing state
-            self.playing = False
-        else:
-            # Do nothing... once stopped it resets to position 0 anyways.
-            pass
-        return stopped
-
-    def pauseWAV(self):
-        '''Pause the currently playing WAVE file and return True.
-
-        If no WAVE file is playing, this returns False.'''
-        paused = False
-        if self.playing:
-            self.audio.pause()
-            paused = True
-            # Reset playing state
-            self.playing = False
-        else:
-            self.audio.pause()
-
-        return paused
-
 
 # Close the splash screen if the user has not already closed it out.
 # Bring up the main application window after splash screen has closed.
