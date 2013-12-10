@@ -20,12 +20,13 @@ import time
 
 from PySide.QtCore import *
 from PySide.QtGui import *
-#from PySide.phonon import *
 
 from audiotoolbar import AudioToolBar
 from aboutdialog import AboutDialog
 from audiodisplay import *
 from audio import *
+from playlist import Playlist
+from scheduler import ScheduleView
 
 # Create a Qt application
 app = QApplication(sys.argv)
@@ -67,6 +68,9 @@ class ParentWindowMgr(QMainWindow):
         _recentProjectFileM = QAction(QIcon(''), '&Recent Projects', self)
         _recentProjectFileM.setStatusTip("Select from a list of previously opened" +
                                          "projects")
+        #_recentProjectFileM = QMenu()
+        _recentProject1ListFileM = QAction('File1.lam', self)
+        _recentProject2ListFileM = QAction('File2.lam', self)
 
         _exitFileM = QAction(QIcon(''), 'E&xit', self)
         _exitFileM.setShortcut('Ctrl+Q')
@@ -95,6 +99,7 @@ class ParentWindowMgr(QMainWindow):
 
         _seePlaylistAudioM = QAction(QIcon(''), 'Pla&ylist', self)
         _seePlaylistAudioM.setStatusTip("See the current list of queued songs")
+        _seePlaylistAudioM.triggered.connect(Playlist)
 
         _addSongAudioM = QAction(QIcon(''), '&Add Song', self)
         _addSongAudioM.setStatusTip("Select a song from the file-system")
@@ -140,7 +145,12 @@ class ParentWindowMgr(QMainWindow):
         fileMenu.addAction(_newProjectFileM)
         fileMenu.addAction(_openFileM)
         fileMenu.addAction(_closeProjectFileM)
-        fileMenu.addAction(_recentProjectFileM)
+
+        #fileMenu.addAction(_recentSubmenu)
+        _recentSubmenu = QMenu("Recent Projects", self)
+        _recentSubmenu.addAction(_recentProject1ListFileM)
+        _recentSubmenu.addAction(_recentProject2ListFileM)
+        fileMenu.addMenu(_recentSubmenu)
         fileMenu.addSeparator()
         fileMenu.addAction(_exitFileM)
 
@@ -207,6 +217,7 @@ class ParentWindowMgr(QMainWindow):
     @staticmethod
     def openLLaMLWWW():
         QDesktopServices.openUrl("http://www.google.com")
+        return None
 
     def openFileWindow(self):
         '''Opens the standard Qt file dialog window.
@@ -216,7 +227,7 @@ class ParentWindowMgr(QMainWindow):
                                                         "Open LLaML Project",
                                                         "/",
                                                         "Project files (*.lam)")
-        print(self.openFileName)
+        return None
 
 
 class MainWidget(QWidget):

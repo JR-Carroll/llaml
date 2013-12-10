@@ -4,6 +4,7 @@
 from PySide.QtGui import *
 from PySide.QtCore import *
 import playlist
+from scheduler import ScheduleView
 
 class AudioToolBar(QToolBar):
     '''
@@ -59,6 +60,7 @@ class AudioToolBar(QToolBar):
         self.waveformWidgetBT = QAction(self.waveformWidgetIMG, "Toggle Waveform Display", self)
         self.zoneManagerBT = QAction(self.zoneManagerIMG, "Toggle Zone Manager", self)
         self.scheduleWidgetBT = QAction(self.scheduleWidgetIMG, "Toggle Scheduler Display", self)
+        self.scheduleWidgetBT.triggered.connect(ScheduleView)
         self.editPlaylistBT = QAction(self.editPlaylistIMG, "Edit the Playlist", self)
         self.editPlaylistBT.triggered.connect(playlist.Playlist)
 
