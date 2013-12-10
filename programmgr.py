@@ -10,16 +10,16 @@ from PySide.QtCore import *
 from PySide.QtGui import *
 
 
-class Playlist(QDialog):
+class ProgramManager(QDialog):
     def __init__(self, *args, **kwargs):
-        super(Playlist, self).__init__()
+        super(ProgramManager, self).__init__()
         # Build/show the About Dialog.
         #self.execUI()
         self.exec_()
     #def
 
 
-class AudioList(object):
+class ProgramList(object):
     def __init__(self):
         self.audioList = []
         self.totalLength = None

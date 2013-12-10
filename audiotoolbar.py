@@ -3,7 +3,7 @@
 
 from PySide.QtGui import *
 from PySide.QtCore import *
-import playlist
+from programmgr import ProgramManager
 from scheduler import ScheduleView
 
 class AudioToolBar(QToolBar):
@@ -24,7 +24,7 @@ class AudioToolBar(QToolBar):
         # Set toolbar parameters.
         self.setIconSize(_size)
         self.setMovable(_movable)
-
+        self.setWindowTitle("Audio Toolbar")
         # Group mappings (overrideable via kwargs) are:
         # 1 = File Menu Group
         # 2 = Meta Control Group
@@ -62,7 +62,7 @@ class AudioToolBar(QToolBar):
         self.scheduleWidgetBT = QAction(self.scheduleWidgetIMG, "Toggle Scheduler Display", self)
         self.scheduleWidgetBT.triggered.connect(ScheduleView)
         self.editPlaylistBT = QAction(self.editPlaylistIMG, "Edit the Playlist", self)
-        self.editPlaylistBT.triggered.connect(playlist.Playlist)
+        self.editPlaylistBT.triggered.connect(ProgramManager)
 
         self.combobox = QComboBox(self._parent)
         self.combobox.addItem("Im To Sexy For Shit.mp3")

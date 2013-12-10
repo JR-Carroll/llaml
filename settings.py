@@ -15,16 +15,12 @@
 import cPickle
 import os
 
-_applicationPath_ = os.curdir()
+from PySide.QtCore import *
+from PySide.QtGui import *
+
+_applicationPath_ = os.curdir
 _application_ = "\LLaML.py"
 _fullAppPath_ = _applicationPath_ + _application_
-
-class ErrorApplicationPath(Exception):
-    def __init__(self, msg):
-        self.msg = msg
-    def __str__(self):
-        return "While looking for a settings file, it was detected that the LLaML"
-    "application does not exists in the expected path: {0}".format(self.msg)
 
 
 def checkForSettings():
@@ -37,6 +33,13 @@ def checkForSettings():
 
 def clearSettingsFile():
     pass
+
+
+class ErrorApplicationPath(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+    def __str__(self):
+        return "While looking for a settings file, it was detected that the LLaML application does not exists in the expected path: {0}".format(self.msg)
 
 
 class ProjectSettingsFile(object):
@@ -77,6 +80,7 @@ class ProjectSettingsFile(object):
         pass
 
 
+# TODO:  Add program settings file class.
 
 class ApplicationSettingsFile(object):
     def __init__(self, *args, **kwargs):
@@ -96,3 +100,20 @@ class ApplicationSettingsFile(object):
 
     def saveAsAppSettingsFile(self):
         pass
+
+
+class ProgramSettingsWindow(QDialog):
+    def __init__(self):
+        super(ProgramSettingsWindow, self).__init__()
+        self.exec_()
+
+
+class ProjectSettingsWindow(QDialog):
+    def __init__(self):
+        super(ProjectSettingsWindow, self).__init__()
+        self.exec_()
+
+class ApplicationSettingsWindow(QDialog):
+    def __init__(self):
+        super(ApplicationSettingsWindow, self).__init__()
+        self.exec_()

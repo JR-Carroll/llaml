@@ -25,8 +25,11 @@ from audiotoolbar import AudioToolBar
 from aboutdialog import AboutDialog
 from audiodisplay import *
 from audio import *
-from playlist import Playlist
+from programmgr import ProgramManager
 from scheduler import ScheduleView
+from settings import *
+from systemcheck import SystemTest
+
 
 # Create a Qt application
 app = QApplication(sys.argv)
@@ -43,89 +46,97 @@ class ParentWindowMgr(QMainWindow):
         super(ParentWindowMgr, self).__init__()
 
         # File Menu
-        _newProjectFileM = QAction(QIcon(''), '&New Project', self)
+        _newProjectFileM = QAction('&New Project', self)
         _newProjectFileM.setShortcut('Ctrl+N')
         _newProjectFileM.setStatusTip("Create a new project")
 
-        _openFileM = QAction(QIcon(''), '&Open Project', self)
+        _openFileM = QAction('&Open Project', self)
         _openFileM.setShortcut('Ctrl+O')
         _openFileM.setStatusTip("Open an existing project file")
         _openFileM.triggered.connect(self.openFileWindow)
         self._openFileName = None
 
-        _saveFileM = QAction(QIcon(''), '&Save Project', self)
+        _saveFileM = QAction('&Save Project', self)
         _saveFileM.setStatusTip("Save the currently opened project")
 
-        _saveAsFileM = QAction(QIcon(''), 'Save Project As', self)
+        _saveAsFileM = QAction('Save Project As', self)
         _saveAsFileM.setStatusTip("Save the currently project something other " +
                                   "what it is currently saved as.")
 
-        _closeProjectFileM = QAction(QIcon(''), '&Close Project', self)
+        _closeProjectFileM = QAction('&Close Project', self)
         _closeProjectFileM.setShortcut('Ctrl+W')
         _closeProjectFileM.setStatusTip("Close the current project")
 
-        # TODO:  Plumb in recent menu correctly!
-        _recentProjectFileM = QAction(QIcon(''), '&Recent Projects', self)
-        _recentProjectFileM.setStatusTip("Select from a list of previously opened" +
-                                         "projects")
-        #_recentProjectFileM = QMenu()
+        _recentSubmenu = QMenu('Recent Projects', self)
+        # XXX: Tempory file objects to through into the recent menu.
         _recentProject1ListFileM = QAction('File1.lam', self)
         _recentProject2ListFileM = QAction('File2.lam', self)
 
-        _exitFileM = QAction(QIcon(''), 'E&xit', self)
+        _preferences = QAction('&Preferences', self)
+        _preferences.setStatusTip("Edit application-level settings")
+        _preferences.triggered.connect(ApplicationSettingsWindow)
+
+        _exitFileM = QAction('E&xit', self)
         _exitFileM.setShortcut('Ctrl+Q')
         _exitFileM.setStatusTip("Exit LLaML")
         _exitFileM.triggered.connect(sys.exit)
 
-        # Edit Menu
-        _preferencesEditM = QAction(QIcon(''), 'Preferences', self)
-        _preferencesEditM.setStatusTip("Edit LLaML preferences and default behaviors")
+        # Project Menu
+        _programManagerProjectM = QAction('Program Manager', self)
+        _programManagerProjectM.setStatusTip("Open the Program Manager")
+        _programManagerProjectM.triggered.connect(ProgramManager)
+        # Separator
+        _projectSettingsProjectM = QAction('Project Settings', self)
+        _projectSettingsProjectM.setStatusTip("Edit project settings")
+        _projectSettingsProjectM.triggered.connect(ProjectSettingsWindow)
+
+        _programSettingsProjectM = QAction('Program Settings', self)
+        _programSettingsProjectM.setStatusTip("Edit program settings")
+        _programSettingsProjectM.triggered.connect(ProgramSettingsWindow)
 
         # Audio Menu
-        _playAudioM = QAction(QIcon(''), '&Play', self)
+        _playAudioM = QAction('&Play', self)
         _playAudioM.setShortcut('Ctrl+P')
         _playAudioM.setStatusTip("Play audio file from last position")
 
-        _pauseAudioM = QAction(QIcon(''), 'Pa&use', self)
+        _pauseAudioM = QAction('Pa&use', self)
         _pauseAudioM.setShortcut('Ctrl+U')
         _pauseAudioM.setStatusTip("Pause the currently playing audio file")
 
-        _stopAudioM = QAction(QIcon(''), '&Stop', self)
+        _stopAudioM = QAction('&Stop', self)
         _stopAudioM.setShortcut('Ctrl+T')
         _stopAudioM.setStatusTip("Stop the currently playing audio file, and rewind")
 
-        _audioInfoAudioM = QAction(QIcon(''), 'Audio &Info', self)
+        _audioInfoAudioM = QAction('Audio &Info', self)
         _audioInfoAudioM.setStatusTip("See any currently available meta information")
 
-        _seePlaylistAudioM = QAction(QIcon(''), 'Pla&ylist', self)
-        _seePlaylistAudioM.setStatusTip("See the current list of queued songs")
-        _seePlaylistAudioM.triggered.connect(Playlist)
-
-        _addSongAudioM = QAction(QIcon(''), '&Add Song', self)
-        _addSongAudioM.setStatusTip("Select a song from the file-system")
-
-        _removeSongAudioM = QAction(QIcon(''), '&Remove Song', self)
-        _removeSongAudioM.setStatusTip("Remove the current song from the playlist")
-
-        _settingsAudioM = QAction(QIcon(''), 'Se&ttings', self)
-        _settingsAudioM.setStatusTip("Modify audio settings")
-
         # View menu
-        _waveformWidgetViewM = QAction(QIcon(''), 'View &Waveform', self)
-        _waveformWidgetViewM.setStatusTip("Toggle viewing of waveform widget " +
-                                          "(can help performance)")
+        _waveformWidgetViewM = QAction('Toggle &Waveform', self)
+        _waveformWidgetViewM.setStatusTip("Toggle viewing of waveform widget (can help performance)")
+        _waveformWidgetViewM.setCheckable(bool(True))
+        _waveformWidgetViewM.setChecked(bool(True))
 
-        _zoneWidgetViewM = QAction(QIcon(''), 'View &Zone Manager', self)
+        _zoneWidgetViewM = QAction('Toggle &Zone Widget', self)
         _zoneWidgetViewM.setStatusTip("See the Zone Widget")
+        _zoneWidgetViewM.setCheckable(bool(True))
+        _zoneWidgetViewM.setChecked(bool(True))
 
-        _statusBarViewM = QAction(QIcon(''), 'Toggle &Statusbar', self)
+        _statusBarViewM = QAction('Toggle &Statusbar', self)
         _statusBarViewM.setStatusTip("Toggle the statusbar view")
+        _statusBarViewM.setCheckable(bool(True))
+        _statusBarViewM.setChecked(bool(True))
+
+        _audioToolbarViewM = QAction('Toggle Audio Toolbar', self)
+        _audioToolbarViewM.setStatusTip("Toggle the audio toolbar")
+        _audioToolbarViewM.setCheckable(bool(True))
+        _audioToolbarViewM.setChecked(bool(True))
+
 
         # Help menu
-        _instructionsHelpM = QAction("Help Manual", self)
+        _instructionsHelpM = QAction('Help Manual', self)
         _instructionsHelpM.setStatusTip("Part of the RTFM process")
 
-        _aboutHelpM = QAction(QIcon(''), '&About LLaML', self)
+        _aboutHelpM = QAction('&About LLaML', self)
         _aboutHelpM.setStatusTip("About LLaLM")
         _aboutHelpM.triggered.connect(lambda: AboutDialog(image=_lightPM))
 
@@ -133,54 +144,54 @@ class ParentWindowMgr(QMainWindow):
         _wwwSiteHelpM.setStatusTip("Go to LLaML website")
         _wwwSiteHelpM.triggered.connect(self.openLLaMLWWW)
 
-        _systemCheckHelpM = QAction(QIcon(''), 'System Check', self)
+        _systemCheckHelpM = QAction('System Check', self)
         _systemCheckHelpM.setStatusTip("Perform a system check to ensure everything" +
                                        "is working correclty")
+        _systemCheckHelpM.triggered.connect(SystemTest)
 
         # Create the actual menubar that contains the various menus.
         menubar = self.menuBar()
 
         # FILE DROPDOWN
-        fileMenu = menubar.addMenu("&File")
+        fileMenu = menubar.addMenu('&File')
         fileMenu.addAction(_newProjectFileM)
         fileMenu.addAction(_openFileM)
         fileMenu.addAction(_closeProjectFileM)
-
-        #fileMenu.addAction(_recentSubmenu)
-        _recentSubmenu = QMenu("Recent Projects", self)
+        # XXX:  Dummy-place holder code for now.
         _recentSubmenu.addAction(_recentProject1ListFileM)
         _recentSubmenu.addAction(_recentProject2ListFileM)
+        # XXX: END DUMMY CODE
+
         fileMenu.addMenu(_recentSubmenu)
+        fileMenu.addSeparator()
+        fileMenu.addAction(_preferences)
         fileMenu.addSeparator()
         fileMenu.addAction(_exitFileM)
 
-        # EDIT DROPDOWN
-        editMenu = menubar.addMenu("&Edit")
-        editMenu.addAction(_preferencesEditM)
+        # PROGRAM DROPDOWN
+        programMenu = menubar.addMenu('&Edit')
+        programMenu.addAction(_programManagerProjectM)
+        programMenu.addSeparator()
+        programMenu.addAction(_projectSettingsProjectM)
+        programMenu.addAction(_programSettingsProjectM)
 
         # AUDIO DROPDOWN
-        audioMenu = menubar.addMenu("&Audio")
+        audioMenu = menubar.addMenu('&Audio')
         audioMenu.addAction(_playAudioM)
         audioMenu.addAction(_pauseAudioM)
         audioMenu.addAction(_stopAudioM)
         audioMenu.addSeparator()
         audioMenu.addAction(_audioInfoAudioM)
-        audioMenu.addSeparator()
-        audioMenu.addAction(_seePlaylistAudioM)
-        audioMenu.addSeparator()
-        audioMenu.addAction(_addSongAudioM)
-        audioMenu.addAction(_removeSongAudioM)
-        audioMenu.addSeparator()
-        audioMenu.addAction(_settingsAudioM)
 
         # VIEW DROPDOWN
-        viewMenu = menubar.addMenu("&View")
+        viewMenu = menubar.addMenu('&View')
         viewMenu.addAction(_waveformWidgetViewM)
         viewMenu.addAction(_zoneWidgetViewM)
         viewMenu.addAction(_statusBarViewM)
+        viewMenu.addAction(_audioToolbarViewM)
 
         # HELP DROPDOWN
-        helpMenu = menubar.addMenu("&Help")
+        helpMenu = menubar.addMenu('&Help')
         helpMenu.addAction(_instructionsHelpM)
         helpMenu.addAction(_aboutHelpM)
         helpMenu.addAction(_wwwSiteHelpM)
