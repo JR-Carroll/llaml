@@ -107,13 +107,64 @@ class ProgramSettingsWindow(QDialog):
         super(ProgramSettingsWindow, self).__init__()
         self.exec_()
 
-
-class ProjectSettingsWindow(QDialog):
-    def __init__(self):
-        super(ProjectSettingsWindow, self).__init__()
-        self.exec_()
-
 class ApplicationSettingsWindow(QDialog):
     def __init__(self):
         super(ApplicationSettingsWindow, self).__init__()
+        self._hbox = QHBoxLayout()
+        self.setGeometry(50, 50, 700, 400)
+        self.listView = QListWidget()
+        self.listView.setGeometry(0, 0, 150, 200)
+        self._general = QListWidgetItem('General')
+        self._startup = QListWidgetItem('Start-up')
+        self._audio = QListWidgetItem('Audio')
+        self._comms = QListWidgetItem('Communications')
+        self._restore = QListWidgetItem('Restore Defaults')
+
+        self.listView.addItem(self._general)
+        self.listView.addItem(self._startup)
+        self.listView.addItem(self._audio)
+        self.listView.addItem(self._comms)
+        self.listView.addItem(self._restore)
+
+        self._hbox.addWidget(self.listView)
+        #self._hbox.addStretch()
+
+        # General form/page
+        # Create all the options/widgets
+        self._generalGrid = QGridLayout()
+
+        self._colorBasedOnDate = QCheckBox("Default pallet to nearest holiday?")
+        self._editHolidays = QPushButton("Edit Holiday Calendar")
+        self._forcePallet = QComboBox()
+        self._importPallet = QPushButton("Import Pallet")
+        self._exportPallet = QPushButton("Export Pallet")
+        self._customizePallet = QPushButton("Customize Pallet")
+        self._defaultPath = QLineEdit()
+        self._defaultPath.setDisabled(bool(True))
+        self._defaultPathButton = QPushButton("Browse")
+        self._save = QPushButton("Save")
+        self._cancel = QPushButton("Cancel")
+
+        self._generalGroupBox = QGroupBox("General Settings")
+        self._generalGrid.addWidget(self._colorBasedOnDate, 0, 0)
+        self._generalGrid.addWidget(self._editHolidays, 1, 0)
+        self._generalGrid.addWidget(self._forcePallet, 2, 0)
+        self._generalGrid.addWidget(self._importPallet, 3, 0)
+        self._generalGrid.addWidget(self._exportPallet, 3, 1)
+        self._generalGrid.addWidget(self._customizePallet, 4, 0)
+        self._generalGrid.addWidget(self._defaultPath, 5, 0)
+        self._generalGrid.addWidget(self._defaultPathButton, 5, 1)
+        self._generalGrid.addWidget(self._cancel, 6, 2)
+        self._generalGrid.addWidget(self._save, 6, 3)
+
+        self._generalGroupBox.setLayout(self._generalGrid)
+        self._hbox.addWidget(self._generalGroupBox)
+        self.setLayout(self._hbox)
         self.exec_()
+
+    def _showGeneral(self):
+        pass
+
+if __name__ == '__main__':
+    # Not doing anything special here.
+    pass

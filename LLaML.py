@@ -86,13 +86,9 @@ class ParentWindowMgr(QMainWindow):
         _programManagerProjectM.setStatusTip("Open the Program Manager")
         _programManagerProjectM.triggered.connect(ProgramManager)
         # Separator
-        _projectSettingsProjectM = QAction('Project Settings', self)
-        _projectSettingsProjectM.setStatusTip("Edit project settings")
-        _projectSettingsProjectM.triggered.connect(ProjectSettingsWindow)
-
-        _programSettingsProjectM = QAction('Program Settings', self)
-        _programSettingsProjectM.setStatusTip("Edit program settings")
-        _programSettingsProjectM.triggered.connect(ProgramSettingsWindow)
+        _editSettingsProjectM = QAction('Settings', self)
+        _editSettingsProjectM.setStatusTip("Edit settings")
+        _editSettingsProjectM.triggered.connect(ProgramSettingsWindow)
 
         # Audio Menu
         _playAudioM = QAction('&Play', self)
@@ -168,12 +164,11 @@ class ParentWindowMgr(QMainWindow):
         fileMenu.addSeparator()
         fileMenu.addAction(_exitFileM)
 
-        # PROGRAM DROPDOWN
-        programMenu = menubar.addMenu('&Edit')
-        programMenu.addAction(_programManagerProjectM)
-        programMenu.addSeparator()
-        programMenu.addAction(_projectSettingsProjectM)
-        programMenu.addAction(_programSettingsProjectM)
+        # EDIT DROPDOWN
+        editMenu = menubar.addMenu('&Program')
+        editMenu.addAction(_programManagerProjectM)
+        editMenu.addSeparator()
+        editMenu.addAction(_editSettingsProjectM)
 
         # AUDIO DROPDOWN
         audioMenu = menubar.addMenu('&Audio')
