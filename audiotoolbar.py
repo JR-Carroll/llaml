@@ -85,6 +85,23 @@ class AudioToolBar(QToolBar):
 
         self.addStandardButtons()
 
+        # Configure default values
+        self.volumeSlider = QSlider(Qt.Orientation.Horizontal)
+        self.volumeSlider.setValue(50)
+        self.volumeSlider.setMaximum(100)
+        self.volumeSlider.setMaximumWidth(101)
+
+        self._volumeLabel = QLabel('Vol')
+        self._sldMin = QLabel(str(self.volumeSlider.minimum()))
+        self._sldMax = QLabel(str(self.volumeSlider.maximum()))
+        self._sldValue = QLabel(str(self.volumeSlider.value()))
+
+        #self.addWidget(self._sldMin)
+        self.addWidget(self._volumeLabel)
+        self.addWidget(self.volumeSlider)
+        self.addWidget(self._sldValue)
+
+
     def addStandardButtons(self):
         '''
         Adds the standard set of buttons one would expect to see in an
@@ -99,3 +116,22 @@ class AudioToolBar(QToolBar):
                 else:
                     self.addAction(button)
             self.addSeparator()
+
+
+class SliderWidget(QWidget):
+    def __init__(self, parent):
+        super(SliderWidget, self).__init__()
+        self.volumeSlider = QSlider(Qt.Orientation.Horizontal)
+        self._sldMin = QLabel(str(self.volumeSlider.minimum()))
+        self._sldMax = QLabel(str(self.volumeSlider.maximum()))
+        self._sldValue = QLabel(str(self.volumeSlider.value()))
+
+        # Configure default values
+        self.volumeSlider.setValue(50)
+        self.volumeSlider.setMaximum(100)
+
+        # Create a layout and add the slider elements to it.
+        self._layout = QHBoxLayout(parent)
+        self._layout.addWidget(self._sldMin)
+        self._layout.addWidget(self.volumeSlider)
+        self._layout.addWidget(self._sldMax)

@@ -45,9 +45,9 @@ class DrawAudioWaveForm(QWidget):
         and the widget redrawn.
         '''
         self.width, self.height = width, height
-        self.resizeEvent(None)
+        self.resizeEvent()
 
-    def resizeEvent(self, event):
+    def resizeEvent(self, *event):
         '''Respond to resize events and adjust the geometry of the widget.'''
         self.scroll(20, 0)
         # At the point of adjusting the geometry of the widget, this assumes that
