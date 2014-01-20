@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 #coding:utf-8
-"""
+'''
   Author:   --<>
   Purpose:
   Created: 12/10/2013
-"""
+'''
 
 from PySide.QtCore import *
 from PySide.QtGui import *

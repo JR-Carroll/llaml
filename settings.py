@@ -108,61 +108,396 @@ class ProgramSettingsWindow(QDialog):
         self.exec_()
 
 class ApplicationSettingsWindow(QDialog):
+
     def __init__(self):
-        super(ApplicationSettingsWindow, self).__init__()
-        self._hbox = QHBoxLayout()
-        self.setGeometry(50, 50, 700, 400)
-        self.listView = QListWidget()
-        self.listView.setGeometry(0, 0, 150, 200)
-        self._general = QListWidgetItem('General')
-        self._startup = QListWidgetItem('Start-up')
-        self._audio = QListWidgetItem('Audio')
-        self._comms = QListWidgetItem('Communications')
-        self._restore = QListWidgetItem('Restore Defaults')
+            super(ApplicationSettingsWindow, self).__init__()
+            self.setFixedSize(self.size())
+            self.setWindowTitle("Application Settings")
+            self._hbox = QHBoxLayout()
+            # Add a layout to the main settings window.
+            self._vbox = QVBoxLayout()
 
-        self.listView.addItem(self._general)
-        self.listView.addItem(self._startup)
-        self.listView.addItem(self._audio)
-        self.listView.addItem(self._comms)
-        self.listView.addItem(self._restore)
+            # Add a listview widget that will have a listing of all the child menus.
+            self.listView = self.ListViewWidget()
+            self.listView.currentItemChanged.connect(self._toggleVisibility)
+            self.listView.setMaximumWidth(150)
 
-        self._hbox.addWidget(self.listView)
-        #self._hbox.addStretch()
+            self.generalView = self.GeneralViewWidget()
+            self.startupView = self.StartupViewWidget()
+            self.audioView = self.AudioViewWidget()
+            self.commView = self.CommunicationsViewWidget()
+            self.adminView = self.AdministrationViewWidget()
 
-        # General form/page
-        # Create all the options/widgets
-        self._generalGrid = QGridLayout()
+            self.startupView.setHidden(True)
+            self.audioView.setHidden(True)
+            self.commView.setHidden(True)
+            self.adminView.setHidden(True)
 
-        self._colorBasedOnDate = QCheckBox("Default pallet to nearest holiday?")
-        self._editHolidays = QPushButton("Edit Holiday Calendar")
-        self._forcePallet = QComboBox()
-        self._importPallet = QPushButton("Import Pallet")
-        self._exportPallet = QPushButton("Export Pallet")
-        self._customizePallet = QPushButton("Customize Pallet")
-        self._defaultPath = QLineEdit()
-        self._defaultPath.setDisabled(bool(True))
-        self._defaultPathButton = QPushButton("Browse")
-        self._save = QPushButton("Save")
-        self._cancel = QPushButton("Cancel")
+            self._save = QPushButton("Save")
+            self._cancel = QPushButton("Cancel")
 
-        self._generalGroupBox = QGroupBox("General Settings")
-        self._generalGrid.addWidget(self._colorBasedOnDate, 0, 0)
-        self._generalGrid.addWidget(self._editHolidays, 1, 0)
-        self._generalGrid.addWidget(self._forcePallet, 2, 0)
-        self._generalGrid.addWidget(self._importPallet, 3, 0)
-        self._generalGrid.addWidget(self._exportPallet, 3, 1)
-        self._generalGrid.addWidget(self._customizePallet, 4, 0)
-        self._generalGrid.addWidget(self._defaultPath, 5, 0)
-        self._generalGrid.addWidget(self._defaultPathButton, 5, 1)
-        self._generalGrid.addWidget(self._cancel, 6, 2)
-        self._generalGrid.addWidget(self._save, 6, 3)
+            self._allSettingsWidgets = {'General': self.generalView,
+                                        'Start-up': self.startupView,
+                                        'Audio': self.audioView,
+                                        'Communications': self.commView,
+                                        'Administration': self.adminView}
 
-        self._generalGroupBox.setLayout(self._generalGrid)
-        self._hbox.addWidget(self._generalGroupBox)
-        self.setLayout(self._hbox)
-        self.exec_()
+            self._allItemsInList = self.listView._buildListViewItems()
+
+            self._hbox.addWidget(self.listView)
+
+            self._vbox.addWidget(self.generalView)
+            self._vbox.addWidget(self.startupView)
+            self._vbox.addWidget(self.audioView)
+            self._vbox.addWidget(self.commView)
+            self._vbox.addWidget(self.adminView)
+            self._vbox.addStretch()
+
+            self._commitCancelLayout = QHBoxLayout()
+            self._commitCancelLayout.addStretch()
+            self._commitCancelLayout.addWidget(self._cancel)
+            self._commitCancelLayout.addWidget(self._save)
+
+            self._vbox.addLayout(self._commitCancelLayout)
+
+            self._hbox.addLayout(self._vbox)
+            self._hbox.addStretch()
+            self.setLayout(self._hbox)
+            self.exec_()
+
+
+    class ListViewWidget(QListWidget):
+        '''ListViewWidget falls under the exclusive parent class of
+        ApplicationSettingsWindow.'''
+
+        def _buildListViewItems(self):
+            '''Helper function to build a list of mappings of text:memory-ref
+            foreach item within the ListViewWidget.'''
+
+            _count = self.count() # Count how many items are currently in the list.
+            _dict = {}
+
+            for item in range(0, _count):
+                _dict[self.item(item).text()] = None
+
+            return _dict
+
+        def __init__(self, *args, **kwargs):
+            QListWidget.__init__(self)
+
+            self.setGeometry(0, 0, 150, 200)
+            # List Widget Items -- add here if more setting pannels are needed.
+            self._general = QListWidgetItem('General')
+            self._startup = QListWidgetItem('Start-up')
+            self._audio = QListWidgetItem('Audio')
+            self._comms = QListWidgetItem('Communications')
+            self._admin = QListWidgetItem('Administration')
+
+            self.addItem(self._general)
+            self.addItem(self._startup)
+            self.addItem(self._audio)
+            self.addItem(self._comms)
+            self.addItem(self._admin)
+
+
+    class AudioViewWidget(QWidget):
+        '''AudioViewWidget falls under the exclusive parent class of
+        ApplicationSettingsWindow and is a container for the Audio Settings.'''
+        def __init__(self, *args, **kwargs):
+            QWidget.__init__(self)
+            # General form/page
+            # Create all the options/widgets
+            self._visualSampleRate = QComboBox()
+
+            self._visualSampleRateLabel = QLabel("Adjust the sample rate at which "
+                                                 "the visual waveforms are drawn; "
+                                                 "lower sample rates can increase "
+                                                 "performance.")
+            self._visualSampleRateLabel.setWordWrap(True)
+
+            self._visualSampleRate.addItem("Raw Sample Rate")
+            self._visualSampleRate.addItem("Low Sample Rate")
+            self._visualSampleRate.addItem("Med Sample Rate")
+            self._visualSampleRate.addItem("High Sample Rate")
+
+            self._cacheWaveForms = QCheckBox("Cache Waveforms (redraw only on demand)")
+            self._audioLevelLabel = QLabel("Default Audio Level on Startup")
+            self._audiolevelSlider = QSlider(Qt.Horizontal)
+
+            self._generalVGrid = QVBoxLayout()
+
+            self._generalVGrid.addWidget(self._visualSampleRateLabel)
+            self._generalVGrid.addWidget(self._visualSampleRate)
+            self._generalVGrid.addWidget(self._cacheWaveForms)
+            self._generalVGrid.addWidget(self._audioLevelLabel)
+            self._generalVGrid.addWidget(self._audiolevelSlider)
+            self._generalVGrid.addStretch()
+
+            self.setLayout(self._generalVGrid)
+
+
+    class AdministrationViewWidget(QWidget):
+        def __init__(self, *args, **kwargs):
+            QWidget.__init__(self)
+            self._importBtn = QPushButton("Import Settings")
+            self._exportBtn = QPushButton("Export Settings")
+            self._restoreBtn = QPushButton("Restore Settings")
+            self._logDebug = QCheckBox("Create log/debug-mode")
+
+            self._generalVGrid = QVBoxLayout()
+
+            self._generalVGrid.addWidget(self._importBtn)
+            self._generalVGrid.addWidget(self._exportBtn)
+            self._generalVGrid.addWidget(self._restoreBtn)
+            self._generalVGrid.addWidget(self._logDebug)
+            self._generalVGrid.addStretch()
+
+            self.setLayout(self._generalVGrid)
+
+
+    class GeneralViewWidget(QWidget):
+        '''GeneralViewWidget falls under the exclusive parent class of
+        ApplicationSettingsWindow and is a container for the General Settings.'''
+        def __init__(self, *args, **kwargs):
+            QWidget.__init__(self)
+            # General form/page
+            # Create all the options/widgets
+            self._generalGrid = QVBoxLayout()
+
+            # Force pallet/colors select box.
+            self._forcePallet = QComboBox()
+            self._customizePallet = QPushButton("Customize Pallet")
+
+            # Holiday groupings
+            self._holidayGrouping = QGroupBox("Application Colors Based on Holiday")
+            self._holidayLayout = QVBoxLayout()
+            self._colorBasedOnDate = QCheckBox("Default color pallet to nearest holiday?")
+            self._editHolidays = QPushButton("Edit Holiday Calendar")
+            #self._editHolidays.connect(QDialog) ## TODO:  Implement connected behavior.
+            self._holidayLayout.addWidget(self._colorBasedOnDate)
+            self._holidayLayout.addWidget(self._editHolidays)
+            self._holidayGrouping.setLayout(self._holidayLayout)
+
+            # Default project path
+            self._defaultPathGroupBox = QGroupBox("Default Project Path")
+            self._defaultPathLayout = QHBoxLayout()
+            self._defaultPath = QLineEdit()
+            self._defaultPath.setDisabled(True)
+            self._defaultPathButton = QPushButton("Browse")
+            self._defaultPathLayout.addWidget(self._defaultPath)
+            self._defaultPathLayout.addWidget(self._defaultPathButton)
+            self._defaultPathGroupBox.setLayout(self._defaultPathLayout)
+
+            self._forcePalletGrouping = QGroupBox("Manually Select Pallet")
+            self._forcePalletLayout = QVBoxLayout()
+            self._forcePalletLayout.addWidget(self._forcePallet)
+            self._forcePalletLayout.addWidget(self._customizePallet)
+            self._forcePalletGrouping.setLayout(self._forcePalletLayout)
+
+            # Pallet control (import/export)
+            self._importPallet = QPushButton("Import Pallet")
+            self._exportPallet = QPushButton("Export Pallet")
+            self._importExportGrouping = QGroupBox("Import/Export Color Pallets")
+            self._importExportLayout = QHBoxLayout()
+            self._importExportLayout.addWidget(self._importPallet)
+            self._importExportLayout.addWidget(self._exportPallet)
+            self._importExportLayout.addStretch()
+            self._importExportGrouping.setLayout(self._importExportLayout)
+
+            # Add to the General Display grid
+            self._generalGrid.addWidget(self._holidayGrouping)
+            self._generalGrid.addWidget(self._forcePalletGrouping)
+            self._generalGrid.addWidget(self._importExportGrouping)
+            self._generalGrid.addWidget(self._defaultPathGroupBox)
+
+            self.setLayout(self._generalGrid)
+
+    class CommunicationsViewWidget(QWidget):
+            '''CommunicatiosViewWidget falls under the exclusive parent class of
+            ApplicationSettingsWindow and is a container for the Communication Settings.'''
+            def __init__(self, *args, **kwargs):
+                QWidget.__init__(self)
+                # General form/page
+                # Create all the options/widgets
+                self._generalGrid = QVBoxLayout()
+                self._testLabel = QLabel("Testing this out...")
+
+                self._tabWidget = QTabWidget()
+
+                self._tabWidget.addTab(self.DevicesTab(), "Devices")
+                self._tabWidget.addTab(self.EmailTab(), "Email")
+                self._tabWidget.addTab(self.BroadcastTab(), "Broadcast")
+                self._tabWidget.addTab(self.ServerTab(), "Server")
+                self._tabWidget.addTab(self.ClientTab(), "Client")
+
+                self._generalGrid.addWidget(self._tabWidget)
+                self._generalGrid.addStretch()
+                self.setLayout(self._generalGrid)
+
+            class EmailTab(QWidget):
+                def __init__(self, *args, **kwargs):
+                    QWidget.__init__(self)
+                    self._generalGrid = QVBoxLayout()
+
+                    self._emailCheckBoxLayout = QVBoxLayout()
+
+                    self._emailOnSchedStartup = QCheckBox("Email on Scheduled Application Start-up")
+                    self._emailOnSongChange = QCheckBox("Email on Song Change")
+                    self._emailOnSchedClose = QCheckBox("Email on Scheduled Application Close")
+                    self._emailOnError = QCheckBox("Email on Error")
+                    self._customizeEmail = QPushButton("Customize Email")
+
+                    self._emailCheckBoxLayout.addWidget(self._emailOnSchedStartup)
+                    self._emailCheckBoxLayout.addWidget(self._emailOnSongChange)
+                    self._emailCheckBoxLayout.addWidget(self._emailOnSchedClose)
+                    self._emailCheckBoxLayout.addWidget(self._emailOnError)
+                    self._emailCheckBoxLayout.addWidget(self._customizeEmail)
+
+                    self._emailGroupBox = QGroupBox("Email On Event:")
+                    self._emailGroupBox.setLayout(self._emailCheckBoxLayout)
+
+
+                    self._fromLabel = QLabel("Send Email From This Address:")
+                    self._fromEmail = QLineEdit()
+                    self._toLabel  = QLabel("Send Email To This Address:")
+                    self._toEmail = QLineEdit()
+                    self._testEmail = QPushButton("Send Test Email")
+
+                    self._generalGrid.addWidget(self._emailGroupBox)
+                    self._generalGrid.addWidget(self._fromLabel)
+                    self._generalGrid.addWidget(self._fromEmail)
+                    self._generalGrid.addWidget(self._toLabel)
+                    self._generalGrid.addWidget(self._toEmail)
+                    self._generalGrid.addWidget(self._testEmail)
+
+                    self.setLayout(self._generalGrid)
+
+            class BroadcastTab(QWidget):
+                def __init__(self, *args, **kwargs):
+                    QWidget.__init__(self)
+
+            class ServerTab(QWidget):
+                def __init__(self, *args, **kwargs):
+                    QWidget.__init__(self)
+
+            class ClientTab(QWidget):
+                def __init__(self, *args, **kwargs):
+                    QWidget.__init__(self)
+
+            class DevicesTab(QWidget):
+                '''Sinlgeton for the devices tab of the settings menu.'''
+                def __init__(self, *args, **kwargs):
+                    QWidget.__init__(self)
+                    self._hboxLayout = QHBoxLayout()
+                    self._gridLayout = QGridLayout()
+                    self._vboxLayout = QVBoxLayout()
+
+                    self._commDeviceList = QListView()
+
+                    self._addDevicesBtn  = QPushButton("Add")
+                    self._removeDevicesBtn = QPushButton("Remove")
+                    self._editDevicesBtn = QPushButton("Edit")
+                    self._exportBtn = QPushButton("Export")
+                    self._importBtn = QPushButton("Import")
+
+                    self._vboxLayout.addWidget(self._addDevicesBtn)
+                    self._vboxLayout.addWidget(self._removeDevicesBtn)
+                    self._vboxLayout.addWidget(self._editDevicesBtn)
+                    self._vboxLayout.addWidget(self._importBtn)
+                    self._vboxLayout.addWidget(self._exportBtn)
+                    self._vboxLayout.addStretch()
+
+                    # Add List Box and Buttons to HBoxLayout
+                    self._hboxLayout.addWidget(self._commDeviceList)
+                    self._hboxLayout.addLayout(self._vboxLayout)
+                    self._hboxLayout.addStretch()
+                    # Add to the overall gridded layout
+                    self._gridLayout.addLayout(self._hboxLayout, 0, 0)
+
+                    self.setLayout(self._gridLayout)
+
+
+    class StartupViewWidget(QWidget):
+        def __init__(self):
+            QWidget.__init__(self)
+            # General form/page
+            # Create all the options/widgets
+            self._startupGrid = QVBoxLayout()
+
+            # Create the various widgets that get added to the Startup View
+            self._defaultProjectGrouping = QGroupBox("Default Project to Start-up")
+            self._defaultProjectHGrid = QHBoxLayout()
+            self._defaultProjectVGrid = QVBoxLayout()
+            self._defaultProject = QLineEdit()
+            self._defaultProject.setDisabled(True)
+            self._defaultProjectBrowseBtn = QPushButton("Select")
+            self._defaultProjectHGrid.addWidget(self._defaultProject)
+            self._defaultProjectHGrid.addWidget(self._defaultProjectBrowseBtn)
+            self._defaultProjectVGrid.addLayout(self._defaultProjectHGrid)
+            self._playOnStartCheckBox = QCheckBox("Start playing project on application load.")
+            self._defaultProjectVGrid.addWidget(self._playOnStartCheckBox)
+            self._defaultProjectGrouping.setLayout(self._defaultProjectVGrid)
+
+            # Toggle widgets GROUP BOX
+            self._widgetToggleGroupBox = QGroupBox("Toggle Widgets on Startup")
+            self._statusbarCheckBox = QCheckBox("Show Status Bar")
+            self._audiobarCheckBox = QCheckBox("Show Audio Bar")
+            self._visualWaveFormCheckBox = QCheckBox("Show Visual Wave Form")
+            self._widgetToggleLayout = QVBoxLayout()
+            self._widgetToggleLayout.addWidget(self._statusbarCheckBox)
+            self._widgetToggleLayout.addWidget(self._audiobarCheckBox)
+            self._widgetToggleLayout.addWidget(self._visualWaveFormCheckBox)
+            self._widgetToggleLayout.addStretch()
+
+            self._widgetToggleGroupBox.setLayout(self._widgetToggleLayout)
+
+            self._startupGrid.addWidget(self._defaultProjectGrouping)
+            self._startupGrid.addWidget(self._widgetToggleGroupBox)
+            self._startupGrid.addStretch()
+            self.setLayout(self._startupGrid)
+
+
+    def _toggleVisibility(self, current, previous, *args, **kwargs):
+        '''Toggle widget visibility.'''
+        currentTxt = current.text()
+
+        try:
+            previousTxt = previous.text()
+        except AttributeError:
+            # If previous is not available, set to none; this occurs on first
+            # creation.
+            previousTxt = None
+
+        try:
+            for item in self._allItemsInList:
+                if item == currentTxt:
+                    # Toggle visibility to TRUE for the widget we want to see.
+                    self._allSettingsWidgets.get(currentTxt, None).setHidden(False)
+                    continue
+                self._allSettingsWidgets.get(previousTxt, None).setHidden(True)
+        except AttributeError:
+            pass
+
+        return currentTxt, previousTxt
+
 
     def _showGeneral(self):
+        pass
+
+    def _hideGeneral(self):
+        self._colorBasedOnDate.setVisible(bool(False))
+        pass
+
+    def _showStartup(self):
+        pass
+
+    def _showAudio(self):
+        pass
+
+    def _showCommunications(self):
+        pass
+
+    def _showAdmin(self):
         pass
 
 if __name__ == '__main__':

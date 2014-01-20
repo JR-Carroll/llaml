@@ -89,7 +89,7 @@ class DrawWave(object):
         self.drawWave()
 
     def drawWave(self):
-        plot.figure(1, figsize=(13, 2))
+        plot.figure(1, figsize=(19, 1.5))
         plot.plot(self.signal[::480])
         plot.grid()
         plot.axis('off')
