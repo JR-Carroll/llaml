@@ -283,7 +283,7 @@ class ApplicationSettingsWindow(QDialog):
             self._defaultPathLayout = QHBoxLayout()
             self._defaultPath = QLineEdit()
             self._defaultPath.setDisabled(True)
-            self._defaultPathButton = QPushButton("Browse")
+            self._defaultPathButton = QPushButton("Select")
             self._defaultPathLayout.addWidget(self._defaultPath)
             self._defaultPathLayout.addWidget(self._defaultPathButton)
             self._defaultPathGroupBox.setLayout(self._defaultPathLayout)

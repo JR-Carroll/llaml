@@ -28,14 +28,10 @@ class DrawAudioWaveForm(QWidget):
         self.width, self.height = None, None
         # Handler to parent container/widget.
         self._parent = parent
-        # Sample points to draw for polyline
-        self.pts = [[0,1], [5, 30], [200, 300]]
-        self.AudioImage = DrawWave()
-        self._rawData = self.AudioImage._bufferedIMG.getvalue()
-        self._rawIMG = QImage.fromData(self._rawData)
-        self.pixmap = QPixmap.fromImage(self._rawIMG)
         self.image = QLabel(self)
-        self.image.setPixmap(self.pixmap)
+        self.AudioImage = DrawWave()
+        self.AudioImage.drawWave()
+        self.setAudioImage()
 
     def setDimensions(self, width, height):
         '''Set widget dimensions.
@@ -44,22 +40,33 @@ class DrawAudioWaveForm(QWidget):
         parent widget resizes, new signals are emitted onto this method/handler
         and the widget redrawn.
         '''
-        self.width, self.height = width, height
+        self.width, self.height = (width-1), (height/8)
         self.resizeEvent()
 
     def resizeEvent(self, *event):
-        '''Respond to resize events and adjust the geometry of the widget.'''
-        self.scroll(20, 0)
-        # At the point of adjusting the geometry of the widget, this assumes that
-        # the waveform will occupy the top 1/8th of the available space, and has
-        # a width of one less than total (totalWidth - 1).
-        self.setGeometry(0, 0, (self.width-1), (self.height/8))
+        '''Respond to resize events and adjust the geometry of the widget.
+
+         At the point of adjusting the geometry of the widget, this assumes that
+         the waveform will occupy the top 1/8th of the available space, and has
+         a width of one less than total (totalWidth - 1).
+
+        '''
+        self.adjustAudioImage(self.width, self.height)
+        self.setGeometry(0, 0, self.width, self.height)
+
+    def setAudioImage(self):
+        self.pixmap = QPixmap.fromImage(QImage.fromData(self.AudioImage._bufferedIMG.getvalue()))
+
+    def adjustAudioImage(self, width=100, height=100):
+        self.image.adjustSize()
+        self.scaledPixmap = self.pixmap.scaled(width, height)
+        self.image.setPixmap(self.scaledPixmap)
 
     def paintEvent(self, event):
         '''Draw the waveform.'''
         canvas = QPainter()
         canvas.begin(self)
-        canvas.setBrush(Qt.green)
+        canvas.setBrush(Qt.red)
         canvas.drawRect(event.rect())
         canvas.setPen(Qt.red)
         #self.drawWaveAudio(canvas)
@@ -73,26 +80,46 @@ class DrawAudioWaveForm(QWidget):
 
 
 class DrawWave(object):
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        '''Constructor of the DrawWave class.
+
+        Responsible for taking WAVE data and turning it into a PNG that is then
+        passed to a buffer object.  This buffer object can then be read from for
+        the purposes of redrawing wavedata (waveform).
+        '''
+        # mapped quality values
+        self._quality = {'raw': 1,
+                         'low': 800,
+                         'med': 500,
+                         'high': 200}
+
+        # open the wave file.
         self.openedWave = wave.open('new.wav', 'r')
         self.signal = self.openedWave.readframes(-1)
+        # convert binary data to an array of int's
         self.signal = numpy.fromstring(self.signal, 'Int16')
+        # retrieve the framerate (from the wave header?)
         self.framerate = self.openedWave.getframerate()
+        # create a stringio buffer object to store everything.
         self._bufferedIMG = StringIO.StringIO()
-        self.otherStuff()
-        # Create a buffer for the PNG image data from matplotlib.
 
-    def otherStuff(self):
-        self.Time = numpy.linspace(0,
-                                   len(self.signal)/self.framerate,
-                                   num=len(self.signal))
-        self.drawWave()
+    #def otherStuff(self):
+        #self.time = numpy.linspace(0, len(self.signal)/self.framerate,
+                                   #num=len(self.signal))
 
-    def drawWave(self):
-        plot.figure(1, figsize=(19, 1.5))
-        plot.plot(self.signal[::480])
-        plot.grid()
+    def drawWave(self, quality='low', width=20, height=5):
+        '''Plots the waveform, derived from the audio data.
+
+        Args:
+            quality: render quality of wavedata either 'raw', 'low', 'med', or 'high'.
+            width:  the width of the graph as measured in inches.
+            height: the height of the graph as measured in inches.
+        '''
+        plot.figure(1, figsize=(width, height))
+        # retrieves the wavedata based on the quality setting.  Default is 'high'.
+        plot.plot(self.signal[::self._quality.get(quality, 'high')])
         plot.axis('off')
+        plot.grid(True)
         plot.savefig(self._bufferedIMG, format='png')
         # After sending img data to buffer, seek to 0.
         self._bufferedIMG.seek(0)
