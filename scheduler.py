@@ -12,8 +12,19 @@ from PySide.QtGui import *
 class ScheduleView(QDialog):
     def __init__(self):
         super(ScheduleView, self).__init__()
+        header = ['Timez', 'Program/Song', 'Length']
+        data = [('12AM', 'Too Sexy for my shirt', '4min'),
+                ('12AM', 'Dancing in the street', '3min'),
+                ('12AM', 'Too many candies', '8min'),
+                ('12AM', 'Crazy Mothers\' Truckin\'', '18min'),
+                ('12AM', 'Everyday is a hard day', '2min'),
+                ('12AM', 'I hate this life', '9min'),
+                ('12AM', 'Drama for your momma', '5min')]
         self.setWindowTitle("Schedule Viewer")
-        self.layout = QVBoxLayout()
+        self.generalLayout = QHBoxLayout()
+        self.generalLayout.setSizeConstraint(self.generalLayout.SetFixedSize)
+        self.vertLayout = QVBoxLayout()
+        self.vertLayout.setSizeConstraint(QLayout.SetFixedSize)
 
         # Add calendar to the dialog
         self.calendar = QCalendarWidget()
@@ -26,34 +37,39 @@ class ScheduleView(QDialog):
         self.projectSelect = QLineEdit()
         self.programSelect = QComboBox()
 
-        self.layout.addWidget(self.calendar)
-        self.layout.addWidget(self.eventName)
-        self.layout.addWidget(self.timeStart)
-        self.layout.addWidget(self.stopOnSong)
-        self.layout.addWidget(self.selectStop)
-        self.layout.addWidget(self.timeEnd)
-        self.layout.addWidget(self.projectSelect)
-        self.layout.addWidget(self.programSelect)
+        self.vertLayout.addWidget(self.calendar)
+        self.vertLayout.addWidget(self.eventName)
+        self.vertLayout.addWidget(self.timeStart)
+        self.vertLayout.addWidget(self.stopOnSong)
+        self.vertLayout.addWidget(self.selectStop)
+        self.vertLayout.addWidget(self.timeEnd)
+        self.vertLayout.addWidget(self.projectSelect)
+        self.vertLayout.addWidget(self.programSelect)
+        self.vertLayout.addStretch()
 
-        self._dailyDataforCalendar = CalendarTimeSlots()
+        self._dailyDataforCalendar = CalendarTimeSlots(self, data, header)
         self.table = QTableView()
-        self.table.setShowGrid(True)
+        self.table.setModel(self._dailyDataforCalendar)
+        self.table.setShowGrid(False)
+        self.table.setFixedWidth(550)
 
-        self.layout.addWidget(self.table)
-        self.setLayout(self.layout)
+        self.generalLayout.addLayout(self.vertLayout)
+        self.generalLayout.addSpacing(10)
+        self.generalLayout.addWidget(self.table)
+        self.setLayout(self.generalLayout)
         self.exec_()
 
 
 class CalendarTimeSlots(QAbstractTableModel):
     def __init__(self, parent, data, header, *args, **kwargs):
-        super(CalendarTimeSlots, self).__init__(self, parent, *args, **kwargs)
+        QAbstractTableModel.__init__(self, parent, *args, **kwargs)
         self.dailyData = data
         self.header = header
 
-    def columnCount(self):
+    def columnCount(self, parent):
         return len(self.dailyData)
 
-    def rowCount(self):
+    def rowCount(self, parent):
         return len(self.header)
 
     def data(self, index, role):
@@ -62,12 +78,33 @@ class CalendarTimeSlots(QAbstractTableModel):
         elif role != Qt.DisplayRole:
             _val = None
         else:
-            _val =  self.dailyData[index.row()][index.column()]
+            if index.column() < len(self.header):
+                _val =  self.dailyData[index.row()][index.column()]
+            else:
+                _val = None
         return _val
 
     def headerData(self, column, orientiation, role):
-        if orientiation == Qt.Horizontal and role == Qt.DisplayRole:
-            _val = self.header[column]
+        if orientiation == Qt.Horizontal and role == Qt.DisplayRole and column < len(self.header):
+            _val = self.header[column-1]
         else:
             _val = None
         return _val
+
+    def sort(self, column, order):
+        self.emit(SIGNAL('layoutAboutToBeChanged()'))
+        self.sortedList = sorted(self.sortedList, key=operator.intemgetter(col))
+        if order == Qt.DescendingOrder:
+            self.sortedList.reverse()
+        self.emit(SIGNAL('layoutChanged()'))
+
+header = ['Time', 'Program/Song', 'Length']
+data = [('12AM', 'Too Sexy for my shirt', '4min'),
+        ('12AM', 'Dancing in the street', '3min'),
+        ('12AM', 'Too many candies', '8min'),
+        ('12AM', 'Crazy Mothers\' Truckin\'', '18min'),
+        ('12AM', 'Everyday is a hard day', '2min'),
+        ('12AM', 'I hate this life', '9min'),
+        ('12AM', 'Drama for your momma', '5min')]
+
+

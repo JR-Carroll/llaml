@@ -120,6 +120,7 @@ class DrawWave(object):
         plot.plot(self.signal[::self._quality.get(quality, 'high')])
         plot.axis('off')
         plot.grid(True)
-        plot.savefig(self._bufferedIMG, format='png')
+        plot.tight_layout()
+        plot.savefig(self._bufferedIMG, pad_inches=0, format='png', bbox_inches='tight')
         # After sending img data to buffer, seek to 0.
         self._bufferedIMG.seek(0)
