@@ -12,14 +12,14 @@ from PySide.QtGui import *
 class ScheduleView(QDialog):
     def __init__(self):
         super(ScheduleView, self).__init__()
-        header = ['Timez', 'Program/Song', 'Length']
-        data = [('12AM', 'Too Sexy for my shirt', '4min'),
-                ('12AM', 'Dancing in the street', '3min'),
-                ('12AM', 'Too many candies', '8min'),
-                ('12AM', 'Crazy Mothers\' Truckin\'', '18min'),
-                ('12AM', 'Everyday is a hard day', '2min'),
-                ('12AM', 'I hate this life', '9min'),
-                ('12AM', 'Drama for your momma', '5min')]
+        header = ['Timez', 'Program/Song', 'Length', 'test']
+        data = [('12AM', 'Too Sexy for my shirt', '4min', 'test'),
+                ('12AM', 'Dancing in the street', '3min', 'tst'),
+                ('12AM', 'Too many candies', '8min', 'test'),
+                ('12AM', 'Crazy Mothers Truckin', '18min', 'tst'),
+                ('12AM', 'Everyday is a hard day', '2min', 'test'),
+                ('12AM', 'I hate this life', '9min', 'test'),
+                ('12AM', 'Drama for your momma', '5min', 'test')]
         self.setWindowTitle("Schedule Viewer")
         self.generalLayout = QHBoxLayout()
         self.generalLayout.setSizeConstraint(self.generalLayout.SetFixedSize)
@@ -67,10 +67,10 @@ class CalendarTimeSlots(QAbstractTableModel):
         self.header = header
 
     def columnCount(self, parent):
-        return len(self.dailyData)
+        return len(self.header)
 
     def rowCount(self, parent):
-        return len(self.header)
+        return len(self.dailyData)
 
     def data(self, index, role):
         if not index.isValid():
@@ -86,7 +86,7 @@ class CalendarTimeSlots(QAbstractTableModel):
 
     def headerData(self, column, orientiation, role):
         if orientiation == Qt.Horizontal and role == Qt.DisplayRole and column < len(self.header):
-            _val = self.header[column-1]
+            _val = self.header[column]
         else:
             _val = None
         return _val
@@ -98,13 +98,13 @@ class CalendarTimeSlots(QAbstractTableModel):
             self.sortedList.reverse()
         self.emit(SIGNAL('layoutChanged()'))
 
-header = ['Time', 'Program/Song', 'Length']
-data = [('12AM', 'Too Sexy for my shirt', '4min'),
-        ('12AM', 'Dancing in the street', '3min'),
+header = ['Time', 'Program/Song', 'Length', 'test']
+data = [('10AM', 'Too Sexy for my shirt', '4min'),
+        ('11AM', 'Dancing in the street', '3min'),
         ('12AM', 'Too many candies', '8min'),
-        ('12AM', 'Crazy Mothers\' Truckin\'', '18min'),
-        ('12AM', 'Everyday is a hard day', '2min'),
-        ('12AM', 'I hate this life', '9min'),
-        ('12AM', 'Drama for your momma', '5min')]
+        ('13AM', 'Crazy Mothers Truckin', '18min'),
+        ('14AM', 'Everyday is a hard day', '2min'),
+        ('15AM', 'I hate this life', '9min'),
+        ('16AM', 'Drama for your momma', '5min')]
 
 

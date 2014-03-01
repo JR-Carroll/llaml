@@ -29,6 +29,7 @@ from programmgr import ProgramManager
 from scheduler import ScheduleView
 from settings import *
 from systemcheck import SystemTest
+from zonewidget import *
 
 
 # Create a Qt application
@@ -243,8 +244,15 @@ class MainWidget(QWidget):
         self.width = self.windowSize.width()
         self.height = self.windowSize.height()
         self.c = Communicate()
+        self.generalLayout = QVBoxLayout()
+        self.generalLayout.setContentsMargins(0, 0, 0, 0)
         # Nested waveform widget.
         self.waveform = DrawAudioWaveForm(self)
+        self.generalLayout.addWidget(self.waveform)
+        #self.zoneContainer = ZoneContainerWidget()
+        #self.generalLayout.addWidget(self.zoneContainer)
+        self.generalLayout.addStretch()
+        self.setLayout(self.generalLayout)
         self.c.updateWidget[int, int].connect(self.waveform.setDimensions)
 
     def paintEvent(self, event):
@@ -263,6 +271,7 @@ class MainWidget(QWidget):
         self.windowSize = self.size()
         self.height = self.windowSize.height()
         self.width = self.windowSize.width()
+        #self.waveform.setDimensions(self.width, self.height)
         self.c.updateWidget.emit(self.width, self.height)
 
 
@@ -270,7 +279,7 @@ class MainWidget(QWidget):
 font = QFont('Serif', 30)
 splash = QSplashScreen(_lightPM)
 splash.setFont(font)
-splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
+splash.showMessage("LLamL", Qt.AlignCenter, Qt.black)
 splash.show()
 
 # Create main application window.

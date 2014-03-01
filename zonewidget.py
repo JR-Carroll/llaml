@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #coding:utf-8
 '''
-  Author:   --<>
-  Purpose:
+  Author:   Justin Carroll--<jrc.csus@gmail.com>
+  Purpose:  Zone Widget Support for LLamL.
   Created: 12/10/2013
 '''
 
@@ -10,24 +10,25 @@ from PySide.QtCore import *
 from PySide.QtGui import *
 
 
-class ZoneWidget(QWidget):
+class ZoneContainerWidget(QScrollArea):
     '''Main zone widget - holds all other widgets.'''
-    def __init__(self, parent, *args, **kwargs):
-        super(ZoneWidget, self).__init__(parent)
-        self.zoneNumber = None
-        self.zoneName = "Zone"
+    def __init__(self, *args, **kwargs):
+        super(ZoneContainerWidget, self).__init__()
+        self.setWidget(QPushButton("Test"))
 
 
-class ZoneIcon(QWidget):
+class ZoneWidget(QWidget):
+    '''Each instance represents individual zones/channels.'''
     def __init__(self, parent, *args, **kwargs):
         super(ZoneIcon, self).__init__(parent)
         self.zoneColor = None
         self.zoneImage = None
 
 
-class ZoneIcon(QWidget):
+class ZoneWidgetLabel(QWidget):
+    '''Container for the Zone Widget Icon, Label, and Color.'''
     def __init__(self, parent, *args, **kwargs):
-        super(ZoneIcon, self).__init__(parent)
+        super(ZoneWidgetIcon, self).__init__(parent)
         self.zoneColor = None
         self.zoneImage = None
 
