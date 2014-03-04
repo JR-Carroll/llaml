@@ -30,7 +30,7 @@ class AboutDialog(QDialog):
         to manage the synchronization of lights and music.
         </p>
         <p>
-        <b>Creator</b>: J. R. Carroll, 2013
+        <b>Creator</b>: J. R. Carroll, 2014
         <br /><b>Email</b>:  <a href="mailto:jrc.csus@gmail.com">jrc.csus@gmail.com</a>
         </p>
         """

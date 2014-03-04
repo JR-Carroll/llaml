@@ -2,7 +2,7 @@
 #coding:utf-8
 """
   Author:   Justin Carroll--<jrcarroll@jrcresearch.net>
-  Purpose:  LLamL Schedule Creater
+  Purpose:  LLaML Schedule Creater
   Created: 12/09/2013
 """
 

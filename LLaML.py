@@ -87,8 +87,8 @@ class ParentWindowMgr(QMainWindow):
         _programManagerProjectM.setStatusTip("Open the Program Manager")
         _programManagerProjectM.triggered.connect(ProgramManager)
         # Separator
-        _editSettingsProjectM = QAction('Settings', self)
-        _editSettingsProjectM.setStatusTip("Edit settings")
+        _editSettingsProjectM = QAction('Program Settings', self)
+        _editSettingsProjectM.setStatusTip("Edit the current program settings")
         _editSettingsProjectM.triggered.connect(ProgramSettingsWindow)
 
         # Audio Menu
@@ -153,13 +153,13 @@ class ParentWindowMgr(QMainWindow):
         fileMenu = menubar.addMenu('&File')
         fileMenu.addAction(_newProjectFileM)
         fileMenu.addAction(_openFileM)
-        fileMenu.addAction(_closeProjectFileM)
-        # XXX:  Dummy-place holder code for now.
+        # XXX: Dummy-place holder code for now.
         _recentSubmenu.addAction(_recentProject1ListFileM)
         _recentSubmenu.addAction(_recentProject2ListFileM)
         # XXX: END DUMMY CODE
-
         fileMenu.addMenu(_recentSubmenu)
+        fileMenu.addAction(_closeProjectFileM)
+
         fileMenu.addSeparator()
         fileMenu.addAction(_preferences)
         fileMenu.addSeparator()
@@ -279,7 +279,7 @@ class MainWidget(QWidget):
 font = QFont('Serif', 30)
 splash = QSplashScreen(_lightPM)
 splash.setFont(font)
-splash.showMessage("LLamL", Qt.AlignCenter, Qt.black)
+splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
 splash.show()
 
 # Create main application window.

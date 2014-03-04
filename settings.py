@@ -110,60 +110,59 @@ class ProgramSettingsWindow(QDialog):
 class ApplicationSettingsWindow(QDialog):
 
     def __init__(self):
-            super(ApplicationSettingsWindow, self).__init__()
-            self.setFixedSize(self.size())
-            self.setWindowTitle("Application Settings")
-            self._hbox = QHBoxLayout()
-            # Add a layout to the main settings window.
-            self._vbox = QVBoxLayout()
+        super(ApplicationSettingsWindow, self).__init__()
+        self.setFixedSize(self.size())
+        self.setWindowTitle("LLaML Settings")
+        self._hbox = QHBoxLayout()
+        # Add a layout to the main settings window.
+        self._vbox = QVBoxLayout()
 
-            # Add a listview widget that will have a listing of all the child menus.
-            self.listView = self.ListViewWidget()
-            self.listView.currentItemChanged.connect(self._toggleVisibility)
-            self.listView.setMaximumWidth(150)
+        # Add a listview widget that will have a listing of all the child menus.
+        self.listView = self.ListViewWidget()
+        self.listView.currentItemChanged.connect(self._toggleVisibility)
+        self.listView.setMaximumWidth(150)
 
-            self.generalView = self.GeneralViewWidget()
-            self.startupView = self.StartupViewWidget()
-            self.audioView = self.AudioViewWidget()
-            self.commView = self.CommunicationsViewWidget()
-            self.adminView = self.AdministrationViewWidget()
+        self.generalView = self.GeneralViewWidget()
+        self.startupView = self.StartupViewWidget()
+        self.audioView = self.AudioViewWidget()
+        self.commView = self.CommunicationsViewWidget()
+        self.adminView = self.AdministrationViewWidget()
 
-            self.startupView.setHidden(True)
-            self.audioView.setHidden(True)
-            self.commView.setHidden(True)
-            self.adminView.setHidden(True)
+        self.startupView.setHidden(True)
+        self.audioView.setHidden(True)
+        self.commView.setHidden(True)
+        self.adminView.setHidden(True)
 
-            self._save = QPushButton("Save")
-            self._cancel = QPushButton("Cancel")
+        self._save = QPushButton("Save")
+        self._cancel = QPushButton("Cancel")
 
-            self._allSettingsWidgets = {'General': self.generalView,
-                                        'Start-up': self.startupView,
-                                        'Audio': self.audioView,
-                                        'Communications': self.commView,
-                                        'Administration': self.adminView}
+        self._allSettingsWidgets = {'General': self.generalView,
+                                    'Start-up': self.startupView,
+                                    'Audio': self.audioView,
+                                    'Communications': self.commView,
+                                    'Administration': self.adminView}
 
-            self._allItemsInList = self.listView._buildListViewItems()
+        self._allItemsInList = self.listView._buildListViewItems()
 
-            self._hbox.addWidget(self.listView)
+        self._hbox.addWidget(self.listView)
 
-            self._vbox.addWidget(self.generalView)
-            self._vbox.addWidget(self.startupView)
-            self._vbox.addWidget(self.audioView)
-            self._vbox.addWidget(self.commView)
-            self._vbox.addWidget(self.adminView)
-            self._vbox.addStretch()
+        self._vbox.addWidget(self.generalView)
+        self._vbox.addWidget(self.startupView)
+        self._vbox.addWidget(self.audioView)
+        self._vbox.addWidget(self.commView)
+        self._vbox.addWidget(self.adminView)
+        self._vbox.addStrut(400)
 
-            self._commitCancelLayout = QHBoxLayout()
-            self._commitCancelLayout.addStretch()
-            self._commitCancelLayout.addWidget(self._cancel)
-            self._commitCancelLayout.addWidget(self._save)
+        self._commitCancelLayout = QHBoxLayout()
+        self._commitCancelLayout.addStretch()
+        self._commitCancelLayout.addWidget(self._cancel)
+        self._commitCancelLayout.addWidget(self._save)
 
-            self._vbox.addLayout(self._commitCancelLayout)
-
-            self._hbox.addLayout(self._vbox)
-            self._hbox.addStretch()
-            self.setLayout(self._hbox)
-            self.exec_()
+        self._hbox.addLayout(self._vbox)
+        self._hbox.addStretch()
+        self._vbox.addLayout(self._commitCancelLayout)
+        self.setLayout(self._hbox)
+        self.exec_()
 
 
     class ListViewWidget(QListWidget):
@@ -215,17 +214,18 @@ class ApplicationSettingsWindow(QDialog):
                                                  "performance.")
             self._visualSampleRateLabel.setWordWrap(True)
 
-            self._visualSampleRate.addItem("Raw Sample Rate")
-            self._visualSampleRate.addItem("Low Sample Rate")
-            self._visualSampleRate.addItem("Med Sample Rate")
-            self._visualSampleRate.addItem("High Sample Rate")
+            self._visualSampleRate.addItem("Raw Sample Rate (unknown performance)")
+            self._visualSampleRate.addItem("Low Sample Rate (best performance)")
+            self._visualSampleRate.addItem("Med Sample Rate ('meh' performance)")
+            self._visualSampleRate.addItem("High Sample Rate (worst performance)")
 
             self._cacheWaveForms = QCheckBox("Cache Waveforms (redraw only on demand)")
+            self._cacheWaveForms.setChecked(True)
+
             self._audioLevelLabel = QLabel("Default Audio Level on Startup")
             self._audiolevelSlider = QSlider(Qt.Horizontal)
 
             self._generalVGrid = QVBoxLayout()
-
             self._generalVGrid.addWidget(self._visualSampleRateLabel)
             self._generalVGrid.addWidget(self._visualSampleRate)
             self._generalVGrid.addWidget(self._cacheWaveForms)
@@ -245,7 +245,6 @@ class ApplicationSettingsWindow(QDialog):
             self._logDebug = QCheckBox("Create log/debug-mode")
 
             self._generalVGrid = QVBoxLayout()
-
             self._generalVGrid.addWidget(self._importBtn)
             self._generalVGrid.addWidget(self._exportBtn)
             self._generalVGrid.addWidget(self._restoreBtn)
@@ -266,7 +265,7 @@ class ApplicationSettingsWindow(QDialog):
 
             # Force pallet/colors select box.
             self._forcePallet = QComboBox()
-            self._customizePallet = QPushButton("Customize Pallet")
+            self._customizePallet = QPushButton("Edit Pallets")
 
             # Holiday groupings
             self._holidayGrouping = QGroupBox("Application Colors Based on Holiday")
@@ -294,20 +293,9 @@ class ApplicationSettingsWindow(QDialog):
             self._forcePalletLayout.addWidget(self._customizePallet)
             self._forcePalletGrouping.setLayout(self._forcePalletLayout)
 
-            # Pallet control (import/export)
-            self._importPallet = QPushButton("Import Pallet")
-            self._exportPallet = QPushButton("Export Pallet")
-            self._importExportGrouping = QGroupBox("Import/Export Color Pallets")
-            self._importExportLayout = QHBoxLayout()
-            self._importExportLayout.addWidget(self._importPallet)
-            self._importExportLayout.addWidget(self._exportPallet)
-            self._importExportLayout.addStretch()
-            self._importExportGrouping.setLayout(self._importExportLayout)
-
             # Add to the General Display grid
             self._generalGrid.addWidget(self._holidayGrouping)
             self._generalGrid.addWidget(self._forcePalletGrouping)
-            self._generalGrid.addWidget(self._importExportGrouping)
             self._generalGrid.addWidget(self._defaultPathGroupBox)
 
             self.setLayout(self._generalGrid)
@@ -326,12 +314,10 @@ class ApplicationSettingsWindow(QDialog):
 
                 self._tabWidget.addTab(self.DevicesTab(), "Devices")
                 self._tabWidget.addTab(self.EmailTab(), "Email")
-                self._tabWidget.addTab(self.BroadcastTab(), "Broadcast")
                 self._tabWidget.addTab(self.ServerTab(), "Server")
                 self._tabWidget.addTab(self.ClientTab(), "Client")
 
                 self._generalGrid.addWidget(self._tabWidget)
-                self._generalGrid.addStretch()
                 self.setLayout(self._generalGrid)
 
             class EmailTab(QWidget):
@@ -372,13 +358,98 @@ class ApplicationSettingsWindow(QDialog):
 
                     self.setLayout(self._generalGrid)
 
-            class BroadcastTab(QWidget):
-                def __init__(self, *args, **kwargs):
-                    QWidget.__init__(self)
 
             class ServerTab(QWidget):
                 def __init__(self, *args, **kwargs):
                     QWidget.__init__(self)
+                    # Basic layout
+                    self._generalLayout = QVBoxLayout()
+                    # The Server is initialized to off to begin with
+                    self.serverStatus = 0
+                    self._serverStatusDict = {0 : "UNKNOWN",
+                                              1 : "OFF",
+                                              2 : "ON",
+                                              3 : "ERROR/SEE LOG"}
+                    self.serverStatusTxt = self._serverStatusDict.get(\
+                        self.serverStatus,
+                        "UNKNOWN")
+
+                    self.serverIP = "UNKNOWN"
+                    self.serverPort = "UNKNOWN"
+                    self.serverMDNS = "UNKNOWN"
+
+                    serverButtonsLayout = self._serverButtons()
+                    serverInfoGBox = self._serverInfo()
+
+                    # Add elements to the layout and set layout as default
+                    self._generalLayout.addLayout(serverButtonsLayout)
+                    self._generalLayout.addWidget(serverInfoGBox)
+                    self._generalLayout.addStretch()
+                    self.setLayout(self._generalLayout)
+
+                def _serverInfo(self):
+                    '''Create/manage the server info grouping box'''
+                    grouping = QGroupBox("Server Details")
+                    layout = QGridLayout()
+
+                    IPTxt = QLabel("Server IP: ")
+                    PortTxt = QLabel("Port: ")
+                    MDNSTxt = QLabel("MDNS Name: ")
+                    StatusTxt = QLabel("Server Status: ")
+
+                    # Column 0, multi rows
+                    layout.addWidget(StatusTxt, 0, 0)
+                    layout.addWidget(IPTxt, 1, 0)
+                    layout.addWidget(PortTxt, 2, 0)
+                    layout.addWidget(MDNSTxt, 3, 0)
+
+                    # Column 1, multi rows
+                    layout.addWidget(QLabel(self.serverStatusTxt), 0, 1)
+                    layout.addWidget(QLabel(self.serverIP), 1, 1)
+                    layout.addWidget(QLabel(self.serverPort), 2, 1)
+                    layout.addWidget(QLabel(self.serverMDNS), 3, 1)
+                    grouping.setLayout(layout)
+                    return grouping
+
+                def _serverButtons(self):
+                    '''Create/manage the buttons at the top of the settings screen'''
+                    # Update the buttons
+                    self.serverStatusTxt = self._serverStatusDict.get(\
+                                            self.serverStatus,
+                                            "UNKNOWN")
+
+                    # Need various layouts to position all elements
+                    layoutVert = QVBoxLayout()
+                    layoutHor = QHBoxLayout()
+
+                    # The Server Start/Stop Button (also shows status)
+                    self.serverOnOffBtn = QPushButton(
+                        "Server Status {}".format(self.serverStatusTxt))
+                    self.serverOnOffBtn.setCheckable(True)
+
+                    # Buttons just below the Server Start/Stop
+                    self.serverSettingsBtn  = QPushButton("Server Settings")
+                    self.testServerBtn = QPushButton("Test Server")
+
+                    # Layout the buttons
+                    layoutHor.addWidget(self.serverSettingsBtn)
+                    layoutHor.addWidget(self.testServerBtn)
+
+                    layoutVert.addWidget(self.serverOnOffBtn)
+                    layoutVert.addLayout(layoutHor)
+                    return layoutVert
+
+
+                def changeServerStatus(self, status=0):
+                    '''
+                    Change the Server Status Button status, and change the button
+                    to notify users.
+
+                    TODO:  Not fully implemented yet -- not connected to the anything
+                    '''
+                    self.serverStatus = status
+                    return self.serverOnOffBtn.setText("Server Status: {0}".format(self.serverStatusTxt.get(
+                            self.serverStatus, "UNKNOWN")))
 
             class ClientTab(QWidget):
                 def __init__(self, *args, **kwargs):

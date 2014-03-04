@@ -2,7 +2,7 @@
 #coding:utf-8
 '''
   Author:   Justin Carroll--<jrc.csus@gmail.com>
-  Purpose:  Zone Widget Support for LLamL.
+  Purpose:  Zone Widget Support for LLaML.
   Created: 12/10/2013
 '''
 
