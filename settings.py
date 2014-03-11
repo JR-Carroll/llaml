@@ -455,6 +455,89 @@ class ApplicationSettingsWindow(QDialog):
                 def __init__(self, *args, **kwargs):
                     QWidget.__init__(self)
 
+                    # The local machine information
+                    self.thisAvahi = "NA"
+                    self.thisIP = "0.0.0.0"
+                    self.thisPort = 0
+
+                    # The target server information
+                    self.servUsername = None
+                    self.servPassword = None
+                    self.servIP = "0.0.0.0"
+                    self.servAvahi = "NA"
+                    self.servPort = 0
+
+                    self.serverInfoGroupBox = QGroupBox("Server Info")
+                    self.clientGeneralLayout = QVBoxLayout()
+                    self.serverColOne = QGridLayout()
+
+                    # Add Username text field
+                    _serverIPLbl = QLabel("Server IP:")
+                    self.servIP =  QLineEdit()
+                    self.serverColOne.addWidget(_serverIPLbl, 0, 0)
+                    self.serverColOne.addWidget(self.servIP, 0, 1)
+
+                    # Add Username text field
+                    _serverPort = QLabel("Server Port:")
+                    self.servPort =  QLineEdit()
+                    self.serverColOne.addWidget(_serverPort, 1, 0)
+                    self.serverColOne.addWidget(self.servPort, 1, 1)
+
+                    # Add Username text field
+                    _userLbl = QLabel("Username:")
+                    self.username =  QLineEdit()
+                    self.serverColOne.addWidget(_userLbl, 2, 0)
+                    self.serverColOne.addWidget(self.username, 2, 1)
+
+                    # Add Password text field
+                    _passwordLbl = QLabel("Password:")
+                    self.password = QLineEdit()
+                    self.password.setEchoMode(QLineEdit.Password)
+                    self.serverColOne.addWidget(_passwordLbl, 3, 0)
+                    self.serverColOne.addWidget(self.password, 3, 1)
+
+                    # Add "Connect" button
+                    self.connectBtn = QPushButton("Connect with Server")
+                    self.installCert = QPushButton("Certificate Management")
+
+                    self.serverColOne.addWidget(self.connectBtn, 4, 0)
+                    self.serverColOne.addWidget(self.installCert, 4, 1)
+
+                    self.serverInfoGroupBox.setLayout(self.serverColOne)
+                    self.clientGeneralLayout.addWidget(self.serverInfoGroupBox)
+
+                    self.commInfoGroupBox = QGroupBox("Test Communications")
+                    self.commVBoxMainLayout = QVBoxLayout()
+                    self.commHBoxLayout = QHBoxLayout()
+                    self.commVBoxLayout = QVBoxLayout()
+
+                    self._startComm = QPushButton("Start Test")
+                    self._stopComm = QPushButton("Stop Test")
+                    self._exportCommLog = QPushButton("Export Log")
+
+                    self._logDataTextField = QTextEdit()
+                    self._logDataTextField.setReadOnly(True)
+
+                    self.commHBoxLayout.addWidget(self._startComm)
+                    self.commHBoxLayout.addWidget(self._stopComm)
+
+                    self.commVBoxLayout.addLayout(self.commHBoxLayout)
+                    self.commVBoxLayout.addStretch()
+                    self.commVBoxLayout.addWidget(self._logDataTextField)
+                    self.commVBoxLayout.addWidget(self._exportCommLog)
+                    self.commVBoxLayout.addStretch()
+
+                    self.commVBoxMainLayout.addLayout(self.commHBoxLayout)
+                    self.commVBoxMainLayout.addLayout(self.commVBoxLayout)
+                    self.commVBoxMainLayout.addStretch()
+
+                    self.commInfoGroupBox.setLayout(self.commVBoxMainLayout)
+
+                    self.clientGeneralLayout.addWidget(self.commInfoGroupBox)
+                    self.clientGeneralLayout.addStretch()
+
+                    self.setLayout(self.clientGeneralLayout)
+
             class DevicesTab(QWidget):
                 '''Sinlgeton for the devices tab of the settings menu.'''
                 def __init__(self, *args, **kwargs):
