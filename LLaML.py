@@ -248,10 +248,14 @@ class MainWidget(QWidget):
         self.generalLayout.setContentsMargins(0, 0, 0, 0)
         # Nested waveform widget.
         self.waveform = DrawAudioWaveForm(self)
+        self.timeRuler = QCalendarWidget(self)
         self.generalLayout.addWidget(self.waveform)
-        #self.zoneContainer = ZoneContainerWidget()
-        #self.generalLayout.addWidget(self.zoneContainer)
-        self.generalLayout.addStretch()
+        #self.generalLayout.addWidget(self.timeRuler)
+
+        # Stretch factor added because stretching only goes so far!  Setting the
+        # factor to 5 allows it to be 5x the normal stretch space allowed.
+        self.generalLayout.addStretch(1)
+
         self.setLayout(self.generalLayout)
         self.c.updateWidget[int, int].connect(self.waveform.setDimensions)
 
@@ -260,7 +264,6 @@ class MainWidget(QWidget):
         canvas.begin(self)
         canvas.setBrush((QColor("#446699")))
         canvas.drawRect(event.rect())
-        canvas.setPen(Qt.red)
         canvas.end()
 
     def resizeEvent(self, event):
@@ -271,16 +274,23 @@ class MainWidget(QWidget):
         self.windowSize = self.size()
         self.height = self.windowSize.height()
         self.width = self.windowSize.width()
-        #self.waveform.setDimensions(self.width, self.height)
+        print("BAM ->", self.width, self.height)
+        v = self.generalLayout.update()
         self.c.updateWidget.emit(self.width, self.height)
+        print(v)
+        self.updateGeometry()
+        self.waveform.updateGeometry()
+        self.generalLayout.update()
+        #_tempWidget = self.generalLayout.takeAt(0)
+        #_tempWidget.widget().deleteLater()
 
 
 # Splash screen setup.
 font = QFont('Serif', 30)
-splash = QSplashScreen(_lightPM)
-splash.setFont(font)
-splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
-splash.show()
+#splash = QSplashScreen(_lightPM)
+#splash.setFont(font)
+#splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
+#splash.show()
 
 # Create main application window.
 LLaMLWindow = ParentWindowMgr()
@@ -289,7 +299,7 @@ LLaMLWindow = ParentWindowMgr()
 # Bring up the main application window after splash screen has closed.
 #
 # TODO:  Add window hint that user can close the splash screen.
-QTimer().singleShot(1000, splash.close)
+#QTimer().singleShot(1000, splash.close)
 QTimer().singleShot(1000, LLaMLWindow.showMaximized)
 
 # Enter Qt application main loop
