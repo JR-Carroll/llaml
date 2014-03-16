@@ -25,7 +25,7 @@ class DrawAudioWaveForm(QScrollArea):
     def __init__(self, parent, width=0, height=0):
         super(DrawAudioWaveForm, self).__init__()
         # Initialize width/height dimensions attribute.
-        self.width, self.height = 50, 50
+        self.width, self.height = 0, 0
 
         # Handler to parent container/widget.
         self._parent = parent
@@ -36,9 +36,6 @@ class DrawAudioWaveForm(QScrollArea):
 
         # Establish top widget
         self.image = QLabel(parent)
-        #self.image.setWidget
-
-        #self.image.setPixmap(self.pixmap.scaled(width, (height/8)))
 
         # Create a layout to start throwing stuff into
         self.generalLayout = QVBoxLayout()
@@ -54,11 +51,12 @@ class DrawAudioWaveForm(QScrollArea):
         and the widget redrawn.
         '''
         self._rawWidth, self._rawHeight = width, height
+
+        # adjust the height of the layout in addition to the height of the
+        # waveform widget
         self.width, self.height = width, (height/8)
-        self.scaledPixmap = self.pixmap.scaled(self.width, self.height)
-        self.image.setPixmap(self.scaledPixmap)
+        self.image.setPixmap(self.pixmap)
         self.image.setScaledContents(True)
-        self.image.resize(self.pixmap.size())
 
     def resizeEvent(self, *event):
         '''Respond to resize events and adjust the geometry of the widget.
@@ -68,16 +66,22 @@ class DrawAudioWaveForm(QScrollArea):
          a width of one less than total (totalWidth - 1).
 
         '''
-        self.setGeometry(0, 0, self.width, self.height)
+        # NOTE: all of the resizing events were removed because they werne't
+        # needed once a factor was added to the mainWidget (LLaML.py) with a
+        # addSpacing factor greater than 0.  If, after adding additional widgets,
+        # this starts to muck up, consider replacing various scaling calls here.
+        pass
 
     def _setAudioImage(self, data):
         return QPixmap.fromImage(QImage.fromData(data))
 
     #def paintEvent(self, event):
         #'''Draw the waveform.'''
+        #print(event)
         #canvas = QPainter()
         #canvas.begin(self)
         #canvas.setBrush(Qt.red)
+        #canvas.drawRect(event.rect())
         #canvas.drawRect(QRect(0, 0, self.width, self.height))
         #canvas.setPen(Qt.red)
         #canvas.end()
@@ -113,11 +117,7 @@ class AudioWaveFormDisplay(object):
         # create a stringio buffer object to store everything.
         self._bufferedIMG = StringIO.StringIO()
 
-    #def otherStuff(self):
-        #self.time = numpy.linspace(0, len(self.signal)/self.framerate,
-                                   #num=len(self.signal))
-
-    def _getDrawnWave(self, quality='low', width=20, height=5):
+    def _getDrawnWave(self, quality='low', width=50, height=20):
         '''Plots the waveform, derived from the audio data.
 
         Args:
@@ -127,12 +127,11 @@ class AudioWaveFormDisplay(object):
         '''
         plot.figure(1, figsize=(width, height))
         # retrieves the wavedata based on the quality setting.  Default is 'high'.
-        plot.plot(self.signal[::self._quality.get(quality, 'high')])
+        plot.plot(self.signal[::self._quality.get(quality, 'low')])
         plot.axis('off')
         plot.tight_layout()
-        #plot.subplots_adjust(right=1, left=.1)
         # TODO:  add in dpi control rather than point-skipping
-        plot.savefig(self._bufferedIMG, format='png', dpi=200, pad_inches=(-0.5), bbox_inches='tight')
+        plot.savefig(self._bufferedIMG, format='png', dpi=30, pad_inches=(-0.5), bbox_inches='tight')
         # After sending img data to buffer, seek to 0.
         self._bufferedIMG.seek(0)
         return self._bufferedIMG.getvalue()
