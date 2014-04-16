@@ -248,9 +248,9 @@ class MainWidget(QWidget):
         self.generalLayout.setContentsMargins(0, 0, 0, 0)
         # Nested waveform widget.
         self.waveform = DrawAudioWaveForm(self)
-        self.timeRuler = QCalendarWidget(self)
+        self.zoneTest = ZoneWidget()
         self.generalLayout.addWidget(self.waveform)
-        #self.generalLayout.addWidget(self.timeRuler)
+        self.generalLayout.addWidget(self.zoneTest)
 
         # Stretch factor added because stretching only goes so far!  Setting the
         # factor to 5 allows it to be 5x the normal stretch space allowed.
@@ -274,10 +274,8 @@ class MainWidget(QWidget):
         self.windowSize = self.size()
         self.height = self.windowSize.height()
         self.width = self.windowSize.width()
-        print("BAM ->", self.width, self.height)
         v = self.generalLayout.update()
         self.c.updateWidget.emit(self.width, self.height)
-        print(v)
         self.updateGeometry()
         self.waveform.updateGeometry()
         self.generalLayout.update()
