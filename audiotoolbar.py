@@ -5,6 +5,9 @@ from PySide.QtGui import *
 from PySide.QtCore import *
 from programmgr import ProgramManager
 from scheduler import ScheduleView
+import logging
+
+logging.debug("Attempting to load (wait for confirmation).")
 
 class AudioToolBar(QToolBar):
     '''
@@ -135,3 +138,5 @@ class SliderWidget(QWidget):
         self._layout.addWidget(self._sldMin)
         self._layout.addWidget(self.volumeSlider)
         self._layout.addWidget(self._sldMax)
+
+logging.debug("Successfully loaded.")

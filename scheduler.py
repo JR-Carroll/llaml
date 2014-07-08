@@ -6,6 +6,9 @@
   Created: 12/09/2013
 """
 
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
+
 from PySide.QtCore import *
 from PySide.QtGui import *
 
@@ -108,3 +111,4 @@ data = [('10AM', 'Too Sexy for my shirt', '4min'),
         ('16AM', 'Drama for your momma', '5min')]
 
 
+logging.debug("Successfully loaded.")

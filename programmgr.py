@@ -5,6 +5,8 @@
   Purpose: aefaefae
   Created: 12/08/2013
 """
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
 
 from PySide.QtCore import *
 from PySide.QtGui import *
@@ -70,3 +72,6 @@ class ProgramList(object):
         Reinitialize the class.'''
         self.__init__()
         return True
+
+
+logging.debug("Successfully loaded.")

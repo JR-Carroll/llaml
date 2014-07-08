@@ -5,6 +5,8 @@
   Purpose:
   Created: 12/08/2013
 """
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
 
 from PySide.QtCore import *
 from PySide.QtGui import *
@@ -135,3 +137,6 @@ class AudioWaveFormDisplay(object):
         # After sending img data to buffer, seek to 0.
         self._bufferedIMG.seek(0)
         return self._bufferedIMG.getvalue()
+
+
+logging.debug("Successfully loaded.")

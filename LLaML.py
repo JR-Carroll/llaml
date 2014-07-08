@@ -13,24 +13,43 @@ Color palette in use:
 PEH-GCA = Pokemon Exception Handling - Gotta Catch'um All
 """
 
-# Import PySide classes
+# Import print()
 from __future__ import print_function
+
+# Start logging - want this at the very top if possible.
+import llamllog
+
+# Import standard library modules
 import sys
 import time
+import logging
 
-from PySide.QtCore import *
-from PySide.QtGui import *
 
-from audiotoolbar import AudioToolBar
-from aboutdialog import AboutDialog
-from audiodisplay import *
-from audio import *
-from programmgr import ProgramManager
-from scheduler import ScheduleView
-from settings import *
-from systemcheck import SystemTest
-from zonewidget import *
+# Import PySide specific modules
+try:
+    from PySide.QtCore import *
+    # TODO Don't need this right now -- consider removing?
+    #from PySide.QtGui import *
+    logging.debug("PySide is installed and all PySide modules loaded")
+except ImportError:
+    logging.error("Attempted to load PySide, PySide is not installed or is " \
+                  "not on the path.  The application may not work correctly.")
 
+# Custom modules
+try:
+    logging.debug("** Attempting to load all custom modules... please wait... **")
+    from audiotoolbar import AudioToolBar
+    from aboutdialog import AboutDialog
+    from audiodisplay import *
+    from audio import *
+    from programmgr import ProgramManager
+    from scheduler import ScheduleView
+    from settings import *
+    from systemcheck import SystemTest
+    from zonewidget import *
+    logging.debug("** All custom modules loaded successfully! **")
+except ImportError:
+    logging.error("One or more of the modules was not found - check the dump for error.")
 
 # Create a Qt application
 app = QApplication(sys.argv)
@@ -267,7 +286,8 @@ class MainWidget(QWidget):
         canvas.end()
 
     def resizeEvent(self, event):
-        '''Respond to resize events and adjust geometry of children.
+        '''
+        Respond to resize events and adjust geometry of children.
 
         Add new child widget signal emitters to this method.
         '''

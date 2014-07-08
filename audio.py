@@ -5,6 +5,8 @@
   Purpose:
   Created: 12/08/2013
 """
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
 
 from PySide.phonon import *
 
@@ -63,4 +65,6 @@ class LoadAudioWAV(object):
 
         return paused
 
+
+logging.debug("Successfully loaded.")
 

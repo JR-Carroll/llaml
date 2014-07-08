@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #coding:utf-8
-"""
+'''
   Author:   --<J. R. Carroll>
   Purpose: Settings controller.
   Created: 12/09/2013
@@ -10,7 +10,10 @@
       - Recently used files
       - User settings
       -
-"""
+'''
+
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
 
 import cPickle
 import os
@@ -39,7 +42,8 @@ class ErrorApplicationPath(Exception):
     def __init__(self, msg):
         self.msg = msg
     def __str__(self):
-        return "While looking for a settings file, it was detected that the LLaML application does not exists in the expected path: {0}".format(self.msg)
+        return "While looking for a settings file, it was detected that the " \
+               "LLaML application does not exists in the expected path: {0}".format(self.msg)
 
 
 class ProjectSettingsFile(object):
@@ -657,3 +661,5 @@ class ApplicationSettingsWindow(QDialog):
 if __name__ == '__main__':
     # Not doing anything special here.
     pass
+
+logging.debug("Successfully loaded.")

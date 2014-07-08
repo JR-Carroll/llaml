@@ -6,11 +6,19 @@
   Created: 12/10/2013
 '''
 
+import logging
+logging.debug("Attempting to load (wait for confirmation)")
+
 from PySide.QtCore import *
 from PySide.QtGui import *
 
 class ZoneWidget(QScrollArea):
-    '''Each instance represents individual zones/channels.'''
+    '''
+    Each instance represents individual zones/channels.
+
+    This is the zone widget in it's proper form.  Everything is wrapped
+    up in here.
+    '''
     def __init__(self, *args, **kwargs):
         super(ZoneWidget, self).__init__()
         self.generalLayout = QVBoxLayout()
@@ -83,4 +91,4 @@ class ZoneInfoDialogWidget(QDialog):
         self.exec_()
 
 
-
+logging.debug("Successfully loaded.")

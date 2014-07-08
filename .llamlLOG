@@ -1,0 +1,613 @@
+2014-07-04 14:53:53,835 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 14:54:43,127 :: (INFO) llamllog	 :: Logging has started
+2014-07-04 14:54:43,201 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 14:56:20,135 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 14:56:20,159 :: (ERROR) dbgutils	 :: Attempted to load PySide, PySide is not installed or is not on the path.
+2014-07-04 14:57:19,184 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 14:57:19,207 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 15:02:33,717 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 15:02:33,739 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 15:02:33,740 :: (DEBUG) LLaML	 :: Attempting to load all custom modules... please wait...
+2014-07-04 15:02:33,794 :: (DEBUG) audiotoolbar	 :: Attempting to load (wait for confirmation).
+2014-07-04 15:02:33,795 :: (DEBUG) audiotoolbar	 :: Successfully loaded.
+2014-07-04 15:05:11,267 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 15:05:11,291 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 15:05:11,292 :: (DEBUG) LLaML	 :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:05:11,345 :: (DEBUG) audiotoolbar	 :: Attempting to load (wait for confirmation).
+2014-07-04 15:05:11,346 :: (DEBUG) audiotoolbar	 :: Successfully loaded.
+2014-07-04 15:05:11,911 :: (DEBUG) LLaML	 :: ** All custom modules loaded successfully! **
+2014-07-04 15:13:40,764 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 15:13:40,789 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 15:13:40,790 :: (DEBUG) LLaML	 :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:13:40,843 :: (DEBUG) programmgr	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:40,844 :: (DEBUG) programmgr	 :: Successfully loaded.
+2014-07-04 15:13:40,846 :: (DEBUG) scheduler	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:40,847 :: (DEBUG) scheduler	 :: Successfully loaded.
+2014-07-04 15:13:40,847 :: (DEBUG) audiotoolbar	 :: Attempting to load (wait for confirmation).
+2014-07-04 15:13:40,847 :: (DEBUG) audiotoolbar	 :: Successfully loaded.
+2014-07-04 15:13:40,849 :: (DEBUG) aboutdialog	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:40,885 :: (DEBUG) aboutdialog	 :: Successfully loaded.
+2014-07-04 15:13:40,887 :: (DEBUG) audiodisplay	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:41,414 :: (DEBUG) audiodisplay	 :: Successfully loaded.
+2014-07-04 15:13:41,416 :: (DEBUG) audio	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:41,428 :: (DEBUG) audio	 :: Successfully loaded.
+2014-07-04 15:13:41,435 :: (DEBUG) settings	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:41,436 :: (DEBUG) settings	 :: Successfully loaded.
+2014-07-04 15:13:41,438 :: (DEBUG) systemcheck	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:41,438 :: (DEBUG) systemcheck	 :: Successfully loaded.
+2014-07-04 15:13:41,440 :: (DEBUG) zonewidget	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:13:41,441 :: (DEBUG) zonewidget	 :: Successfully loaded.
+2014-07-04 15:13:41,441 :: (DEBUG) LLaML	 :: ** All custom modules loaded successfully! **
+2014-07-04 15:19:19,849 :: (INFO) llamllog	 :: Logging module has formally started
+2014-07-04 15:19:19,873 :: (DEBUG) LLaML	 :: PySide is installed and all PySide modules loaded
+2014-07-04 15:19:19,873 :: (DEBUG) LLaML	 :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:19:19,928 :: (DEBUG) programmgr	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:19,929 :: (DEBUG) programmgr	 :: Successfully loaded.
+2014-07-04 15:19:19,930 :: (DEBUG) scheduler	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:19,930 :: (DEBUG) scheduler	 :: Successfully loaded.
+2014-07-04 15:19:19,931 :: (DEBUG) audiotoolbar	 :: Attempting to load (wait for confirmation).
+2014-07-04 15:19:19,931 :: (DEBUG) audiotoolbar	 :: Successfully loaded.
+2014-07-04 15:19:19,934 :: (DEBUG) aboutdialog	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:19,970 :: (DEBUG) aboutdialog	 :: Successfully loaded.
+2014-07-04 15:19:19,971 :: (DEBUG) audiodisplay	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:20,489 :: (DEBUG) audiodisplay	 :: Successfully loaded.
+2014-07-04 15:19:20,490 :: (DEBUG) audio	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:20,503 :: (DEBUG) audio	 :: Successfully loaded.
+2014-07-04 15:19:20,504 :: (DEBUG) settings	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:20,505 :: (DEBUG) settings	 :: Successfully loaded.
+2014-07-04 15:19:20,506 :: (DEBUG) systemcheck	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:20,507 :: (DEBUG) systemcheck	 :: Successfully loaded.
+2014-07-04 15:19:20,508 :: (DEBUG) zonewidget	 :: Attempting to load (wait for confirmation)
+2014-07-04 15:19:20,509 :: (DEBUG) zonewidget	 :: Successfully loaded.
+2014-07-04 15:19:20,509 :: (DEBUG) LLaML	 :: ** All custom modules loaded successfully! **
+2014-07-04 15:19:30,161 :: (DEBUG) aboutdialog	 :: Opened developer information window.
+2014-07-04 15:19:30,377 :: (WARNING) aboutdialog	 :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:19:41,874 :: (WARNING) aboutdialog	 :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:19:42,936 :: (WARNING) aboutdialog	 :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:19:45,445 :: (WARNING) aboutdialog	 :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:19:45,854 :: (WARNING) aboutdialog	 :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:26:39,090 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:26:39,114 :: (DEBUG) LLaML :: PySide is installed and all PySide modules loaded
+2014-07-04 15:26:39,114 :: (DEBUG) LLaML :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:26:39,172 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,173 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:26:39,173 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,174 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:26:39,174 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:26:39,175 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:26:39,177 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,215 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:26:39,216 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,752 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:26:39,753 :: (DEBUG) audio :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,766 :: (DEBUG) audio :: Successfully loaded.
+2014-07-04 15:26:39,767 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,768 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:26:39,769 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,770 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:26:39,771 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:26:39,772 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:26:39,772 :: (DEBUG) LLaML :: ** All custom modules loaded successfully! **
+2014-07-04 15:26:48,082 :: (DEBUG) aboutdialog :: Opened developer information window.
+2014-07-04 15:26:48,299 :: (WARNING) aboutdialog :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:26:51,785 :: (WARNING) aboutdialog :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:26:52,791 :: (WARNING) aboutdialog :: User requested information from the debug dialog, but the the method they requested does not exists or isn't working.
+2014-07-04 15:30:07,002 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:30:07,026 :: (DEBUG) LLaML :: PySide is installed and all PySide modules loaded
+2014-07-04 15:30:07,026 :: (DEBUG) LLaML :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:30:07,083 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,084 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:30:07,085 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,085 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:30:07,086 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:30:07,086 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:30:07,089 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,125 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:30:07,126 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,645 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:30:07,646 :: (DEBUG) audio :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,659 :: (DEBUG) audio :: Successfully loaded.
+2014-07-04 15:30:07,661 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,662 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:30:07,663 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,664 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:30:07,665 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:07,665 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:30:07,666 :: (DEBUG) LLaML :: ** All custom modules loaded successfully! **
+2014-07-04 15:30:14,633 :: (DEBUG) aboutdialog :: Opened developer information window.
+2014-07-04 15:30:49,217 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:30:49,239 :: (DEBUG) LLaML :: PySide is installed and all PySide modules loaded
+2014-07-04 15:30:49,239 :: (DEBUG) LLaML :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:30:49,296 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,297 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:30:49,297 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,298 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:30:49,298 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:30:49,299 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:30:49,302 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,342 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:30:49,343 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,866 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:30:49,867 :: (DEBUG) audio :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,879 :: (DEBUG) audio :: Successfully loaded.
+2014-07-04 15:30:49,881 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,882 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:30:49,883 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,884 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:30:49,884 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:30:49,885 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:30:49,886 :: (DEBUG) LLaML :: ** All custom modules loaded successfully! **
+2014-07-04 15:31:02,670 :: (DEBUG) aboutdialog :: Opened developer information window.
+2014-07-04 15:31:29,041 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:31:29,064 :: (DEBUG) LLaML :: PySide is installed and all PySide modules loaded
+2014-07-04 15:31:29,065 :: (DEBUG) LLaML :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:31:29,123 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,125 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:31:29,125 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,126 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:31:29,126 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:31:29,127 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:31:29,129 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,169 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:31:29,169 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,692 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:31:29,693 :: (DEBUG) audio :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,705 :: (DEBUG) audio :: Successfully loaded.
+2014-07-04 15:31:29,707 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,708 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:31:29,709 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,709 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:31:29,710 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:31:29,711 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:31:29,712 :: (DEBUG) LLaML :: ** All custom modules loaded successfully! **
+2014-07-04 15:31:37,377 :: (DEBUG) aboutdialog :: Opened developer information window.
+2014-07-04 15:31:37,585 :: (WARNING) aboutdialog :: User requested "<PySide.QtGui.QListWidgetItem object at 0x7a9e050>" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:31:42,054 :: (WARNING) aboutdialog :: User requested "<PySide.QtGui.QListWidgetItem object at 0x7a9e050>" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:31:42,690 :: (WARNING) aboutdialog :: User requested "<PySide.QtGui.QListWidgetItem object at 0x7a9e050>" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:04,200 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:32:04,224 :: (DEBUG) LLaML :: PySide is installed and all PySide modules loaded
+2014-07-04 15:32:04,225 :: (DEBUG) LLaML :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:32:04,282 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,282 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:32:04,283 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,284 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:32:04,284 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:32:04,284 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:32:04,287 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,325 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:32:04,326 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,844 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:32:04,849 :: (DEBUG) audio :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,860 :: (DEBUG) audio :: Successfully loaded.
+2014-07-04 15:32:04,861 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,863 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:32:04,864 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,865 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:32:04,865 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:32:04,866 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:32:04,867 :: (DEBUG) LLaML :: ** All custom modules loaded successfully! **
+2014-07-04 15:32:11,349 :: (DEBUG) aboutdialog :: Opened developer information window.
+2014-07-04 15:32:11,566 :: (WARNING) aboutdialog :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:13,541 :: (WARNING) aboutdialog :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:15,925 :: (WARNING) aboutdialog :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:17,650 :: (WARNING) aboutdialog :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:18,712 :: (WARNING) aboutdialog :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:19,491 :: (WARNING) aboutdialog :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:20,243 :: (WARNING) aboutdialog :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:32:20,984 :: (WARNING) aboutdialog :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:37:12,021 :: (INFO) llamllog :: Logging module has formally started
+2014-07-04 15:37:12,044 :: (DEBUG) LLaML    :: PySide is installed and all PySide modules loaded
+2014-07-04 15:37:12,044 :: (DEBUG) LLaML    :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:37:12,101 :: (DEBUG) programmgr :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,102 :: (DEBUG) programmgr :: Successfully loaded.
+2014-07-04 15:37:12,102 :: (DEBUG) scheduler :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,103 :: (DEBUG) scheduler :: Successfully loaded.
+2014-07-04 15:37:12,103 :: (DEBUG) audiotoolbar :: Attempting to load (wait for confirmation).
+2014-07-04 15:37:12,104 :: (DEBUG) audiotoolbar :: Successfully loaded.
+2014-07-04 15:37:12,104 :: (DEBUG) aboutdialog :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,142 :: (DEBUG) aboutdialog :: Successfully loaded.
+2014-07-04 15:37:12,143 :: (DEBUG) audiodisplay :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,666 :: (DEBUG) audiodisplay :: Successfully loaded.
+2014-07-04 15:37:12,667 :: (DEBUG) audio    :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,680 :: (DEBUG) audio    :: Successfully loaded.
+2014-07-04 15:37:12,681 :: (DEBUG) settings :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,682 :: (DEBUG) settings :: Successfully loaded.
+2014-07-04 15:37:12,683 :: (DEBUG) systemcheck :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,684 :: (DEBUG) systemcheck :: Successfully loaded.
+2014-07-04 15:37:12,684 :: (DEBUG) zonewidget :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:12,685 :: (DEBUG) zonewidget :: Successfully loaded.
+2014-07-04 15:37:12,686 :: (DEBUG) LLaML    :: ** All custom modules loaded successfully! **
+2014-07-04 15:37:25,492 :: (INFO) llamllog        :: Logging module has formally started
+2014-07-04 15:37:25,515 :: (DEBUG) LLaML           :: PySide is installed and all PySide modules loaded
+2014-07-04 15:37:25,516 :: (DEBUG) LLaML           :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:37:25,572 :: (DEBUG) programmgr      :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:25,573 :: (DEBUG) programmgr      :: Successfully loaded.
+2014-07-04 15:37:25,573 :: (DEBUG) scheduler       :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:25,574 :: (DEBUG) scheduler       :: Successfully loaded.
+2014-07-04 15:37:25,574 :: (DEBUG) audiotoolbar    :: Attempting to load (wait for confirmation).
+2014-07-04 15:37:25,575 :: (DEBUG) audiotoolbar    :: Successfully loaded.
+2014-07-04 15:37:25,576 :: (DEBUG) aboutdialog     :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:25,613 :: (DEBUG) aboutdialog     :: Successfully loaded.
+2014-07-04 15:37:25,614 :: (DEBUG) audiodisplay    :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:26,144 :: (DEBUG) audiodisplay    :: Successfully loaded.
+2014-07-04 15:37:26,145 :: (DEBUG) audio           :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:26,158 :: (DEBUG) audio           :: Successfully loaded.
+2014-07-04 15:37:26,159 :: (DEBUG) settings        :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:26,160 :: (DEBUG) settings        :: Successfully loaded.
+2014-07-04 15:37:26,161 :: (DEBUG) systemcheck     :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:26,162 :: (DEBUG) systemcheck     :: Successfully loaded.
+2014-07-04 15:37:26,163 :: (DEBUG) zonewidget      :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:26,164 :: (DEBUG) zonewidget      :: Successfully loaded.
+2014-07-04 15:37:26,164 :: (DEBUG) LLaML           :: ** All custom modules loaded successfully! **
+2014-07-04 15:37:37,822 :: (DEBUG) aboutdialog     :: Opened developer information window.
+2014-07-04 15:37:38,082 :: (WARNING) aboutdialog     :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:37:52,442 :: (INFO) llamllog       :: Logging module has formally started
+2014-07-04 15:37:52,464 :: (DEBUG) LLaML          :: PySide is installed and all PySide modules loaded
+2014-07-04 15:37:52,465 :: (DEBUG) LLaML          :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:37:52,522 :: (DEBUG) programmgr     :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:52,523 :: (DEBUG) programmgr     :: Successfully loaded.
+2014-07-04 15:37:52,524 :: (DEBUG) scheduler      :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:52,524 :: (DEBUG) scheduler      :: Successfully loaded.
+2014-07-04 15:37:52,525 :: (DEBUG) audiotoolbar   :: Attempting to load (wait for confirmation).
+2014-07-04 15:37:52,525 :: (DEBUG) audiotoolbar   :: Successfully loaded.
+2014-07-04 15:37:52,526 :: (DEBUG) aboutdialog    :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:52,564 :: (DEBUG) aboutdialog    :: Successfully loaded.
+2014-07-04 15:37:52,565 :: (DEBUG) audiodisplay   :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:53,094 :: (DEBUG) audiodisplay   :: Successfully loaded.
+2014-07-04 15:37:53,096 :: (DEBUG) audio          :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:53,108 :: (DEBUG) audio          :: Successfully loaded.
+2014-07-04 15:37:53,109 :: (DEBUG) settings       :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:53,111 :: (DEBUG) settings       :: Successfully loaded.
+2014-07-04 15:37:53,111 :: (DEBUG) systemcheck    :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:53,112 :: (DEBUG) systemcheck    :: Successfully loaded.
+2014-07-04 15:37:53,113 :: (DEBUG) zonewidget     :: Attempting to load (wait for confirmation)
+2014-07-04 15:37:53,114 :: (DEBUG) zonewidget     :: Successfully loaded.
+2014-07-04 15:37:53,114 :: (DEBUG) LLaML          :: ** All custom modules loaded successfully! **
+2014-07-04 15:38:03,953 :: (DEBUG) aboutdialog    :: Opened developer information window.
+2014-07-04 15:38:04,206 :: (WARNING) aboutdialog    :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:38:44,947 :: (INFO) llamllog         :: Logging module has formally started
+2014-07-04 15:38:44,970 :: (DEBUG) LLaML            :: PySide is installed and all PySide modules loaded
+2014-07-04 15:38:44,970 :: (DEBUG) LLaML            :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:38:45,027 :: (DEBUG) programmgr       :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,028 :: (DEBUG) programmgr       :: Successfully loaded.
+2014-07-04 15:38:45,028 :: (DEBUG) scheduler        :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,029 :: (DEBUG) scheduler        :: Successfully loaded.
+2014-07-04 15:38:45,029 :: (DEBUG) audiotoolbar     :: Attempting to load (wait for confirmation).
+2014-07-04 15:38:45,030 :: (DEBUG) audiotoolbar     :: Successfully loaded.
+2014-07-04 15:38:45,030 :: (DEBUG) aboutdialog      :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,068 :: (DEBUG) aboutdialog      :: Successfully loaded.
+2014-07-04 15:38:45,069 :: (DEBUG) audiodisplay     :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,592 :: (DEBUG) audiodisplay     :: Successfully loaded.
+2014-07-04 15:38:45,593 :: (DEBUG) audio            :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,606 :: (DEBUG) audio            :: Successfully loaded.
+2014-07-04 15:38:45,607 :: (DEBUG) settings         :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,608 :: (DEBUG) settings         :: Successfully loaded.
+2014-07-04 15:38:45,610 :: (DEBUG) systemcheck      :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,610 :: (DEBUG) systemcheck      :: Successfully loaded.
+2014-07-04 15:38:45,611 :: (DEBUG) zonewidget       :: Attempting to load (wait for confirmation)
+2014-07-04 15:38:45,612 :: (DEBUG) zonewidget       :: Successfully loaded.
+2014-07-04 15:38:45,612 :: (DEBUG) LLaML            :: ** All custom modules loaded successfully! **
+2014-07-04 15:39:11,428 :: (INFO    ) llamllog         :: Logging module has formally started
+2014-07-04 15:39:11,452 :: (DEBUG   ) LLaML            :: PySide is installed and all PySide modules loaded
+2014-07-04 15:39:11,452 :: (DEBUG   ) LLaML            :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:39:11,508 :: (DEBUG   ) programmgr       :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:11,510 :: (DEBUG   ) programmgr       :: Successfully loaded.
+2014-07-04 15:39:11,510 :: (DEBUG   ) scheduler        :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:11,511 :: (DEBUG   ) scheduler        :: Successfully loaded.
+2014-07-04 15:39:11,511 :: (DEBUG   ) audiotoolbar     :: Attempting to load (wait for confirmation).
+2014-07-04 15:39:11,512 :: (DEBUG   ) audiotoolbar     :: Successfully loaded.
+2014-07-04 15:39:11,512 :: (DEBUG   ) aboutdialog      :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:11,548 :: (DEBUG   ) aboutdialog      :: Successfully loaded.
+2014-07-04 15:39:11,549 :: (DEBUG   ) audiodisplay     :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:12,071 :: (DEBUG   ) audiodisplay     :: Successfully loaded.
+2014-07-04 15:39:12,072 :: (DEBUG   ) audio            :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:12,084 :: (DEBUG   ) audio            :: Successfully loaded.
+2014-07-04 15:39:12,086 :: (DEBUG   ) settings         :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:12,087 :: (DEBUG   ) settings         :: Successfully loaded.
+2014-07-04 15:39:12,089 :: (DEBUG   ) systemcheck      :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:12,089 :: (DEBUG   ) systemcheck      :: Successfully loaded.
+2014-07-04 15:39:12,090 :: (DEBUG   ) zonewidget       :: Attempting to load (wait for confirmation)
+2014-07-04 15:39:12,091 :: (DEBUG   ) zonewidget       :: Successfully loaded.
+2014-07-04 15:39:12,092 :: (DEBUG   ) LLaML            :: ** All custom modules loaded successfully! **
+2014-07-04 15:40:01,343 :: (INFO     llamllog         :: Logging module has formally started
+2014-07-04 15:40:01,367 :: (DEBUG    LLaML            :: PySide is installed and all PySide modules loaded
+2014-07-04 15:40:01,367 :: (DEBUG    LLaML            :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:40:01,422 :: (DEBUG    programmgr       :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:01,423 :: (DEBUG    programmgr       :: Successfully loaded.
+2014-07-04 15:40:01,424 :: (DEBUG    scheduler        :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:01,425 :: (DEBUG    scheduler        :: Successfully loaded.
+2014-07-04 15:40:01,425 :: (DEBUG    audiotoolbar     :: Attempting to load (wait for confirmation).
+2014-07-04 15:40:01,425 :: (DEBUG    audiotoolbar     :: Successfully loaded.
+2014-07-04 15:40:01,426 :: (DEBUG    aboutdialog      :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:01,463 :: (DEBUG    aboutdialog      :: Successfully loaded.
+2014-07-04 15:40:01,464 :: (DEBUG    audiodisplay     :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:01,985 :: (DEBUG    audiodisplay     :: Successfully loaded.
+2014-07-04 15:40:01,986 :: (DEBUG    audio            :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:01,999 :: (DEBUG    audio            :: Successfully loaded.
+2014-07-04 15:40:02,000 :: (DEBUG    settings         :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:02,001 :: (DEBUG    settings         :: Successfully loaded.
+2014-07-04 15:40:02,002 :: (DEBUG    systemcheck      :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:02,004 :: (DEBUG    systemcheck      :: Successfully loaded.
+2014-07-04 15:40:02,004 :: (DEBUG    zonewidget       :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:02,005 :: (DEBUG    zonewidget       :: Successfully loaded.
+2014-07-04 15:40:02,006 :: (DEBUG    LLaML            :: ** All custom modules loaded successfully! **
+2014-07-04 15:40:42,531 :: (INFO)-8s llamllog         :: Logging module has formally started
+2014-07-04 15:40:42,554 :: (DEBUG)-8s LLaML            :: PySide is installed and all PySide modules loaded
+2014-07-04 15:40:42,554 :: (DEBUG)-8s LLaML            :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:40:42,611 :: (DEBUG)-8s programmgr       :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:42,612 :: (DEBUG)-8s programmgr       :: Successfully loaded.
+2014-07-04 15:40:42,612 :: (DEBUG)-8s scheduler        :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:42,613 :: (DEBUG)-8s scheduler        :: Successfully loaded.
+2014-07-04 15:40:42,613 :: (DEBUG)-8s audiotoolbar     :: Attempting to load (wait for confirmation).
+2014-07-04 15:40:42,614 :: (DEBUG)-8s audiotoolbar     :: Successfully loaded.
+2014-07-04 15:40:42,614 :: (DEBUG)-8s aboutdialog      :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:42,651 :: (DEBUG)-8s aboutdialog      :: Successfully loaded.
+2014-07-04 15:40:42,652 :: (DEBUG)-8s audiodisplay     :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:43,181 :: (DEBUG)-8s audiodisplay     :: Successfully loaded.
+2014-07-04 15:40:43,182 :: (DEBUG)-8s audio            :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:43,195 :: (DEBUG)-8s audio            :: Successfully loaded.
+2014-07-04 15:40:43,196 :: (DEBUG)-8s settings         :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:43,197 :: (DEBUG)-8s settings         :: Successfully loaded.
+2014-07-04 15:40:43,198 :: (DEBUG)-8s systemcheck      :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:43,199 :: (DEBUG)-8s systemcheck      :: Successfully loaded.
+2014-07-04 15:40:43,200 :: (DEBUG)-8s zonewidget       :: Attempting to load (wait for confirmation)
+2014-07-04 15:40:43,200 :: (DEBUG)-8s zonewidget       :: Successfully loaded.
+2014-07-04 15:40:43,201 :: (DEBUG)-8s LLaML            :: ** All custom modules loaded successfully! **
+2014-07-04 15:41:28,038 :: INFO     llamllog         :: Logging module has formally started
+2014-07-04 15:41:28,062 :: DEBUG    LLaML            :: PySide is installed and all PySide modules loaded
+2014-07-04 15:41:28,062 :: DEBUG    LLaML            :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:41:28,117 :: DEBUG    programmgr       :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,118 :: DEBUG    programmgr       :: Successfully loaded.
+2014-07-04 15:41:28,119 :: DEBUG    scheduler        :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,119 :: DEBUG    scheduler        :: Successfully loaded.
+2014-07-04 15:41:28,120 :: DEBUG    audiotoolbar     :: Attempting to load (wait for confirmation).
+2014-07-04 15:41:28,120 :: DEBUG    audiotoolbar     :: Successfully loaded.
+2014-07-04 15:41:28,121 :: DEBUG    aboutdialog      :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,160 :: DEBUG    aboutdialog      :: Successfully loaded.
+2014-07-04 15:41:28,161 :: DEBUG    audiodisplay     :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,682 :: DEBUG    audiodisplay     :: Successfully loaded.
+2014-07-04 15:41:28,683 :: DEBUG    audio            :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,695 :: DEBUG    audio            :: Successfully loaded.
+2014-07-04 15:41:28,696 :: DEBUG    settings         :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,697 :: DEBUG    settings         :: Successfully loaded.
+2014-07-04 15:41:28,698 :: DEBUG    systemcheck      :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,699 :: DEBUG    systemcheck      :: Successfully loaded.
+2014-07-04 15:41:28,700 :: DEBUG    zonewidget       :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:28,700 :: DEBUG    zonewidget       :: Successfully loaded.
+2014-07-04 15:41:28,701 :: DEBUG    LLaML            :: ** All custom modules loaded successfully! **
+2014-07-04 15:41:36,680 :: DEBUG    aboutdialog      :: Opened developer information window.
+2014-07-04 15:41:36,897 :: WARNING  aboutdialog      :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:41:50,022 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 15:41:50,045 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 15:41:50,046 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:41:50,103 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,104 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 15:41:50,105 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,106 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 15:41:50,106 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 15:41:50,106 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 15:41:50,107 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,144 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 15:41:50,145 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,666 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 15:41:50,668 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,680 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 15:41:50,681 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,682 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 15:41:50,683 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,684 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 15:41:50,685 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 15:41:50,685 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 15:41:50,686 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 15:41:57,265 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:41:57,482 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:41:58,561 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:41:59,604 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:42:00,572 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:42:02,826 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:42:03,585 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:42:04,101 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:42:05,247 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:10,967 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 15:43:10,990 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 15:43:10,991 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:43:11,046 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,047 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 15:43:11,048 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,048 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 15:43:11,049 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 15:43:11,049 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 15:43:11,052 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,089 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 15:43:11,090 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,618 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 15:43:11,620 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,632 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 15:43:11,633 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,634 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 15:43:11,635 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,636 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 15:43:11,637 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:11,638 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 15:43:11,638 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 15:43:18,380 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:43:18,585 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:22,652 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:42,089 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 15:43:42,112 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 15:43:42,112 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:43:42,169 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,170 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 15:43:42,171 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,172 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 15:43:42,172 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 15:43:42,172 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 15:43:42,175 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,212 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 15:43:42,213 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,735 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 15:43:42,737 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,749 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 15:43:42,750 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,752 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 15:43:42,753 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,753 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 15:43:42,754 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 15:43:42,755 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 15:43:42,756 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 15:43:50,869 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:43:51,111 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:53,723 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:56,699 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:43:56,975 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:44:22,788 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 15:44:22,812 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 15:44:22,813 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:44:22,874 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:22,875 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 15:44:22,876 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:22,876 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 15:44:22,877 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 15:44:22,877 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 15:44:22,878 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:22,917 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 15:44:22,918 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:23,472 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 15:44:23,473 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:23,486 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 15:44:23,488 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:23,489 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 15:44:23,490 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:23,491 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 15:44:23,492 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 15:44:23,493 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 15:44:23,494 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 15:44:31,159 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:44:48,601 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:46:00,581 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:46:09,531 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:46:22,317 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:46:25,801 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:46:31,839 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 15:46:57,181 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 15:46:57,204 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 15:46:57,204 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 15:46:57,263 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,264 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 15:46:57,265 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,266 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 15:46:57,266 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 15:46:57,266 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 15:46:57,270 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,312 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 15:46:57,313 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,851 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 15:46:57,852 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,864 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 15:46:57,866 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,867 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 15:46:57,868 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,869 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 15:46:57,869 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 15:46:57,870 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 15:46:57,871 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 15:47:04,415 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 15:47:06,756 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:02,488 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 16:45:02,513 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 16:45:02,513 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 16:45:02,585 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:02,586 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 16:45:02,587 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:02,587 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 16:45:02,587 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 16:45:02,588 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 16:45:02,590 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:02,625 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 16:45:02,626 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:03,217 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 16:45:03,218 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:03,231 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 16:45:03,231 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:03,234 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 16:45:03,237 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:03,237 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 16:45:03,238 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:03,240 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 16:45:03,241 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 16:45:16,673 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 16:45:20,412 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:22,544 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:23,522 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:23,902 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:27,512 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:28,082 :: WARNING  aboutdialog   :: User requested "Python Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:45:42,155 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 16:45:42,180 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 16:45:42,181 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 16:45:42,244 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,245 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 16:45:42,246 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,246 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 16:45:42,248 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 16:45:42,248 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 16:45:42,249 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,294 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 16:45:42,294 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,875 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 16:45:42,877 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,890 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 16:45:42,892 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,893 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 16:45:42,894 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,896 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 16:45:42,897 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 16:45:42,898 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 16:45:42,899 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 16:45:56,605 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 16:45:56,822 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-04 16:46:59,531 :: INFO     llamllog      :: Logging module has formally started
+2014-07-04 16:46:59,558 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-04 16:46:59,558 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-04 16:46:59,619 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-04 16:46:59,620 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-04 16:46:59,621 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-04 16:46:59,622 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-04 16:46:59,622 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-04 16:46:59,623 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-04 16:46:59,626 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-04 16:46:59,669 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-04 16:46:59,670 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-04 16:47:00,272 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-04 16:47:00,274 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-04 16:47:00,288 :: DEBUG    audio         :: Successfully loaded.
+2014-07-04 16:47:00,290 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-04 16:47:00,292 :: DEBUG    settings      :: Successfully loaded.
+2014-07-04 16:47:00,293 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-04 16:47:00,294 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-04 16:47:00,295 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-04 16:47:00,296 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-04 16:47:00,297 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-04 16:47:13,637 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-04 16:47:13,873 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:03,355 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-07-07 23:07:03,415 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:06,109 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:26,628 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:27,771 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:40,956 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:41,723 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:42,570 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:42,963 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:43,470 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:44,240 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:44,649 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:45,322 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:45,586 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:46,335 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:46,642 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:46,994 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:47,578 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:47,890 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:48,252 :: WARNING  aboutdialog   :: User requested "QT Version" from the developer dialog, but the info requested does not exists or isn't working.
+2014-07-07 23:07:49,741 :: WARNING  aboutdialog   :: User requested "PySide Version" from the developer dialog, but the info requested does not exists or isn't working.

@@ -1,18 +1,29 @@
 #!/usr/bin/env python
 #coding:utf-8
-"""
+'''
   Author:   --<>
   Purpose:
   Created: 12/08/2013
-"""
+'''
 
+# Import Standard Library modules
+import logging
+
+logging.debug("Attempting to load (wait for confirmation)")
+
+# Import PySide specific modules
 from PySide.QtGui import *
 from PySide.QtCore import *
+from PySide import *
 
-__version__ = "0.1a"
+# import standard libraries
+import sys
+
+__llaml_version__ = "0.1a"
 
 class AboutDialog(QDialog):
-    '''Draw the About Dialog on user request.
+    '''
+    Render the About Dialog on user request.
 
     Requires an image to run correctly -- images are stored in resources and MUST
     be loaded from the main application after QApplication has been called.
@@ -24,7 +35,7 @@ class AboutDialog(QDialog):
 
         # Attributes for the app name and app details to be displayed in the
         # About dialog.
-        self.TITLE = """<b><h3>Lights, Lights, and More Lights v{0}</h3></b>""".format(__version__)
+        self.TITLE = """<b><h3>Lights, Lights, and More Lights v{0}</h3></b>""".format(__llaml_version__)
         self.ABOUT = """
         <p>LLaML (pronounced "YAML") is a program that was created
         to manage the synchronization of lights and music.
@@ -42,8 +53,21 @@ class AboutDialog(QDialog):
         self._toggleWordWrap(self.Qbody, wrap="yes")
 
         # Set window defaults.
-        self._setWindowTitle(title="About LLaML {0}".format(__version__))
+        self._setWindowTitle(title="About LLaML {0}".format(__llaml_version__))
         self._setAppImage(image)
+
+        # Set up developer information from About dialog.
+        # There is nothing secrete here, just random bits of
+        # developer information that is useful for debugging.
+        #
+        # Encourage others to add to this section anything they
+        # do not want the users to see, but should be easy enough
+        # for developers to jump into (should be all static information).
+        self.setContextMenuPolicy(Qt.ActionsContextMenu)
+        _hiddenInfo = QAction(self)
+        _hiddenInfo.setText("Developer Information")
+        _hiddenInfo.triggered.connect(ShowDeveloperWindow)
+        self.addAction(_hiddenInfo)
 
         # Lock in the window size.
         #
@@ -185,3 +209,69 @@ class AboutDialog(QDialog):
             # TODO:  Add in better exception handling here.
             raise
         return result
+
+
+class ShowDeveloperWindow(QDialog):
+    def __init__(self, *args, **kwargs):
+        super(ShowDeveloperWindow, self).__init__()
+
+        # log that someone has gone into the developer mode.
+        logging.debug("Opened developer information window.")
+
+        # Layout to which all elements are added.
+        self._hbox = QHBoxLayout()
+
+        # Side menu to which all elements are added.
+        self.sideMenu = QListWidget()
+        self.sideMenu.setMaximumWidth(150)
+        self.sideMenu.currentItemChanged.connect(self._requestInfo)
+        # Setup what is in the side menu.
+        self.sideMenu.addItem("PySide Version")
+        self.sideMenu.addItem("QT Version")
+        self.sideMenu.addItem("Python Version")
+        self.sideMenu.addItem("QT Version")
+        self.sideMenu.addItem("QT Version")
+
+        # Setup TextEdit on the side of the "sideMenu".
+        self.informationBox = QTextEdit()
+
+        # Add all the elements to the hbox.
+        self._hbox.addWidget(self.sideMenu)
+        self._hbox.addWidget(self.informationBox)
+
+        self.setLayout(self._hbox)
+        self.exec_()
+
+    def _requestInfo(self, *args, **kwargs):
+        _request = str(args[0].text())
+        _currentRequest = str(args[0].text()).replace(" ", "_").lower()
+
+        try:
+            request = getattr(self, _currentRequest)
+            if not request:
+                print "test"
+            else:
+                returnMessage = request()
+        except Exception as e:
+            returnMessage = str(RequestDoesNotExist(req=_request))
+
+        self.informationBox.setText(returnMessage)
+        return returnMessage
+
+    @staticmethod
+    def python_version():
+        _expecting = "Python 2.7.*"
+        _pythonVer = sys.version
+        return "<b>Expecting</b>: {0} <br/>" \
+               "<b>Installed:</b> {1}".format(_expecting, _pythonVer)
+
+class RequestDoesNotExist(Exception):
+    def __init__(self, *args, **kwargs):
+        super(RequestDoesNotExist, self).__init__()
+        self.message = "Your request is not valid/implemented"
+        logging.warn("User requested \"{0}\" from the developer dialog, but the "\
+                     "info requested does not exists or isn't working.".format(kwargs.get('req', 'Unknown')))
+    def __str__(self):
+        return self.message
+
+logging.debug("Successfully loaded.")
