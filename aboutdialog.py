@@ -229,8 +229,8 @@ class ShowDeveloperWindow(QDialog):
         self.sideMenu.addItem("PySide Version")
         self.sideMenu.addItem("QT Version")
         self.sideMenu.addItem("Python Version")
-        self.sideMenu.addItem("QT Version")
-        self.sideMenu.addItem("QT Version")
+        self.sideMenu.addItem("TBD")
+        self.sideMenu.addItem("TBD")
 
         # Setup TextEdit on the side of the "sideMenu".
         self.informationBox = QTextEdit()
@@ -253,24 +253,44 @@ class ShowDeveloperWindow(QDialog):
             else:
                 returnMessage = request()
         except Exception as e:
-            returnMessage = str(RequestDoesNotExist(req=_request))
+            returnMessage = str(RequestDoesNotExist(req=_currentRequest))
 
         self.informationBox.setText(returnMessage)
         return returnMessage
 
     @staticmethod
     def python_version():
+        """Retrieve the latest Python version."""
         _expecting = "Python 2.7.*"
         _pythonVer = sys.version
         return "<b>Expecting</b>: {0} <br/>" \
                "<b>Installed:</b> {1}".format(_expecting, _pythonVer)
 
+    @staticmethod
+    def pyside_version():
+        """Retrieve the latest PySide version."""
+        from PySide import __version__
+        _expecting = "PySide ver 1.1.1"
+        _pysideVer = __version__
+        return "<b>Expecting</b>: {0} <br/>" \
+               "<b>Installed:</b> {1}".format(_expecting, _pysideVer)
+
+    @staticmethod
+    def qt_version():
+        from PySide.QtCore import __version__
+        _expecting = "Qt ver. 4.8.2"
+        _qtVersion = __version__
+        return "<b>Expecting</b>: {0} <br/>" \
+               "<b>Installed:</b> {1}".format(_expecting, _qtVersion)
+
+
 class RequestDoesNotExist(Exception):
     def __init__(self, *args, **kwargs):
         super(RequestDoesNotExist, self).__init__()
         self.message = "Your request is not valid/implemented"
-        logging.warn("User requested \"{0}\" from the developer dialog, but the "\
-                     "info requested does not exists or isn't working.".format(kwargs.get('req', 'Unknown')))
+        logging.warn("User requested \"{0}\" from the dev. dialog, but the "\
+                     "info requested isn't working.".format(kwargs.get('req',
+                                                                       'Unknown')))
     def __str__(self):
         return self.message
 

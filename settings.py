@@ -25,6 +25,12 @@ _applicationPath_ = os.curdir
 _application_ = "\LLaML.py"
 _fullAppPath_ = _applicationPath_ + _application_
 
+###################################################
+##      APPLICATION SETTINGS - DO NOT MODIFY     ##
+###################################################
+
+# First, we create a settings dict/prototype (we will populate later).
+settings = {"defProjectPath": None}
 
 def checkForSettings():
     '''Poor-mans check to make sure we are in the correct directory.'''
@@ -111,14 +117,17 @@ class ProgramSettingsWindow(QDialog):
         super(ProgramSettingsWindow, self).__init__()
         self.exec_()
 
+
 class ApplicationSettingsWindow(QDialog):
 
     def __init__(self):
         super(ApplicationSettingsWindow, self).__init__()
+        self.setMaximumWidth(600)
         self.setFixedSize(self.size())
         self.setWindowTitle("LLaML Settings")
+        # This layout is the listview and the submenu selection.
         self._hbox = QHBoxLayout()
-        # Add a layout to the main settings window.
+        # This layout contains the the various submenu's content paines.
         self._vbox = QVBoxLayout()
 
         # Add a listview widget that will have a listing of all the child menus.
@@ -139,6 +148,8 @@ class ApplicationSettingsWindow(QDialog):
 
         self._save = QPushButton("Save")
         self._cancel = QPushButton("Cancel")
+        #Close the modal dialog and return to the application
+        self._cancel.clicked.connect(self.reject)
 
         self._allSettingsWidgets = {'General': self.generalView,
                                     'Start-up': self.startupView,
@@ -163,9 +174,13 @@ class ApplicationSettingsWindow(QDialog):
         self._commitCancelLayout.addWidget(self._save)
 
         self._hbox.addLayout(self._vbox)
-        self._hbox.addStretch()
         self._vbox.addLayout(self._commitCancelLayout)
         self.setLayout(self._hbox)
+
+        # Set Settings Atributes here - JSON format for easy export/import.
+        self.defaultProjectPath = ""
+
+        # Show the application window.
         self.exec_()
 
 
@@ -262,6 +277,10 @@ class ApplicationSettingsWindow(QDialog):
         '''GeneralViewWidget falls under the exclusive parent class of
         ApplicationSettingsWindow and is a container for the General Settings.'''
         def __init__(self, *args, **kwargs):
+            # Pull-in global setttings.
+            global settings
+            self._settings = settings
+
             QWidget.__init__(self)
             # General form/page
             # Create all the options/widgets
@@ -286,7 +305,11 @@ class ApplicationSettingsWindow(QDialog):
             self._defaultPathLayout = QHBoxLayout()
             self._defaultPath = QLineEdit()
             self._defaultPath.setDisabled(True)
+
             self._defaultPathButton = QPushButton("Select")
+            self._defaultPathButton.clicked.connect(lambda: ApplicationSettingsWindow._SelectDirectoryPath(self))
+            #print v
+
             self._defaultPathLayout.addWidget(self._defaultPath)
             self._defaultPathLayout.addWidget(self._defaultPathButton)
             self._defaultPathGroupBox.setLayout(self._defaultPathLayout)
@@ -303,6 +326,33 @@ class ApplicationSettingsWindow(QDialog):
             self._generalGrid.addWidget(self._defaultPathGroupBox)
 
             self.setLayout(self._generalGrid)
+
+        def _changeProjectDirectory(self, directory, *args, **kwargs):
+            self._defaultPath.setText(directory)
+            self._settings = directory
+            logging.info("Default project path changed, but not yet saved, "
+                         "to {0}.".format(directory))
+
+    class _SelectDirectoryPath(QObject):
+        def __init__(self, *args, **kwargs):
+            self.defaultProjectDirectory = None
+            self._parent = args[0]
+            self._show_existingDir()
+
+        def _show_existingDir(self, *args, **kwargs):
+            logging.debug("User requested to opent he QFileDialog.getExistingDirectory()")
+            _directory = QFileDialog.getExistingDirectory()
+            if _directory != None:
+                self._change_existingDir(_directory)
+            else:
+                logging.debug("User didn't select a default proj. directory - they cancelled out.")
+        def _change_existingDir(self, directory, *args, **kwargs):
+            if directory != None:
+                self.defaultProjectDirectory = self._parent._changeProjectDirectory(directory)
+            else:
+                # Doesn't need changing!
+                pass
+
 
     class CommunicationsViewWidget(QWidget):
             '''CommunicatiosViewWidget falls under the exclusive parent class of
