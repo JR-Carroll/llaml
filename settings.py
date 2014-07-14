@@ -12,6 +12,8 @@
       -
 '''
 
+from __future__ import print_function
+
 import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
@@ -30,7 +32,15 @@ _fullAppPath_ = _applicationPath_ + _application_
 ###################################################
 
 # First, we create a settings dict/prototype (we will populate later).
-settings = {"defProjectPath": None}
+settings = {
+    "ApplicationSettings": {
+        "GeneralTab": {
+            "defProjectPath": None,
+            "colorPalletByDate": False,
+            "TBD": True
+        }
+    }
+}
 
 def checkForSettings():
     '''Poor-mans check to make sure we are in the correct directory.'''
@@ -49,7 +59,8 @@ class ErrorApplicationPath(Exception):
         self.msg = msg
     def __str__(self):
         return "While looking for a settings file, it was detected that the " \
-               "LLaML application does not exists in the expected path: {0}".format(self.msg)
+               "LLaML application does not exists in the expected path: " \
+               "{0}".format(self.msg)
 
 
 class ProjectSettingsFile(object):
@@ -279,7 +290,7 @@ class ApplicationSettingsWindow(QDialog):
         def __init__(self, *args, **kwargs):
             # Pull-in global setttings.
             global settings
-            self._settings = settings
+            self._settings = settings['ApplicationSettings']['GeneralTab']
 
             QWidget.__init__(self)
             # General form/page
@@ -291,11 +302,18 @@ class ApplicationSettingsWindow(QDialog):
             self._customizePallet = QPushButton("Edit Pallets")
 
             # Holiday groupings
-            self._holidayGrouping = QGroupBox("Application Colors Based on Holiday")
+            self._holidayGrouping = QGroupBox("Application Colors Based on " \
+                                              "Holiday")
             self._holidayLayout = QVBoxLayout()
-            self._colorBasedOnDate = QCheckBox("Default color pallet to nearest holiday?")
+            self._colorBasedOnDate = QCheckBox("Default color pallet to " \
+                                               "nearest holiday?")
+            setattr(self._colorBasedOnDate, "nameSetting", "colorPalletByDate")
+            self._colorBasedOnDate.stateChanged.connect(
+                lambda: self._set_SettingCheckFlag(self._colorBasedOnDate))
             self._editHolidays = QPushButton("Edit Holiday Calendar")
-            #self._editHolidays.connect(QDialog) ## TODO:  Implement connected behavior.
+            # Dummy fn to call/see current settings...
+            self._editHolidays.clicked.connect(lambda: print(self._settings))
+
             self._holidayLayout.addWidget(self._colorBasedOnDate)
             self._holidayLayout.addWidget(self._editHolidays)
             self._holidayGrouping.setLayout(self._holidayLayout)
@@ -307,8 +325,8 @@ class ApplicationSettingsWindow(QDialog):
             self._defaultPath.setDisabled(True)
 
             self._defaultPathButton = QPushButton("Select")
-            self._defaultPathButton.clicked.connect(lambda: ApplicationSettingsWindow._SelectDirectoryPath(self))
-            #print v
+            self._defaultPathButton.clicked.connect(lambda:
+                                                    ApplicationSettingsWindow._SelectDirectoryPath(self))
 
             self._defaultPathLayout.addWidget(self._defaultPath)
             self._defaultPathLayout.addWidget(self._defaultPathButton)
@@ -327,6 +345,17 @@ class ApplicationSettingsWindow(QDialog):
 
             self.setLayout(self._generalGrid)
 
+        def _set_SettingCheckFlag(self, option, *args, **kwargs):
+            if isinstance(option, QCheckBox) and option.nameSetting:
+                self._settings[str(option.nameSetting)] = option.isChecked()
+            else:
+                logging.debug("User attempted to change an application setting " \
+                              "and the setting doesn't have a 'nameSetting' " \
+                              "attribute.  No settings were changed.")
+                # Todo add in custom error logic to present user with an error.
+                # TODO add in additional logging messages that are more verbose.
+                return False
+
         def _changeProjectDirectory(self, directory, *args, **kwargs):
             self._defaultPath.setText(directory)
             self._settings = directory
@@ -340,12 +369,14 @@ class ApplicationSettingsWindow(QDialog):
             self._show_existingDir()
 
         def _show_existingDir(self, *args, **kwargs):
-            logging.debug("User requested to opent he QFileDialog.getExistingDirectory()")
+            logging.debug("User requested to opent he " \
+                          "QFileDialog.getExistingDirectory()")
             _directory = QFileDialog.getExistingDirectory()
             if _directory != None:
                 self._change_existingDir(_directory)
             else:
-                logging.debug("User didn't select a default proj. directory - they cancelled out.")
+                logging.debug("User didn't select a default proj. directory "\
+                              "- they cancelled out.")
         def _change_existingDir(self, directory, *args, **kwargs):
             if directory != None:
                 self.defaultProjectDirectory = self._parent._changeProjectDirectory(directory)
@@ -355,8 +386,11 @@ class ApplicationSettingsWindow(QDialog):
 
 
     class CommunicationsViewWidget(QWidget):
-            '''CommunicatiosViewWidget falls under the exclusive parent class of
-            ApplicationSettingsWindow and is a container for the Communication Settings.'''
+            '''
+            CommunicatiosViewWidget falls under the exclusive parent class of
+            ApplicationSettingsWindow and is a container for the Communication
+            Settings.
+            '''
             def __init__(self, *args, **kwargs):
                 QWidget.__init__(self)
                 # General form/page
@@ -502,7 +536,8 @@ class ApplicationSettingsWindow(QDialog):
                     TODO:  Not fully implemented yet -- not connected to the anything
                     '''
                     self.serverStatus = status
-                    return self.serverOnOffBtn.setText("Server Status: {0}".format(self.serverStatusTxt.get(
+                    return self.serverOnOffBtn.setText("Server Status: " \
+                                                       "{0}".format(self.serverStatusTxt.get(
                             self.serverStatus, "UNKNOWN")))
 
             class ClientTab(QWidget):
