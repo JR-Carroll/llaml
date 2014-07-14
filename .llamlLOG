@@ -2337,3 +2337,188 @@
 2014-07-13 21:29:52,528 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
 2014-07-13 21:30:56,168 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
 2014-07-13 21:30:58,668 :: INFO     settings      :: Default project path changed, but not yet saved, to /home/jnam/git/xmasLights/tests.
+2014-07-13 21:54:02,129 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 21:54:02,240 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 21:54:02,241 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 21:54:02,509 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 21:54:02,509 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 21:54:02,511 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 21:54:02,512 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 21:54:02,512 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 21:54:02,513 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 21:54:02,514 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 21:54:02,845 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 21:54:02,848 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 21:54:04,284 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 21:54:04,285 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 21:54:04,338 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 21:54:04,351 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 21:55:05,966 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 21:55:05,968 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 21:55:05,968 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 21:55:05,970 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 21:55:05,971 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 21:55:05,971 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 21:55:20,101 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 21:55:22,650 :: INFO     settings      :: Default project path changed, but not yet saved, to /home/jnam/git/xmasLights/tests.
+2014-07-13 22:06:11,259 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:06:11,281 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:06:11,281 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:06:11,330 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,330 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:06:11,330 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,331 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:06:11,331 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:06:11,332 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:06:11,332 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,364 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:06:11,365 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,843 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:06:11,844 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,855 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:06:11,862 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,863 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:06:11,864 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,865 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:06:11,865 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:11,866 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:06:11,866 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:06:35,521 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:06:35,543 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:06:35,544 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:06:35,591 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:35,592 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:06:35,592 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:35,593 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:06:35,593 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:06:35,593 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:06:35,594 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:35,625 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:06:35,625 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:36,104 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:06:36,105 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:36,115 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:06:36,123 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:36,124 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:06:36,125 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:36,125 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:06:36,126 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:06:36,127 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:06:36,127 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:06:42,137 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:07:30,315 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:07:30,337 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:07:30,337 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:07:30,387 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,388 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:07:30,389 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,389 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:07:30,389 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:07:30,390 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:07:30,390 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,425 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:07:30,426 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,913 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:07:30,914 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,924 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:07:30,925 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,927 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:07:30,927 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,928 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:07:30,928 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:30,930 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:07:30,931 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:07:37,322 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:07:54,088 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:07:54,108 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:07:54,109 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:07:54,162 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,163 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:07:54,163 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,164 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:07:54,164 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:07:54,165 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:07:54,165 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,199 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:07:54,200 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,691 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:07:54,692 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,703 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:07:54,704 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,705 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:07:54,706 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,707 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:07:54,708 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:07:54,708 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:07:54,709 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:08:00,914 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:08:14,936 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:08:14,958 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:08:14,958 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:08:15,009 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,010 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:08:15,010 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,011 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:08:15,011 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:08:15,012 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:08:15,012 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,045 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:08:15,046 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,537 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:08:15,538 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,548 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:08:15,556 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,557 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:08:15,558 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,558 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:08:15,559 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:15,559 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:08:15,560 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:08:21,606 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:08:21,629 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:08:21,629 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:08:21,679 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:21,680 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:08:21,680 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:21,681 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:08:21,681 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:08:21,682 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:08:21,682 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:21,714 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:08:21,715 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:22,200 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:08:22,201 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:22,211 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:08:22,212 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:22,213 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:08:22,214 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:22,215 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:08:22,215 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:08:22,216 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:08:22,217 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:08:27,667 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:08:30,696 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:09:37,519 :: INFO     llamllog      :: Logging module has formally started
+2014-07-13 22:09:37,542 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-07-13 22:09:37,542 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-07-13 22:09:37,590 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:37,591 :: DEBUG    programmgr    :: Successfully loaded.
+2014-07-13 22:09:37,591 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:37,592 :: DEBUG    scheduler     :: Successfully loaded.
+2014-07-13 22:09:37,592 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-07-13 22:09:37,592 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-07-13 22:09:37,593 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:37,625 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-07-13 22:09:37,626 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:38,108 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-07-13 22:09:38,109 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:38,120 :: DEBUG    audio         :: Successfully loaded.
+2014-07-13 22:09:38,128 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:38,129 :: DEBUG    settings      :: Successfully loaded.
+2014-07-13 22:09:38,130 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:38,130 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-07-13 22:09:38,131 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-07-13 22:09:38,132 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-07-13 22:09:38,132 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-07-13 22:09:44,340 :: DEBUG    settings      :: User requested to opent he QFileDialog.getExistingDirectory()
+2014-07-13 22:09:46,667 :: INFO     settings      :: Default project path changed, but not yet saved, to /home/jnam/git/xmasLights/images.

@@ -309,7 +309,7 @@ class ApplicationSettingsWindow(QDialog):
                                                "nearest holiday?")
             setattr(self._colorBasedOnDate, "nameSetting", "colorPalletByDate")
             self._colorBasedOnDate.stateChanged.connect(
-                lambda: self._set_SettingCheckFlag(self._colorBasedOnDate))
+                lambda: self._set_setting(self._colorBasedOnDate))
             self._editHolidays = QPushButton("Edit Holiday Calendar")
             # Dummy fn to call/see current settings...
             self._editHolidays.clicked.connect(lambda: print(self._settings))
@@ -345,9 +345,11 @@ class ApplicationSettingsWindow(QDialog):
 
             self.setLayout(self._generalGrid)
 
-        def _set_SettingCheckFlag(self, option, *args, **kwargs):
+        def _set_setting(self, option, value=None, *args, **kwargs):
             if isinstance(option, QCheckBox) and option.nameSetting:
                 self._settings[str(option.nameSetting)] = option.isChecked()
+            elif option.nameSetting:
+                self._settings[str(option.nameSetting)] = value
             else:
                 logging.debug("User attempted to change an application setting " \
                               "and the setting doesn't have a 'nameSetting' " \
@@ -358,7 +360,6 @@ class ApplicationSettingsWindow(QDialog):
 
         def _changeProjectDirectory(self, directory, *args, **kwargs):
             self._defaultPath.setText(directory)
-            self._settings = directory
             logging.info("Default project path changed, but not yet saved, "
                          "to {0}.".format(directory))
 
@@ -366,6 +367,7 @@ class ApplicationSettingsWindow(QDialog):
         def __init__(self, *args, **kwargs):
             self.defaultProjectDirectory = None
             self._parent = args[0]
+            self.nameSetting = "defProjectPath"
             self._show_existingDir()
 
         def _show_existingDir(self, *args, **kwargs):
@@ -379,7 +381,8 @@ class ApplicationSettingsWindow(QDialog):
                               "- they cancelled out.")
         def _change_existingDir(self, directory, *args, **kwargs):
             if directory != None:
-                self.defaultProjectDirectory = self._parent._changeProjectDirectory(directory)
+                self.defaultProjectDirectory = self._parent._set_setting(self, directory)
+                self._parent._changeProjectDirectory(directory)
             else:
                 # Doesn't need changing!
                 pass
