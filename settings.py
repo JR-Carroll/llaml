@@ -17,7 +17,7 @@ from __future__ import print_function
 import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
-import cPickle
+import json
 import os
 
 from PySide.QtCore import *
@@ -31,16 +31,7 @@ _fullAppPath_ = _applicationPath_ + _application_
 ##      APPLICATION SETTINGS - DO NOT MODIFY     ##
 ###################################################
 
-# First, we create a settings dict/prototype (we will populate later).
-settings = {
-    "ApplicationSettings": {
-        "GeneralTab": {
-            "defProjectPath": None,
-            "colorPalletByDate": False,
-            "TBD": True
-        }
-    }
-}
+from rawSettings import settings
 
 def checkForSettings():
     '''Poor-mans check to make sure we are in the correct directory.'''
@@ -104,8 +95,12 @@ class ProjectSettingsFile(object):
 # TODO:  Add program settings file class.
 
 class ApplicationSettingsFile(object):
+    singleton = 0
     def __init__(self, *args, **kwargs):
-        pass
+        if self.singleton >= 1:
+            raise Exception("This is a singleton class, there is already one "\
+                            "created")
+        self.singleton = 1
 
     def createAppSettingsFile(self):
         pass
@@ -117,7 +112,12 @@ class ApplicationSettingsFile(object):
         pass
 
     def saveAppSettingsFile(self):
-        pass
+        try:
+            with open('.llaml.settings', 'w') as setFile:
+                setFile.write(json.dumps(settings, indent=4, separators=(',', ': ')))
+            logging.info("Wrote out settings to settings file.")
+        except:
+            logging.warn("Unable to save settings file for unknown reason.")
 
     def saveAsAppSettingsFile(self):
         pass
@@ -158,6 +158,7 @@ class ApplicationSettingsWindow(QDialog):
         self.adminView.setHidden(True)
 
         self._save = QPushButton("Save")
+        self._save.clicked.connect(self._pushed_savedBtn)
         self._cancel = QPushButton("Cancel")
         #Close the modal dialog and return to the application
         self._cancel.clicked.connect(self.reject)
@@ -194,16 +195,31 @@ class ApplicationSettingsWindow(QDialog):
         # Show the application window.
         self.exec_()
 
+    def _pushed_savedBtn(self):
+        """
+        This is the default behavior for when you press the 'save' button
+        on the application settings dialog.
+
+        This will save the current settings (and cause to modify the entire
+        application instance where the settings should be applied).
+        """
+        settingsFile.saveAppSettingsFile()
+        self.close()
 
     class ListViewWidget(QListWidget):
-        '''ListViewWidget falls under the exclusive parent class of
-        ApplicationSettingsWindow.'''
+        """
+        ListViewWidget falls under the exclusive parent class of
+        ApplicationSettingsWindow.
+        """
 
         def _buildListViewItems(self):
-            '''Helper function to build a list of mappings of text:memory-ref
-            foreach item within the ListViewWidget.'''
+            """
+            Helper function to build a list of mappings of text:memory-ref
+            foreach item within the ListViewWidget.
+            """
 
-            _count = self.count() # Count how many items are currently in the list.
+            # Count how many items are currently in the list.
+            _count = self.count()
             _dict = {}
 
             for item in range(0, _count):
@@ -233,6 +249,10 @@ class ApplicationSettingsWindow(QDialog):
         '''AudioViewWidget falls under the exclusive parent class of
         ApplicationSettingsWindow and is a container for the Audio Settings.'''
         def __init__(self, *args, **kwargs):
+            # Global is not needed, but it is explicit
+            global settings
+            self._settings = settings['ApplicationSettings']['AudioTab']
+
             QWidget.__init__(self)
             # General form/page
             # Create all the options/widgets
@@ -248,22 +268,71 @@ class ApplicationSettingsWindow(QDialog):
             self._visualSampleRate.addItem("Low Sample Rate (best performance)")
             self._visualSampleRate.addItem("Med Sample Rate ('meh' performance)")
             self._visualSampleRate.addItem("High Sample Rate (worst performance)")
+            self._sampleRateDict = {0 : 'raw',
+                                    1: 'low',
+                                    2: 'med',
+                                    3: 'high'}
+            #setattr(self._visualSampleRate, 'rateMap', sampleRateDict)
+            self._visualSampleRate.currentIndexChanged.connect(
+                lambda x: self._update_sampleRate(x))
 
+            # Cache waveforms and redraw only on demand (this can be performance
+            # enhancing!).
             self._cacheWaveForms = QCheckBox("Cache Waveforms (redraw only on demand)")
             self._cacheWaveForms.setChecked(True)
+            setattr(self._cacheWaveForms, 'nameSetting', 'cacheWaveforms')
+            self._cacheWaveForms.stateChanged.connect(
+                lambda: self._set_setting(self._cacheWaveForms))
 
+            # Default startup volume level.
             self._audioLevelLabel = QLabel("Default Audio Level on Startup")
-            self._audiolevelSlider = QSlider(Qt.Horizontal)
+            self._audioLevelSlider = QSlider(Qt.Horizontal)
+            self._rawAudioSliderValue = "{0}%".format(self._audioLevelSlider.value()+1)
+            self._audioLevelValue = QLabel(self._rawAudioSliderValue)
+            setattr(self._audioLevelSlider, 'nameSetting', 'defaultAudioLevelOnStartup')
+            self._audioLevelSlider.valueChanged.connect(self._update_audioLevel)
 
             self._generalVGrid = QVBoxLayout()
             self._generalVGrid.addWidget(self._visualSampleRateLabel)
             self._generalVGrid.addWidget(self._visualSampleRate)
             self._generalVGrid.addWidget(self._cacheWaveForms)
             self._generalVGrid.addWidget(self._audioLevelLabel)
-            self._generalVGrid.addWidget(self._audiolevelSlider)
+            self._audioSliderHGrid = QHBoxLayout()
+            self._audioSliderHGrid.addWidget(self._audioLevelValue)
+            self._audioSliderHGrid.addWidget(self._audioLevelSlider)
+            self._generalVGrid.addLayout(self._audioSliderHGrid)
             self._generalVGrid.addStretch()
 
             self.setLayout(self._generalVGrid)
+
+        def _update_audioLevel(self, level):
+            """
+            Updates the audio level percentage.
+
+            This is a helper function.
+            """
+            self._rawAudioSliderValue = "{0}%".format(level+1)
+            self._audioLevelValue.setText(self._rawAudioSliderValue)
+            self._settings['defaultAudioLevelOnStartup'] = level + 1
+            print(settings)
+
+        def _update_sampleRate(self, level):
+            self._settings['rawSampleRate'] = self._sampleRateDict[level]
+            print(settings)
+
+        def _set_setting(self, option, value=None, *args, **kwargs):
+            if isinstance(option, QCheckBox) and option.nameSetting:
+                self._settings[str(option.nameSetting)] = option.isChecked()
+                print(settings)
+            elif option.nameSetting:
+                self._settings[str(option.nameSetting)] = value
+            else:
+                logging.debug("User attempted to change an application setting " \
+                              "and the setting doesn't have a 'nameSetting' " \
+                              "attribute.  No settings were changed.")
+                # TODO add in custom error logic to present user with an error.
+                # TODO add in additional logging messages that are more verbose.
+                return False
 
 
     class AdministrationViewWidget(QWidget):
@@ -271,6 +340,7 @@ class ApplicationSettingsWindow(QDialog):
             QWidget.__init__(self)
             self._importBtn = QPushButton("Import Settings")
             self._exportBtn = QPushButton("Export Settings")
+            self._exportBtn.clicked.connect(settingsFile.saveAppSettingsFile)
             self._restoreBtn = QPushButton("Restore Settings")
             self._logDebug = QCheckBox("Create log/debug-mode")
 
@@ -312,7 +382,7 @@ class ApplicationSettingsWindow(QDialog):
                 lambda: self._set_setting(self._colorBasedOnDate))
             self._editHolidays = QPushButton("Edit Holiday Calendar")
             # Dummy fn to call/see current settings...
-            self._editHolidays.clicked.connect(lambda: print(self._settings))
+            self._editHolidays.clicked.connect(lambda: print(settings))
 
             self._holidayLayout.addWidget(self._colorBasedOnDate)
             self._holidayLayout.addWidget(self._editHolidays)
@@ -354,7 +424,7 @@ class ApplicationSettingsWindow(QDialog):
                 logging.debug("User attempted to change an application setting " \
                               "and the setting doesn't have a 'nameSetting' " \
                               "attribute.  No settings were changed.")
-                # Todo add in custom error logic to present user with an error.
+                # TODO add in custom error logic to present user with an error.
                 # TODO add in additional logging messages that are more verbose.
                 return False
 
@@ -644,6 +714,7 @@ class ApplicationSettingsWindow(QDialog):
                     self._removeDevicesBtn = QPushButton("Remove")
                     self._editDevicesBtn = QPushButton("Edit")
                     self._exportBtn = QPushButton("Export")
+                    self._exportBtn.clicked.connect(lambda: print('test'))
                     self._importBtn = QPushButton("Import")
 
                     self._vboxLayout.addWidget(self._addDevicesBtn)
@@ -665,6 +736,10 @@ class ApplicationSettingsWindow(QDialog):
 
     class StartupViewWidget(QWidget):
         def __init__(self):
+            # Global is not necessary here, but it's explicit.
+            global settings
+            self._settings = settings['ApplicationSettings']['StartupTab']
+
             QWidget.__init__(self)
             # General form/page
             # Create all the options/widgets
@@ -680,15 +755,42 @@ class ApplicationSettingsWindow(QDialog):
             self._defaultProjectHGrid.addWidget(self._defaultProject)
             self._defaultProjectHGrid.addWidget(self._defaultProjectBrowseBtn)
             self._defaultProjectVGrid.addLayout(self._defaultProjectHGrid)
-            self._playOnStartCheckBox = QCheckBox("Start playing project on application load.")
+
+            # Start playing on application load.
+            self._playOnStartCheckBox = QCheckBox("Start auto playing project "\
+                                                  "on application load.")
+            setattr(self._playOnStartCheckBox, 'nameSetting', 'startOnLoad')
+            self._playOnStartCheckBox.stateChanged.connect(
+                lambda: self._set_setting(self._playOnStartCheckBox))
             self._defaultProjectVGrid.addWidget(self._playOnStartCheckBox)
             self._defaultProjectGrouping.setLayout(self._defaultProjectVGrid)
 
             # Toggle widgets GROUP BOX
             self._widgetToggleGroupBox = QGroupBox("Toggle Widgets on Startup")
+
+            # Show status bar on startup behavior.  If true, it will show
+            # the statusbar - else the statusbar is hidden.
             self._statusbarCheckBox = QCheckBox("Show Status Bar")
+            setattr(self._statusbarCheckBox, 'nameSetting', 'showStatusBarOnStartup')
+            self._statusbarCheckBox.stateChanged.connect(
+                lambda: self._set_setting(self._statusbarCheckBox))
+
+            # Show the audio bar at the top of the screen (the audio menu bar).
+            # If true, then this will show the audio controls at the top of the
+            # screen.  If false, it will show nothing/be hidden on startup.
             self._audiobarCheckBox = QCheckBox("Show Audio Bar")
+            setattr(self._audiobarCheckBox, 'nameSetting', 'showAudioBarOnStartup')
+            self._audiobarCheckBox.stateChanged.connect(
+                lambda: self._set_setting(self._audiobarCheckBox))
+
+            # Show the audio waveform bar at the top of the application.  If true,
+            # this will show the processor-intensive waveform at the top.  False,
+            # will hide it - thus, saving some overhead on application load.
             self._visualWaveFormCheckBox = QCheckBox("Show Visual Wave Form")
+            setattr(self._visualWaveFormCheckBox, 'nameSetting', 'showVisualWaveOnStartup')
+            self._visualWaveFormCheckBox.stateChanged.connect(
+                lambda: self._set_setting(self._visualWaveFormCheckBox))
+
             self._widgetToggleLayout = QVBoxLayout()
             self._widgetToggleLayout.addWidget(self._statusbarCheckBox)
             self._widgetToggleLayout.addWidget(self._audiobarCheckBox)
@@ -702,6 +804,19 @@ class ApplicationSettingsWindow(QDialog):
             self._startupGrid.addStretch()
             self.setLayout(self._startupGrid)
 
+        def _set_setting(self, option, value=None, *args, **kwargs):
+            if isinstance(option, QCheckBox) and option.nameSetting:
+                self._settings[str(option.nameSetting)] = option.isChecked()
+                print(settings)
+            elif option.nameSetting:
+                self._settings[str(option.nameSetting())] = value
+            else:
+                logging.debug("User attempted to change an application setting " \
+                              "and the setting doesn't have a 'nameSetting' " \
+                              "attribute.  No settings were changed.")
+                # TODO add in custom error logic to present user with an error.
+                # TODO add in additional logging messages that are more verbose.
+                return False
 
     def _toggleVisibility(self, current, previous, *args, **kwargs):
         '''Toggle widget visibility.'''
@@ -713,7 +828,6 @@ class ApplicationSettingsWindow(QDialog):
             # If previous is not available, set to none; this occurs on first
             # creation.
             previousTxt = None
-
         try:
             for item in self._allItemsInList:
                 if item == currentTxt:
@@ -746,6 +860,8 @@ class ApplicationSettingsWindow(QDialog):
     def _showAdmin(self):
         pass
 
+settingsFile = ApplicationSettingsFile()
+v= ApplicationSettingsFile()
 if __name__ == '__main__':
     # Not doing anything special here.
     pass
