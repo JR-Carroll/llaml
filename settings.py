@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #coding:utf-8
-'''
+"""
   Author:   --<J. R. Carroll>
   Purpose: Settings controller.
   Created: 12/09/2013
@@ -10,7 +10,7 @@
       - Recently used files
       - User settings
       -
-'''
+"""
 
 from __future__ import print_function
 
@@ -19,13 +19,11 @@ logging.debug("Attempting to load (wait for confirmation)")
 
 import json
 import os
+import sys
+import utilities as util
 
 from PySide.QtCore import *
 from PySide.QtGui import *
-
-_applicationPath_ = os.curdir
-_application_ = "\LLaML.py"
-_fullAppPath_ = _applicationPath_ + _application_
 
 ###################################################
 ##      APPLICATION SETTINGS - DO NOT MODIFY     ##
@@ -33,25 +31,12 @@ _fullAppPath_ = _applicationPath_ + _application_
 
 from rawSettings import settings
 
-def checkForSettings():
-    '''Poor-mans check to make sure we are in the correct directory.'''
-    if os.path.exists(_fullAppPath_) and os.path.isfile(_fullAppPath_):
-        return True
-    else:
-        raise ErrorApplicationPath(_fullAppPath_)
-
+###################################################
+##      END OF APPLICATION SETTINGS              ##
+###################################################
 
 def clearSettingsFile():
     pass
-
-
-class ErrorApplicationPath(Exception):
-    def __init__(self, msg):
-        self.msg = msg
-    def __str__(self):
-        return "While looking for a settings file, it was detected that the " \
-               "LLaML application does not exists in the expected path: " \
-               "{0}".format(self.msg)
 
 
 class ProjectSettingsFile(object):
@@ -95,31 +80,106 @@ class ProjectSettingsFile(object):
 # TODO:  Add program settings file class.
 
 class ApplicationSettingsFile(object):
-    singleton = 0
     def __init__(self, *args, **kwargs):
-        if self.singleton >= 1:
-            raise Exception("This is a singleton class, there is already one "\
-                            "created")
-        self.singleton = 1
+        # Check for existance of settings file - if none exists, create one.
+        if not self.check_settingsExistance():
+            save_appSettingsFile()
 
-    def createAppSettingsFile(self):
+    def create_appSettingsFile(self):
         pass
 
-    def _validateAppSettingsFile(self):
-        pass
+    def check_settingsExistance(self):
+        """
+        Check to see if the application file exists.
 
-    def loadAppSettingsFile(self):
-        pass
+        If the file does not exist then create one.
+        """
+        settingsFile = ".llamlSettings"
+        state = None
 
-    def saveAppSettingsFile(self):
+        if os.path.isfile(settingsFile):
+            logging.info("A pre-existing settings file was found.")
+            self.load_appSettingsFile()
+            state = True
+        else:
+            logging.info("No pre-existing settings file located.  Creating a " \
+                         "new settings file.")
+            state = False
+        return state
+
+    def validate_appSettingsFile(self):
+        """
+        Validate the application settings file.
+
+        This only compares the keys of the JSON structure.  If the keys
+        are the same, regardless of the values, then the structures are
+        considered to be equivalent.
+        """
+        state = False
+        _allFileKeys = util.explode_dictKeys(settings)
+
         try:
-            with open('.llaml.settings', 'w') as setFile:
+            with open('.llamlSettings', 'r') as mySettingsFile:
+                _allSettingKeys = util.explode_dictKeys(json.loads(mySettingsFile.read()))
+
+            if _allFileKeys == _allSettingKeys:
+                logging.info("Verified the integrity of the settings file.")
+                state = True
+            else:
+                logging.info("The settings file is not valid (unknown reason).")
+        except:
+            # doesn't matter what the error is, the validation failed.
+            pass
+        return state
+
+    def load_appSettingsFile(self):
+        global settings
+        state = None
+        _validateAttempt = 0
+
+        is_valid = self.validate_appSettingsFile()
+
+        if not is_valid:
+            logging.info("Saving a new settings file & destroying the old one!")
+            # TODO - save the OLD settings file -- prompt the user to destroy/keep.
+            self.save_appSettingsFile()
+
+            if _validateAttempt == 0:
+                logging.info("Attempting to revalidate the new settings file!")
+                is_valid = self.validate_appSettingsFile()
+                _validateAttempt += 1
+            else:
+                logging.debug("Unable to create a new settings file - the "\
+                              "sentinel variable reached its max value due "\
+                              "to an unknown reason.  No settings file was "\
+                              "created in-place or to replace the old file.")
+                is_valid = False
+
+        if is_valid:
+            try:
+                logging.info("Attempting to load the previously identified settings file.")
+                with open('.llamlSettings', 'r') as settingsFile:
+                    settings = json.loads(settingsFile.read())
+                state = True
+            except:
+                logging.error("Loading of the settings file failed for an unknown " \
+                              "reason: {0}".format(sys.exc_info()))
+                state = False
+        else:
+            logging.info("Unable to verify the integrity of the settings file.")
+
+        return state
+
+
+    def save_appSettingsFile(self):
+        try:
+            with open('.llamlSettings', 'w') as setFile:
                 setFile.write(json.dumps(settings, indent=4, separators=(',', ': ')))
             logging.info("Wrote out settings to settings file.")
         except:
             logging.warn("Unable to save settings file for unknown reason.")
 
-    def saveAsAppSettingsFile(self):
+    def saveAs_appSettingsFile(self):
         pass
 
 
@@ -203,7 +263,7 @@ class ApplicationSettingsWindow(QDialog):
         This will save the current settings (and cause to modify the entire
         application instance where the settings should be applied).
         """
-        settingsFile.saveAppSettingsFile()
+        settingsFile.save_appSettingsFile()
         self.close()
 
     class ListViewWidget(QListWidget):
@@ -340,7 +400,7 @@ class ApplicationSettingsWindow(QDialog):
             QWidget.__init__(self)
             self._importBtn = QPushButton("Import Settings")
             self._exportBtn = QPushButton("Export Settings")
-            self._exportBtn.clicked.connect(settingsFile.saveAppSettingsFile)
+            self._exportBtn.clicked.connect(settingsFile.save_appSettingsFile)
             self._restoreBtn = QPushButton("Restore Settings")
             self._logDebug = QCheckBox("Create log/debug-mode")
 
@@ -861,7 +921,7 @@ class ApplicationSettingsWindow(QDialog):
         pass
 
 settingsFile = ApplicationSettingsFile()
-v= ApplicationSettingsFile()
+
 if __name__ == '__main__':
     # Not doing anything special here.
     pass
