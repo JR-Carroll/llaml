@@ -141,7 +141,7 @@ class ApplicationSettingsFile(object):
 
         if not is_valid:
             logging.info("Saving a new settings file & destroying the old one!")
-            # TODO - save the OLD settings file -- prompt the user to destroy/keep.
+            # TODO - save the OLD settings file -- prompt the user to destroy/keep.s
             self.save_appSettingsFile()
 
             if _validateAttempt == 0:
