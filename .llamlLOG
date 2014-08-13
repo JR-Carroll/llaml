@@ -4850,3 +4850,1779 @@
 2014-08-03 10:21:01,827 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
 2014-08-03 10:21:01,828 :: DEBUG    zonewidget    :: Successfully loaded.
 2014-08-03 10:21:01,828 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 21:10:40,142 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 21:10:40,167 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 21:10:40,167 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 21:10:40,221 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,222 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 21:10:40,222 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,223 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 21:10:40,223 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 21:10:40,224 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 21:10:40,225 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,262 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 21:10:40,263 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,806 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 21:10:40,807 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,819 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 21:10:40,828 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,852 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 21:10:40,853 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 21:10:40,853 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 21:10:40,853 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 21:10:40,855 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,856 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 21:10:40,857 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 21:10:40,858 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 21:10:40,859 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 21:15:35,965 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 21:15:35,989 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 21:15:35,989 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 21:15:36,045 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,046 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 21:15:36,046 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,047 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 21:15:36,048 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 21:15:36,048 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 21:15:36,049 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,086 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 21:15:36,087 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,620 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 21:15:36,621 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,633 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 21:15:36,635 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,652 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 21:15:36,654 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 21:15:36,654 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 21:15:36,654 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 21:15:36,656 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,657 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 21:15:36,657 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 21:15:36,658 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 21:15:36,659 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:50:42,744 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:50:42,828 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:50:42,829 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:50:42,830 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:42,830 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:50:42,831 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:42,832 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:50:42,832 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:50:42,833 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:50:42,833 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:42,873 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:50:42,874 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:43,409 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:50:43,411 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:43,423 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:50:43,424 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:43,442 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:50:43,443 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:50:43,443 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:50:43,444 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:50:43,445 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:43,446 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:50:43,447 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:50:43,448 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:50:43,448 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:53:23,871 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:53:23,951 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:53:23,952 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:53:23,953 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:23,953 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:53:23,954 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:23,955 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:53:23,955 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:53:23,955 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:53:23,956 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:23,994 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:53:23,995 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:24,553 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:53:24,555 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:24,568 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:53:24,569 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:24,588 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:53:24,589 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:53:24,589 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:53:24,590 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:53:24,591 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:24,592 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:53:24,593 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:24,594 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:53:24,594 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:53:45,694 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:53:45,778 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:53:45,778 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:53:45,779 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:45,780 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:53:45,781 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:45,781 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:53:45,782 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:53:45,782 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:53:45,783 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:45,819 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:53:45,820 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:46,361 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:53:46,362 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:46,375 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:53:46,376 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:46,403 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:53:46,404 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:53:46,404 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:53:46,405 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:53:46,406 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:46,408 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:53:46,409 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:46,410 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:53:46,411 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:53:59,845 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:53:59,926 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:53:59,927 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:53:59,928 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:59,929 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:53:59,929 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:59,930 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:53:59,930 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:53:59,931 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:53:59,931 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:53:59,968 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:53:59,969 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:00,506 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:54:00,507 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:00,520 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:54:00,521 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:00,540 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:54:00,540 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:54:00,541 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:54:00,541 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:54:00,542 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:00,543 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:54:00,544 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:00,545 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:54:00,546 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:54:12,654 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:54:12,734 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:54:12,734 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:54:12,735 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:12,736 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:54:12,737 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:12,737 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:54:12,738 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:54:12,738 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:54:12,739 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:12,785 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:54:12,786 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:13,339 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:54:13,340 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:13,352 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:54:13,353 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:13,372 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:54:13,373 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:54:13,373 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:54:13,373 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:54:13,374 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:13,375 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:54:13,376 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:54:13,377 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:54:13,378 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:55:17,783 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:55:17,870 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:55:17,871 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:55:17,872 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:17,873 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:55:17,873 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:17,874 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:55:17,874 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:55:17,875 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:55:17,875 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:17,917 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:55:17,919 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:18,481 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:55:18,483 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:18,496 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:55:18,498 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:18,518 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:55:18,518 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:55:18,519 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:55:18,519 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:55:18,520 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:18,521 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:55:18,522 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:18,523 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:55:18,523 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:55:35,259 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:55:35,340 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:55:35,340 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:55:35,341 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,342 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:55:35,342 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,343 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:55:35,343 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:55:35,344 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:55:35,344 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,387 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:55:35,387 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,951 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:55:35,952 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,964 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:55:35,965 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,985 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:55:35,986 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:55:35,986 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:55:35,986 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:55:35,987 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,988 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:55:35,989 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:35,990 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:55:35,991 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:55:56,861 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 22:55:56,941 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 22:55:56,942 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 22:55:56,943 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:56,944 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 22:55:56,944 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:56,945 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 22:55:56,945 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 22:55:56,946 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 22:55:56,946 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:56,983 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 22:55:56,984 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:57,534 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 22:55:57,535 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:57,547 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 22:55:57,548 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:57,567 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 22:55:57,567 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 22:55:57,568 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 22:55:57,568 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 22:55:57,569 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:57,570 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 22:55:57,571 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 22:55:57,572 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 22:55:57,573 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 22:59:20,570 :: DEBUG    aboutdialog   :: Opened developer information window.
+2014-08-12 23:03:19,192 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:03:19,269 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:03:19,271 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:03:19,272 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,273 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:03:19,274 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,274 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:03:19,275 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:03:19,275 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:03:19,278 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,320 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:03:19,321 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,863 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:03:19,865 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,878 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:03:19,880 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,898 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:03:19,899 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:03:19,899 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:03:19,900 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:03:19,901 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,901 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:03:19,904 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:19,904 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:03:19,905 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:03:39,254 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:03:39,334 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:03:39,334 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:03:39,335 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,336 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:03:39,336 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,337 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:03:39,337 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:03:39,338 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:03:39,338 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,375 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:03:39,376 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,915 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:03:39,916 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,928 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:03:39,930 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,949 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:03:39,949 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:03:39,950 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:03:39,950 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:03:39,951 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,952 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:03:39,954 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:39,955 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:03:39,956 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:03:46,730 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:03:46,813 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:03:46,813 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:03:46,814 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:46,815 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:03:46,815 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:46,816 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:03:46,817 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:03:46,817 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:03:46,818 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:46,854 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:03:46,855 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:47,393 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:03:47,394 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:47,407 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:03:47,408 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:47,426 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:03:47,427 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:03:47,427 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:03:47,428 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:03:47,428 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:47,429 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:03:47,431 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:47,432 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:03:47,433 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:03:57,545 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:03:57,624 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:03:57,625 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:03:57,626 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:57,626 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:03:57,627 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:57,628 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:03:57,628 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:03:57,629 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:03:57,629 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:57,667 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:03:57,668 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:58,220 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:03:58,221 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:58,234 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:03:58,235 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:58,254 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:03:58,255 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:03:58,255 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:03:58,255 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:03:58,257 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:58,258 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:03:58,261 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:03:58,262 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:03:58,263 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:15:23,034 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:15:23,113 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:15:23,114 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:15:23,115 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,115 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:15:23,116 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,117 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:15:23,117 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:15:23,117 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:15:23,120 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,157 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:15:23,157 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,699 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:15:23,700 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,713 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:15:23,715 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,733 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:15:23,734 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:15:23,734 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:15:23,734 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:15:23,736 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,736 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:15:23,738 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:15:23,739 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:15:23,740 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:16:10,902 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:16:10,986 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:16:10,987 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:16:10,987 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:10,988 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:16:10,989 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:10,989 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:16:10,990 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:16:10,990 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:16:10,991 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,030 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:16:11,031 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,581 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:16:11,582 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,594 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:16:11,595 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,614 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:16:11,615 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:16:11,615 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:16:11,615 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:16:11,617 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,617 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:16:11,618 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:16:11,619 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:16:11,620 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:17:32,792 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:17:32,874 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:17:32,874 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:17:32,875 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:32,876 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:17:32,877 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:32,877 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:17:32,878 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:17:32,878 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:17:32,879 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:32,916 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:17:32,917 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:33,461 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:17:33,462 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:33,474 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:17:33,476 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:33,494 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:17:33,495 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:17:33,495 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:17:33,496 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:17:33,497 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:33,498 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:17:33,499 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:17:33,500 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:17:33,501 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:18:23,452 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:18:23,530 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:18:23,531 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:18:23,532 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:23,532 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:18:23,533 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:23,534 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:18:23,534 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:18:23,534 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:18:23,535 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:23,573 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:18:23,574 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:24,114 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:18:24,115 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:24,128 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:18:24,129 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:24,148 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:18:24,148 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:18:24,149 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:18:24,149 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:18:24,150 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:24,151 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:18:24,152 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:24,153 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:18:24,153 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:18:44,474 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:18:44,552 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:18:44,552 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:18:44,553 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:44,554 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:18:44,554 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:44,555 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:18:44,556 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:18:44,556 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:18:44,557 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:44,594 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:18:44,597 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:45,141 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:18:45,142 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:45,154 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:18:45,155 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:45,173 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:18:45,174 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:18:45,174 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:18:45,175 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:18:45,176 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:45,177 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:18:45,177 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:18:45,178 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:18:45,179 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:19:05,582 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:19:05,660 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:19:05,660 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:19:05,661 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:05,662 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:19:05,663 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:05,663 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:19:05,664 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:19:05,664 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:19:05,665 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:05,701 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:19:05,703 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:06,247 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:19:06,248 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:06,260 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:19:06,261 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:06,280 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:19:06,280 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:19:06,281 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:19:06,281 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:19:06,282 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:06,283 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:19:06,284 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:06,285 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:19:06,285 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:19:17,154 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:19:17,233 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:19:17,233 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:19:17,234 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,235 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:19:17,235 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,236 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:19:17,236 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:19:17,237 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:19:17,237 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,275 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:19:17,277 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,814 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:19:17,815 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,826 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:19:17,828 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,847 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:19:17,848 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:19:17,848 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:19:17,849 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:19:17,849 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,850 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:19:17,851 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:19:17,852 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:19:17,853 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:24:52,559 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:24:52,636 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:24:52,636 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:24:52,637 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:52,638 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:24:52,638 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:52,639 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:24:52,639 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:24:52,640 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:24:52,640 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:52,677 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:24:52,679 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:53,220 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:24:53,221 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:53,233 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:24:53,235 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:53,253 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:24:53,254 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:24:53,254 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:24:53,254 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:24:53,255 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:53,256 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:24:53,256 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:24:53,257 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:24:53,258 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:25:57,149 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:25:57,228 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:25:57,228 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:25:57,229 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,230 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:25:57,230 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,231 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:25:57,231 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:25:57,232 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:25:57,232 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,269 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:25:57,271 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,809 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:25:57,810 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,821 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:25:57,823 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,841 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:25:57,841 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:25:57,842 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:25:57,842 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:25:57,843 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,844 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:25:57,845 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:25:57,845 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:25:57,846 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:27:06,217 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:27:06,296 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:27:06,296 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:27:06,297 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,298 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:27:06,298 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,299 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:27:06,299 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:27:06,300 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:27:06,300 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,336 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:27:06,338 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,876 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:27:06,877 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,889 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:27:06,891 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,909 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:27:06,910 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:27:06,910 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:27:06,910 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:27:06,911 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,912 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:27:06,913 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:27:06,914 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:27:06,915 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:29:06,851 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:29:06,930 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:29:06,931 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:29:06,931 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:06,932 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:29:06,933 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:06,933 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:29:06,934 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:29:06,934 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:29:06,934 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:06,972 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:29:06,974 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:07,507 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:29:07,508 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:07,520 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:29:07,522 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:07,541 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:29:07,541 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:29:07,542 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:29:07,542 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:29:07,543 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:07,544 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:29:07,545 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:07,546 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:29:07,546 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:29:16,876 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:29:16,953 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:29:16,953 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:29:16,954 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:16,955 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:29:16,955 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:16,956 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:29:16,956 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:29:16,957 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:29:16,957 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:16,995 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:29:16,997 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:17,527 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:29:17,529 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:17,542 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:29:17,543 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:17,562 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:29:17,563 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:29:17,563 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:29:17,563 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:29:17,565 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:17,565 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:29:17,566 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:17,567 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:29:17,568 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:29:26,862 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:29:26,942 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:29:26,943 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:29:26,944 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:26,944 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:29:26,945 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:26,946 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:29:26,946 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:29:26,946 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:29:26,947 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:26,986 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:29:26,988 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:27,529 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:29:27,530 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:27,542 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:29:27,544 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:27,562 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:29:27,563 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:29:27,563 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:29:27,563 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:29:27,565 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:27,566 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:29:27,567 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:27,568 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:29:27,569 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:29:43,921 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:29:44,001 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:29:44,002 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:29:44,003 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,003 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:29:44,004 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,005 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:29:44,005 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:29:44,006 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:29:44,006 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,044 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:29:44,046 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,588 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:29:44,589 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,601 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:29:44,603 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,621 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:29:44,621 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:29:44,622 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:29:44,622 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:29:44,623 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,624 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:29:44,625 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:44,626 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:29:44,627 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:29:58,935 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:29:59,015 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:29:59,016 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:29:59,017 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,018 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:29:59,019 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,019 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:29:59,020 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:29:59,020 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:29:59,021 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,058 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:29:59,059 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,599 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:29:59,600 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,612 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:29:59,614 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,632 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:29:59,632 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:29:59,633 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:29:59,633 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:29:59,634 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,635 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:29:59,636 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:29:59,637 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:29:59,637 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:30:13,473 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:30:13,554 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:30:13,559 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:30:13,560 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:13,560 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:30:13,561 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:13,562 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:30:13,562 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:30:13,562 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:30:13,563 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:13,601 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:30:13,603 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:14,142 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:30:14,143 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:14,157 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:30:14,158 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:14,177 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:30:14,178 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:30:14,178 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:30:14,179 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:30:14,180 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:14,181 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:30:14,182 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:30:14,182 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:30:14,183 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:31:07,278 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:31:07,361 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:31:07,362 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:31:07,363 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,364 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:31:07,364 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,365 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:31:07,365 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:31:07,366 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:31:07,366 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,403 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:31:07,406 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,933 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:31:07,934 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,946 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:31:07,947 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,966 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:31:07,967 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:31:07,967 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:31:07,967 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:31:07,969 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,969 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:31:07,970 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:07,971 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:31:07,972 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:31:17,026 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:31:17,104 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:31:17,105 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:31:17,105 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,106 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:31:17,107 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,107 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:31:17,108 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:31:17,108 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:31:17,109 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,146 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:31:17,147 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,696 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:31:17,697 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,709 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:31:17,711 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,729 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:31:17,729 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:31:17,730 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:31:17,730 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:31:17,731 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,732 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:31:17,733 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:17,733 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:31:17,734 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:31:33,537 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:31:33,614 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:31:33,615 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:31:33,616 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:33,617 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:31:33,617 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:33,618 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:31:33,618 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:31:33,619 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:31:33,619 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:33,656 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:31:33,658 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:34,212 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:31:34,213 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:34,227 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:31:34,228 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:34,247 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:31:34,247 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:31:34,248 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:31:34,248 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:31:34,249 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:34,250 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:31:34,251 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:31:34,252 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:31:34,253 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:32:12,611 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:32:12,689 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:32:12,689 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:32:12,690 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:12,691 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:32:12,691 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:12,692 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:32:12,693 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:32:12,693 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:32:12,694 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:12,731 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:32:12,733 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:13,284 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:32:13,285 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:13,297 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:32:13,299 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:13,317 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:32:13,318 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:32:13,318 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:32:13,318 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:32:13,319 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:13,320 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:32:13,321 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:13,322 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:32:13,323 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:32:21,702 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:32:21,786 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:32:21,786 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:32:21,787 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:21,788 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:32:21,789 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:21,789 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:32:21,790 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:32:21,790 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:32:21,791 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:21,828 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:32:21,829 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:22,376 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:32:22,377 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:22,390 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:32:22,391 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:22,420 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:32:22,421 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:32:22,421 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:32:22,421 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:32:22,422 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:22,425 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:32:22,428 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:22,429 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:32:22,430 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:32:33,463 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:32:33,547 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:32:33,548 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:32:33,549 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:33,550 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:32:33,550 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:33,551 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:32:33,551 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:32:33,552 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:32:33,552 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:33,590 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:32:33,592 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:34,129 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:32:34,130 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:34,143 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:32:34,145 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:34,163 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:32:34,164 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:32:34,164 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:32:34,165 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:32:34,166 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:34,168 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:32:34,169 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:32:34,169 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:32:34,170 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:50:45,036 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:50:45,119 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:50:45,119 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:50:45,120 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,121 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:50:45,121 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,122 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:50:45,123 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:50:45,123 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:50:45,124 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,162 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:50:45,163 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,723 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:50:45,724 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,737 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:50:45,738 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,759 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:50:45,760 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:50:45,760 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:50:45,761 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:50:45,762 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,763 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:50:45,765 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:50:45,766 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:50:45,767 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:55:48,101 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:55:48,184 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:55:48,184 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:55:48,185 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,186 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:55:48,186 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,187 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:55:48,188 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:55:48,188 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:55:48,189 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,228 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:55:48,230 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,782 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:55:48,783 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,795 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:55:48,797 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,815 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:55:48,815 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:55:48,816 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:55:48,816 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:55:48,817 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,818 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:55:48,819 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:48,820 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:55:48,821 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:55:57,628 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:55:57,709 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:55:57,710 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:55:57,711 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:57,711 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:55:57,712 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:57,713 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:55:57,713 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:55:57,714 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:55:57,714 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:57,757 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:55:57,758 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:58,309 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:55:58,310 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:58,322 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:55:58,323 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:58,342 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:55:58,343 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:55:58,343 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:55:58,343 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:55:58,345 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:58,346 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:55:58,346 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:55:58,347 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:55:58,348 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:56:13,154 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:56:13,238 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:56:13,238 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:56:13,239 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,240 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:56:13,241 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,241 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:56:13,242 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:56:13,242 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:56:13,243 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,283 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:56:13,285 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,836 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:56:13,837 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,850 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:56:13,851 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,869 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:56:13,870 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:56:13,870 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:56:13,870 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:56:13,872 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,872 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:56:13,874 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:56:13,875 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:56:13,875 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:57:23,173 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:57:23,256 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:57:23,257 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:57:23,258 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,259 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:57:23,259 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,260 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:57:23,260 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:57:23,261 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:57:23,261 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,301 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:57:23,303 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,860 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:57:23,862 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,874 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:57:23,876 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,895 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:57:23,896 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:57:23,897 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:57:23,898 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:57:23,898 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,899 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:57:23,900 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:23,901 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:57:23,902 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:57:41,156 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:57:41,236 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:57:41,236 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:57:41,237 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,238 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:57:41,238 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,239 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:57:41,239 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:57:41,240 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:57:41,240 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,279 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:57:41,281 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,842 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:57:41,843 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,856 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:57:41,857 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,877 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:57:41,878 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:57:41,878 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:57:41,878 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:57:41,879 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,880 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:57:41,881 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:57:41,882 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:57:41,883 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:58:00,644 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:58:00,729 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:58:00,730 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:58:00,731 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:00,732 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:58:00,732 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:00,733 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:58:00,733 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:58:00,734 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:58:00,734 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:00,781 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:58:00,783 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:01,340 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:58:01,343 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:01,356 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:58:01,357 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:01,377 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:58:01,378 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:58:01,379 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:58:01,379 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:58:01,380 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:01,381 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:58:01,382 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:01,383 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:58:01,384 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-12 23:58:49,358 :: INFO     llamllog      :: Logging module has formally started
+2014-08-12 23:58:49,442 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-12 23:58:49,442 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-12 23:58:49,443 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:49,444 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-12 23:58:49,444 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:49,445 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-12 23:58:49,446 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-12 23:58:49,447 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-12 23:58:49,447 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:49,486 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-12 23:58:49,487 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:50,039 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-12 23:58:50,040 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:50,053 :: DEBUG    audio         :: Successfully loaded.
+2014-08-12 23:58:50,054 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:50,073 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-12 23:58:50,073 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-12 23:58:50,074 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-12 23:58:50,074 :: DEBUG    settings      :: Successfully loaded.
+2014-08-12 23:58:50,076 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:50,076 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-12 23:58:50,078 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-12 23:58:50,079 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-12 23:58:50,080 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:09:43,169 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:09:43,248 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:09:43,249 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:09:43,250 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,250 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:09:43,251 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,252 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:09:43,252 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:09:43,253 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:09:43,253 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,290 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:09:43,291 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,843 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:09:43,845 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,857 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:09:43,859 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,877 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:09:43,878 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:09:43,878 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:09:43,878 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:09:43,879 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,880 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:09:43,883 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:09:43,884 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:09:43,885 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:10:03,468 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:10:03,550 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:10:03,550 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:10:03,551 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:03,552 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:10:03,553 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:03,553 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:10:03,554 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:10:03,554 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:10:03,555 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:03,596 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:10:03,597 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:04,150 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:10:04,151 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:04,164 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:10:04,166 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:04,186 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:10:04,187 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:10:04,187 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:10:04,187 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:10:04,189 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:04,190 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:10:04,192 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:04,193 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:10:04,193 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:10:16,320 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:10:16,399 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:10:16,400 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:10:16,400 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:16,401 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:10:16,402 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:16,402 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:10:16,403 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:10:16,403 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:10:16,404 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:16,442 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:10:16,443 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:16,996 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:10:16,997 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:17,011 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:10:17,012 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:17,031 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:10:17,032 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:10:17,032 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:10:17,033 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:10:17,033 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:17,034 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:10:17,037 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:17,038 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:10:17,039 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:10:40,458 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:10:40,540 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:10:40,541 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:10:40,541 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:40,543 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:10:40,544 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:40,544 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:10:40,545 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:10:40,545 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:10:40,546 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:40,586 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:10:40,587 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:41,139 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:10:41,141 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:41,157 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:10:41,158 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:41,180 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:10:41,181 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:10:41,182 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:10:41,182 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:10:41,185 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:41,185 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:10:41,188 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:10:41,189 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:10:41,190 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:24:46,240 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:24:46,323 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:24:46,323 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:24:46,324 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,325 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:24:46,325 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,326 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:24:46,326 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:24:46,327 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:24:46,327 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,366 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:24:46,367 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,910 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:24:46,911 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,923 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:24:46,924 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,944 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:24:46,944 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:24:46,945 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:24:46,945 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:24:46,946 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,947 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:24:46,948 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:24:46,949 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:24:46,950 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:25:12,278 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:25:12,358 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:25:12,359 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:25:12,360 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,361 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:25:12,361 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,362 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:25:12,362 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:25:12,363 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:25:12,363 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,404 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:25:12,404 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,953 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:25:12,954 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,968 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:25:12,969 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,989 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:25:12,990 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:25:12,990 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:25:12,990 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:25:12,992 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,993 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:25:12,995 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:12,996 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:25:12,997 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:25:20,423 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:25:20,503 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:25:20,503 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:25:20,504 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:20,505 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:25:20,505 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:20,506 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:25:20,506 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:25:20,507 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:25:20,508 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:20,550 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:25:20,551 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:21,087 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:25:21,088 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:21,100 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:25:21,103 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:21,120 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:25:21,121 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:25:21,121 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:25:21,122 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:25:21,123 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:21,124 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:25:21,125 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:21,126 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:25:21,127 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:25:48,691 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:25:48,779 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:25:48,779 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:25:48,780 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:48,781 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:25:48,782 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:48,782 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:25:48,783 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:25:48,783 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:25:48,783 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:48,823 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:25:48,824 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:49,373 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:25:49,375 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:49,388 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:25:49,389 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:49,408 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:25:49,410 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:25:49,411 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:25:49,411 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:25:49,412 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:49,413 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:25:49,414 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:25:49,415 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:25:49,415 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:26:14,226 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:26:14,307 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:26:14,307 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:26:14,308 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,309 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:26:14,309 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,310 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:26:14,310 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:26:14,311 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:26:14,311 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,350 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:26:14,351 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,894 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:26:14,895 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,908 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:26:14,910 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,928 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:26:14,929 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:26:14,929 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:26:14,930 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:26:14,931 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,931 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:26:14,932 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:26:14,933 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:26:14,934 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:27:45,825 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:27:45,907 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:27:45,908 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:27:45,909 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:45,909 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:27:45,910 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:45,911 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:27:45,911 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:27:45,911 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:27:45,912 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:45,950 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:27:45,951 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:46,496 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:27:46,498 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:46,510 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:27:46,511 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:46,530 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:27:46,531 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:27:46,531 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:27:46,531 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:27:46,533 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:46,533 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:27:46,536 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:46,537 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:27:46,538 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:27:53,406 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:27:53,492 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:27:53,492 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:27:53,494 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:53,495 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:27:53,495 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:53,496 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:27:53,496 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:27:53,497 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:27:53,497 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:53,536 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:27:53,537 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:54,082 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:27:54,083 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:54,095 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:27:54,097 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:54,115 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:27:54,116 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:27:54,117 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:27:54,117 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:27:54,118 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:54,119 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:27:54,120 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:27:54,121 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:27:54,122 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:28:21,818 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:28:21,897 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:28:21,899 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:28:21,900 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:21,900 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:28:21,901 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:21,902 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:28:21,902 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:28:21,902 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:28:21,903 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:21,941 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:28:21,942 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:22,482 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:28:22,483 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:22,496 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:28:22,497 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:22,516 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:28:22,517 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:28:22,517 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:28:22,517 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:28:22,518 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:22,519 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:28:22,522 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:22,523 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:28:22,524 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:28:40,334 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:28:40,421 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:28:40,421 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:28:40,422 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:40,422 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:28:40,423 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:40,424 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:28:40,424 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:28:40,425 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:28:40,425 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:40,464 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:28:40,465 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:41,008 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:28:41,009 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:41,022 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:28:41,023 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:41,042 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:28:41,042 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:28:41,043 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:28:41,043 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:28:41,044 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:41,045 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:28:41,047 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:28:41,049 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:28:41,050 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:31:10,489 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:31:10,575 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:31:10,575 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:31:10,576 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:10,577 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:31:10,577 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:10,578 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:31:10,578 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:31:10,579 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:31:10,580 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:10,621 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:31:10,622 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:11,162 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:31:11,163 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:11,176 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:31:11,177 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:11,196 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:31:11,197 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:31:11,197 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:31:11,198 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:31:11,199 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:11,200 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:31:11,201 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:11,202 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:31:11,203 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:31:31,534 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:31:31,617 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:31:31,618 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:31:31,619 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:31,619 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:31:31,620 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:31,621 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:31:31,621 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:31:31,622 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:31:31,622 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:31,662 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:31:31,663 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:32,228 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:31:32,229 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:32,241 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:31:32,242 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:32,261 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:31:32,262 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:31:32,262 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:31:32,262 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:31:32,263 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:32,264 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:31:32,265 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:32,266 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:31:32,267 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:31:53,180 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:31:53,262 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:31:53,263 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:31:53,264 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,264 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:31:53,265 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,266 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:31:53,266 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:31:53,267 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:31:53,267 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,306 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:31:53,307 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,850 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:31:53,852 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,864 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:31:53,867 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,885 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:31:53,886 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:31:53,886 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:31:53,886 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:31:53,887 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,888 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:31:53,889 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:31:53,890 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:31:53,891 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:32:03,657 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:32:03,737 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:32:03,738 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:32:03,739 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:03,739 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:32:03,740 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:03,741 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:32:03,741 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:32:03,741 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:32:03,742 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:03,783 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:32:03,784 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:04,339 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:32:04,340 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:04,353 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:32:04,355 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:04,373 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:32:04,375 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:32:04,375 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:32:04,376 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:32:04,377 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:04,378 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:32:04,379 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:04,380 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:32:04,382 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:32:15,425 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:32:15,508 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:32:15,508 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:32:15,509 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:15,510 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:32:15,511 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:15,511 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:32:15,512 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:32:15,512 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:32:15,513 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:15,551 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:32:15,552 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:16,107 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:32:16,108 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:16,120 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:32:16,122 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:16,141 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:32:16,142 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:32:16,142 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:32:16,143 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:32:16,144 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:16,145 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:32:16,145 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:16,146 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:32:16,147 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:32:53,567 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:32:53,648 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:32:53,648 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:32:53,649 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:53,650 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:32:53,651 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:53,651 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:32:53,652 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:32:53,652 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:32:53,653 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:53,691 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:32:53,693 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:54,237 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:32:54,238 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:54,251 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:32:54,252 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:54,271 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:32:54,272 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:32:54,272 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:32:54,273 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:32:54,274 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:54,275 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:32:54,276 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:32:54,277 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:32:54,277 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:34:16,328 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:34:16,407 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:34:16,408 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:34:16,408 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:16,409 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:34:16,410 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:16,410 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:34:16,411 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:34:16,411 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:34:16,412 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:16,450 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:34:16,452 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:16,990 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:34:16,991 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:17,004 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:34:17,006 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:17,024 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:34:17,025 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:34:17,026 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:34:17,026 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:34:17,027 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:17,028 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:34:17,030 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:34:17,031 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:34:17,033 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:36:17,684 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:36:17,774 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:36:17,774 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:36:17,775 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:17,776 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:36:17,777 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:17,777 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:36:17,778 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:36:17,778 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:36:17,779 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:17,816 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:36:17,819 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:18,363 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:36:18,365 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:18,378 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:36:18,379 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:18,398 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:36:18,399 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:36:18,399 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:36:18,399 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:36:18,400 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:18,401 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:36:18,402 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:36:18,404 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:36:18,405 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:38:12,323 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:38:12,405 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:38:12,406 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:38:12,407 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:12,408 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:38:12,408 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:12,409 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:38:12,409 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:38:12,410 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:38:12,410 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:12,453 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:38:12,453 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:12,995 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:38:12,997 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:13,009 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:38:13,010 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:13,029 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:38:13,030 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:38:13,030 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:38:13,030 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:38:13,031 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:13,032 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:38:13,035 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:13,035 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:38:13,036 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:38:17,486 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:38:17,569 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:38:17,569 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:38:17,570 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:17,571 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:38:17,571 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:17,572 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:38:17,572 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:38:17,573 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:38:17,573 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:17,610 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:38:17,612 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:18,151 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:38:18,152 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:18,165 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:38:18,167 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:18,185 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:38:18,186 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:38:18,186 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:38:18,187 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:38:18,188 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:18,189 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:38:18,189 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:18,190 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:38:18,191 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:38:33,907 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:38:33,986 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:38:33,986 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:38:33,987 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:33,988 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:38:33,988 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:33,989 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:38:33,989 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:38:33,990 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:38:33,990 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,029 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:38:34,030 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,575 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:38:34,577 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,590 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:38:34,591 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,611 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:38:34,612 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:38:34,612 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:38:34,612 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:38:34,614 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,615 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:38:34,617 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:38:34,618 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:38:34,619 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:39:04,683 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:39:04,778 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:39:04,779 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:39:04,779 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:04,780 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:39:04,781 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:04,782 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:39:04,782 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:39:04,782 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:39:04,783 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:04,821 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:39:04,823 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:05,374 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:39:05,375 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:05,388 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:39:05,389 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:05,407 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:39:05,407 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:39:05,408 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:39:05,408 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:39:05,409 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:05,410 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:39:05,411 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:05,412 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:39:05,412 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:39:20,844 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:39:20,924 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:39:20,925 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:39:20,925 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:20,926 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:39:20,927 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:20,927 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:39:20,928 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:39:20,928 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:39:20,929 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:20,967 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:39:20,969 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:21,523 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:39:21,525 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:21,537 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:39:21,538 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:21,557 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:39:21,558 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:39:21,558 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:39:21,559 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:39:21,560 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:21,561 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:39:21,562 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:21,563 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:39:21,563 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **
+2014-08-13 00:39:31,986 :: INFO     llamllog      :: Logging module has formally started
+2014-08-13 00:39:32,067 :: DEBUG    LLaML         :: PySide is installed and all PySide modules loaded
+2014-08-13 00:39:32,067 :: DEBUG    LLaML         :: ** Attempting to load all custom modules... please wait... **
+2014-08-13 00:39:32,068 :: DEBUG    programmgr    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,069 :: DEBUG    programmgr    :: Successfully loaded.
+2014-08-13 00:39:32,069 :: DEBUG    scheduler     :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,070 :: DEBUG    scheduler     :: Successfully loaded.
+2014-08-13 00:39:32,071 :: DEBUG    audiotoolbar  :: Attempting to load (wait for confirmation).
+2014-08-13 00:39:32,071 :: DEBUG    audiotoolbar  :: Successfully loaded.
+2014-08-13 00:39:32,072 :: DEBUG    aboutdialog   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,112 :: DEBUG    aboutdialog   :: Successfully loaded.
+2014-08-13 00:39:32,114 :: DEBUG    audiodisplay  :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,663 :: DEBUG    audiodisplay  :: Successfully loaded.
+2014-08-13 00:39:32,664 :: DEBUG    audio         :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,677 :: DEBUG    audio         :: Successfully loaded.
+2014-08-13 00:39:32,678 :: DEBUG    settings      :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,698 :: INFO     settings      :: A pre-existing settings file was found.
+2014-08-13 00:39:32,699 :: INFO     settings      :: Verified the integrity of the settings file.
+2014-08-13 00:39:32,700 :: INFO     settings      :: Attempting to load the previously identified settings file.
+2014-08-13 00:39:32,700 :: DEBUG    settings      :: Successfully loaded.
+2014-08-13 00:39:32,702 :: DEBUG    systemcheck   :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,702 :: DEBUG    systemcheck   :: Successfully loaded.
+2014-08-13 00:39:32,703 :: DEBUG    zonewidget    :: Attempting to load (wait for confirmation)
+2014-08-13 00:39:32,704 :: DEBUG    zonewidget    :: Successfully loaded.
+2014-08-13 00:39:32,705 :: DEBUG    LLaML         :: ** All custom modules loaded successfully! **

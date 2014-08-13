@@ -29,7 +29,7 @@ import logging
 try:
     from PySide.QtCore import *
     # TODO Don't need this right now -- consider removing?
-    #from PySide.QtGui import *
+    from PySide.QtGui import *
     logging.debug("PySide is installed and all PySide modules loaded")
 except ImportError:
     logging.error("Attempted to load PySide, PySide is not installed or is " \
@@ -53,6 +53,8 @@ except ImportError:
 
 # Create a Qt application
 app = QApplication(sys.argv)
+# Explicit set of "style" to GTK+... meant only for Linux.
+app.setStyle("GTK+")
 app.setWindowIcon(QIcon('greenLightSM.png'))
 app.setApplicationName("LLaML")
 
@@ -273,7 +275,7 @@ class MainWidget(QWidget):
 
         # Stretch factor added because stretching only goes so far!  Setting the
         # factor to 5 allows it to be 5x the normal stretch space allowed.
-        self.generalLayout.addStretch(1)
+        #self.generalLayout.addStretch(1)
 
         self.setLayout(self.generalLayout)
         self.c.updateWidget[int, int].connect(self.waveform.setDimensions)

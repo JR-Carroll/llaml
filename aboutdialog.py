@@ -42,7 +42,7 @@ class AboutDialog(QDialog):
         </p>
         <p>
         <b>Creator</b>: J. R. Carroll, 2014
-        <br /><b>Email</b>:  <a href="mailto:jrc.csus@gmail.com">jrc.csus@gmail.com</a>
+        <br /><b>Email</b>:  <a href="mailto:jrcarroll@jrcresearch.net">jrcarroll@jrcresearch.net</a>
         </p>
         """
 
