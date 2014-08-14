@@ -22,23 +22,9 @@ class ZoneWidget(QScrollArea):
     def __init__(self, *args, **kwargs):
         super(ZoneWidget, self).__init__()
         self.generalLayout = QVBoxLayout()
-        self.setContentsMargins(20,20,20,20)
-        self.setGeometry(5000,5000,5000,5000)
         self.zoneWidgetOne = ZoneContainerWidget()
-        self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
-        self.zoneWidgetTwo = ZoneContainerWidget()
-        self.zoneWidgetThree = ZoneContainerWidget()
-        self.zoneWidgetFour = ZoneContainerWidget()
-        self.zoneWidgetFive = ZoneContainerWidget()
-        self.zoneWidgetSix = ZoneContainerWidget()
-        self.zoneWidgetSeven = ZoneContainerWidget()
-        self.generalLayout.addWidget(self.zoneWidgetOne)
-        self.generalLayout.addWidget(self.zoneWidgetTwo)
-        self.generalLayout.addWidget(self.zoneWidgetThree)
-        #self.generalLayout.addWidget(self.zoneWidgetFour)
-        #self.generalLayout.addWidget(self.zoneWidgetFive)
-        #self.generalLayout.addWidget(self.zoneWidgetSix)
-        #self.generalLayout.addWidget(self.zoneWidgetSeven)
+        self.setWidget(self.zoneWidgetOne)
+
         self.setLayout(self.generalLayout)
 
 
@@ -46,16 +32,16 @@ class ZoneContainerWidget(QWidget):
     """Container for the Label and Touch portions of the zone widget"""
     def __init__(self, *args, **kwargs):
         super(ZoneContainerWidget, self).__init__()
-        self.setContentsMargins(0,0,0,0)
+        #self.setContentsMargins(0,0,0,0)
+        #self.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed))
         self.generalLayout = QHBoxLayout()
         self.labelWidget = ZoneLabelWidget()
         self.blockWidget = ZoneTouchWidget()
 
         # add the label and touch widget to the layout
         self.generalLayout.addWidget(self.labelWidget)
-        #self.generalLayout.addWidget(self.blockWidget)
-        self.generalLayout.addStretch(1)
-
+        self.generalLayout.addWidget(self.blockWidget)
+        #self.generalLayout.addStretch(1)
         self.setLayout(self.generalLayout)
 
 class ZoneLabelWidget(QPushButton):
@@ -63,9 +49,12 @@ class ZoneLabelWidget(QPushButton):
     def __init__(self, *args, **kwargs):
         super(ZoneLabelWidget, self).__init__()
         self.setContentsMargins(0,0,0,0)
-        self.setFixedWidth(125)
+        self.setFixedWidth(115)
+        self.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed))
         self.generalLayout = QHBoxLayout()
         self.text = QLabel("2.R.Window")
+        _labelFont = QFont("Helvetica", 8)
+        self.text.setFont(_labelFont)
         self.colorSqr = QFrame()
         self.colorSqr.setFixedWidth(20)
         self.colorSqr.setStyleSheet("QWidget { background-color: #FF0000}")
@@ -75,7 +64,6 @@ class ZoneLabelWidget(QPushButton):
         self.zoneColor = None
         self.zoneImage = None
         self.setLayout(self.generalLayout)
-
         self.clicked.connect(ZoneInfoDialogWidget)
 
 
@@ -84,6 +72,7 @@ class ZoneTouchWidget(QScrollArea):
     def __init__(self, *args, **kwargs):
         super(ZoneTouchWidget, self).__init__()
         self.setContentsMargins(0,0,0,0)
+        self.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Ignored)
 
 
 class ZoneInfoDialogWidget(QDialog):

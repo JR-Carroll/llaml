@@ -38,7 +38,6 @@ class DrawAudioWaveForm(QScrollArea):
 
         # Establish top widget
         self.image = QLabel(parent)
-        self.image.setGeometry(0, 0, 20, 20)
         # Create a layout to start throwing stuff into
         self.generalLayout = QVBoxLayout()
         self.generalLayout.setContentsMargins(0, 0, 0, 0)

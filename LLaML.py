@@ -272,6 +272,7 @@ class MainWidget(QWidget):
         self.zoneTest = ZoneWidget()
         self.generalLayout.addWidget(self.waveform)
         self.generalLayout.addWidget(self.zoneTest)
+        self.generalLayout.setSpacing(0)
 
         # Stretch factor added because stretching only goes so far!  Setting the
         # factor to 5 allows it to be 5x the normal stretch space allowed.
