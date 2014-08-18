@@ -1,7 +1,7 @@
 {
     "ApplicationSettings": {
         "StartupTab": {
-            "startOnLoad": null,
+            "startOnLoad": true,
             "showStatusBarOnStartup": null,
             "defaultProjectStartup": null,
             "showVisualWaveOnStartup": null,
@@ -9,11 +9,11 @@
         },
         "AudioTab": {
             "cacheWaveforms": null,
-            "defaultAudioLevelOnStartup": null,
-            "rawSampleRate": null
+            "defaultAudioLevelOnStartup": 50,
+            "rawSampleRate": "med"
         },
         "GeneralTab": {
-            "colorPalletByDate": null,
+            "colorPalletByDate": true,
             "TBD": true,
             "defProjectPath": null
         }

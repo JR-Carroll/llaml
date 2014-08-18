@@ -268,9 +268,13 @@ class MainWidget(QWidget):
         self.generalLayout = QVBoxLayout()
         self.generalLayout.setContentsMargins(0, 0, 0, 0)
         # Nested waveform widget.
+        self.topLayout = QHBoxLayout()
         self.waveform = DrawAudioWaveForm(self)
-        self.zoneTest = ZoneWidget()
-        self.generalLayout.addWidget(self.waveform)
+        self.zoneTest = ZoneWidget(self)
+        self.topLayout.addWidget(QFrame())
+        self.topLayout.addWidget(self.waveform)
+        #self.generalLayout.addWidget(self.waveform)
+        self.generalLayout.addLayout(self.topLayout)
         self.generalLayout.addWidget(self.zoneTest)
         self.generalLayout.setSpacing(0)
 
