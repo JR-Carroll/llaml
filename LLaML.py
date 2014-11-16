@@ -312,10 +312,10 @@ class MainWidget(QWidget):
 
 # Splash screen setup.
 font = QFont('Serif', 30)
-#splash = QSplashScreen(_lightPM)
-#splash.setFont(font)
-#splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
-#splash.show()
+splash = QSplashScreen(_lightPM)
+splash.setFont(font)
+splash.showMessage("LLaML", Qt.AlignCenter, Qt.black)
+splash.show()
 
 # Create main application window.
 LLaMLWindow = ParentWindowMgr()

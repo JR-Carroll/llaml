@@ -37,7 +37,8 @@ class ZoneFrameContainer(QFrame):
         self.generalLayout.addWidget(self.zoneWidgetOne)
         self.generalLayout.setSpacing(0)
         self.generalLayout.setContentsMargins(0,0,0,0)
-
+        
+        self.setFixedWidth(2000)
         # Dummy code to invoke QScrollArea -- remove later.
         for i in range(0, 60, 1):
             self.generalLayout.addWidget(ZoneContainerWidget())
@@ -52,7 +53,7 @@ class ZoneContainerWidget(QWidget):
         self.generalLayout = QHBoxLayout()
         self.labelWidget = ZoneLabelWidget()
         self.blockWidget = ZoneTouchWidget()
-
+        
         # add the label and touch widget to the layout
         self.generalLayout.setContentsMargins(0,0,0,0)
         self.generalLayout.setSpacing(0)
@@ -68,7 +69,7 @@ class ZoneLabelWidget(QPushButton):
         self.setFlat(True)
         self.setContentsMargins(0,0,0,0)
         self.setFixedWidth(115)
-        self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
+        #self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
         self.generalLayout = QHBoxLayout()
         #self.setFr
         self.text = QLabel("2.R.Window")
@@ -89,7 +90,7 @@ class ZoneLabelWidget(QPushButton):
 
 
 class ZoneTouchWidget(QFrame):
-    '''The scrollable area of the zone widget'''
+    """The scrollable area of the zone widget"""
     def __init__(self, *args, **kwargs):
         super(ZoneTouchWidget, self).__init__()
         #self.setContentsMargins(0,0,0,0)
@@ -98,9 +99,38 @@ class ZoneTouchWidget(QFrame):
         #self.setFixedWidth(500)
         self.setSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
         hbox = QHBoxLayout()
-        hbox.addWidget(QLabel("aefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajef5aefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajefaefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajef5aefaefaefaefaefajeflajfkaelkfjlajkflajelfafjlaeflajef"))
+        self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
+        self.setStyleSheet("QFrame {background-color: \"white\"}")
+        
+        self.isPressed = False
+        
         self.setLayout(hbox)
-
+        
+    def mousePressEvent(self, *args, **kwargs):
+        self.isPressed = True
+        self.mouseX = args[0].x()
+        self.mouseY = args[0].y()
+        self.update()
+        pass
+    
+    def mouseReleaseEvent(self, *args, **kwargs):
+        self.isPressed = False
+        
+    def paintEvent(self, *args, **kwargs):
+        if self.isPressed:
+            print self.x(), self.y()
+            tmpPaint = QPainter()
+            tmpPaint.begin(self)
+            for i in xrange(0, 5):
+                tmpPaint.drawPoint(self.mouseX, self.mouseY+i)
+            tmpPaint.end()
+            tmpPaint.restore()
+        super(ZoneTouchWidget, self).paintEvent(*args, **kwargs)
+            
+    def _resizeCells(self):
+        pass
+    
+    
 class ZoneInfoDialogWidget(QDialog):
     """The information dialog that pops up when you click on a zone."""
     def __init__(self, *args, **kwargs):
