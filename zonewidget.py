@@ -121,8 +121,8 @@ class ZoneTouchWidget(QFrame):
             print self.x(), self.y()
             tmpPaint = QPainter()
             tmpPaint.begin(self)
-            for i in xrange(0, 5):
-                tmpPaint.drawPoint(self.mouseX, self.mouseY+i)
+            # Todo -- need to map in the colors from the widget into this portion of the application.
+            tmpPaint.fillRect(self.mouseX, 0, 10, 26, QColor(122, 122, 122))
             tmpPaint.end()
             tmpPaint.restore()
         super(ZoneTouchWidget, self).paintEvent(*args, **kwargs)
