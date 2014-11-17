@@ -22,15 +22,12 @@ class ZoneWidget(QScrollArea):
     def __init__(self, parent, *args, **kwargs):
         super(ZoneWidget, self).__init__(parent)
         self.frameWidget = ZoneFrameContainer(self)
-        #self.frameWidget.setFrameStyle(QFrame.Panel)
-        #self.frameWidget.setLineWidth(1)
         self.frameWidget.setSizePolicy(QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Ignored))
         self.setWidget(self.frameWidget)
 
 class ZoneFrameContainer(QFrame):
     def __init__(self, parent, *args, **kwargs):
         super(ZoneFrameContainer, self).__init__(parent)
-        #self.set
         self.generalLayout = QVBoxLayout()
         self.generalLayout.setContentsMargins(0,0,0,0)
         self.zoneWidgetOne = ZoneContainerWidget()
@@ -59,7 +56,6 @@ class ZoneContainerWidget(QWidget):
         self.generalLayout.setSpacing(0)
         self.generalLayout.addWidget(self.labelWidget)
         self.generalLayout.addWidget(self.blockWidget)
-        #self.generalLayout.addStretch(1)
         self.setLayout(self.generalLayout)
 
 class ZoneLabelWidget(QPushButton):
@@ -69,9 +65,7 @@ class ZoneLabelWidget(QPushButton):
         self.setFlat(True)
         self.setContentsMargins(0,0,0,0)
         self.setFixedWidth(115)
-        #self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
         self.generalLayout = QHBoxLayout()
-        #self.setFr
         self.text = QLabel("2.R.Window")
         _labelFont = QFont("Helvetica", 8)
         self.text.setFont(_labelFont)
@@ -79,7 +73,6 @@ class ZoneLabelWidget(QPushButton):
         self.colorSqr.setFixedWidth(15)
         self.colorSqr.setFixedHeight(15)
         self.colorSqr.setStyleSheet("QWidget {background-color: #FF0000}")
-        #self.setStyleSheet("QWidget {background-color: #FF0000}")
         self.generalLayout.addWidget(self.colorSqr)
         self.generalLayout.addWidget(self.text)
         self.generalLayout.addStretch()
@@ -93,43 +86,78 @@ class ZoneTouchWidget(QFrame):
     """The scrollable area of the zone widget"""
     def __init__(self, *args, **kwargs):
         super(ZoneTouchWidget, self).__init__()
-        #self.setContentsMargins(0,0,0,0)
         self.setFrameStyle(QFrame.Panel)
         self.setLineWidth(1)
-        #self.setFixedWidth(500)
         self.setSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
         hbox = QHBoxLayout()
         self.setSizePolicy(QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding))
         self.setStyleSheet("QFrame {background-color: \"white\"}")
-        
-        self.isPressed = False
-        
+        self.isPressed = False        
         self.setLayout(hbox)
-        
+        self._allLightNodes = []
+        # Arbitrary 10000 ceiling.  
+        self._allZoneSteps = [a for a in xrange(0,10000, 2)]
+    
     def mousePressEvent(self, *args, **kwargs):
         self.isPressed = True
+        # The last mouseX and mouseY pressed
         self.mouseX = args[0].x()
         self.mouseY = args[0].y()
+        self._allLightNodes.append((self._determine_nearestNodeFloor(), self.mouseY))
         self.update()
-        pass
     
+    def _determine_nearestNodeFloor(self, i=None):
+        """
+        Calculate the nearest node floor value.
+        
+        Node floor is calculated by looking at the self._allZoneSteps.
+        
+        If "x" is < self._allZoneSteps[i], then use i-1.
+        If "x" is == self._allZoneSteps[i], then use i.
+        If "x" is > self._allZoneSteps[i], then try again!
+        
+        Args:
+            i = value to test.
+        """
+        if not i:
+            i = self.mouseX
+        lastStep = None 
+        for step in self._allZoneSteps:
+            if i < step:
+                rtnStep = lastStep
+            elif i == step:
+                rtnStep = step
+            else:
+                lastStep = step
+                continue
+            return rtnStep
+        
     def mouseReleaseEvent(self, *args, **kwargs):
         self.isPressed = False
         
     def paintEvent(self, *args, **kwargs):
-        if self.isPressed:
-            print self.x(), self.y()
-            tmpPaint = QPainter()
-            tmpPaint.begin(self)
-            # Todo -- need to map in the colors from the widget into this portion of the application.
-            tmpPaint.fillRect(self.mouseX, 0, 10, 26, QColor(122, 122, 122))
-            tmpPaint.end()
-            tmpPaint.restore()
+        """Overloaded paintEvent"""
+        self.draw_allLightNodes()
         super(ZoneTouchWidget, self).paintEvent(*args, **kwargs)
-            
-    def _resizeCells(self):
+    
+    def draw_singleLightNode(self):
+        """
+        Draw a single node on the zone widget.
+        """
         pass
     
+    def draw_allLightNodes(self):
+        """
+        Draw all nodes on the zone widget (this has to be called EVERY type update occurs).
+        """
+        tmpPaint = QPainter()
+        tmpPaint.begin(self)
+        # Todo -- need to map in the colors from the widget into this portion of the application.
+        for node in self._allLightNodes:
+            tmpPaint.fillRect(node[0], 0, 2, 26, QColor(122, 122, 122))
+        tmpPaint.end()
+        tmpPaint.restore()        
+
     
 class ZoneInfoDialogWidget(QDialog):
     """The information dialog that pops up when you click on a zone."""
@@ -139,7 +167,6 @@ class ZoneInfoDialogWidget(QDialog):
         self.zonePartialNameTXT = "2ndFlr BR"
         self.setWindowTitle("Zone Information:  {0}".format(self.zoneFullNameTXT,
                                                             "NULL"))
-
         self.generalLayout = QGridLayout()
 
         self.zoneFullNameLBL = QLabel("Zone Full Name:")
