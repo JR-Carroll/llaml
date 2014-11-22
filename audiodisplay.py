@@ -43,6 +43,7 @@ class DrawAudioWaveForm(QScrollArea):
         self.generalLayout.setContentsMargins(0, 0, 0, 0)
         self.generalLayout.addWidget(self.image)
         self.setLayout(self.generalLayout)
+        self.setStyleSheet("QScrollArea {background-color: #fff}")
 
     def setDimensions(self, width, height):
         """
@@ -52,13 +53,13 @@ class DrawAudioWaveForm(QScrollArea):
         parent widget resizes, new signals are emitted onto this method/handler
         and the widget redrawn.
         """
-        self._rawWidth, self._rawHeight = width, height
+        #self._rawWidth, self._rawHeight = width, height
 
         # adjust the height of the layout in addition to the height of the
         # waveform widget
-        self.width, self.height = width, (height/20)
+        #self.width, self.height = width, (height/20)
         self.image.setPixmap(self.pixmap)
-        self.image.setScaledContents(True)
+        #self.image.setScaledContents(False)
 
     def resizeEvent(self, *event):
         """
@@ -120,7 +121,7 @@ class AudioWaveFormDisplay(object):
         # create a stringio buffer object to store everything.
         self._bufferedIMG = StringIO.StringIO()
 
-    def _getDrawnWave(self, quality='low', width=50, height=20):
+    def _getDrawnWave(self, quality='low', width=50, height=10):
         """
         Plots the waveform, derived from the audio data.
 
