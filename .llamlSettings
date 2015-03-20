@@ -3,9 +3,9 @@
         "StartupTab": {
             "startOnLoad": true,
             "showStatusBarOnStartup": null,
+            "showAudioBarOnStartup": null,
             "defaultProjectStartup": null,
-            "showVisualWaveOnStartup": null,
-            "showAudioBarOnStartup": null
+            "showVisualWaveOnStartup": null
         },
         "AudioTab": {
             "cacheWaveforms": null,
