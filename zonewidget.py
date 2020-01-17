@@ -101,10 +101,11 @@ class ZoneTouchWidget(QFrame):
     def mousePressEvent(self, *args, **kwargs):
         self.isPressed = True
         # The last mouseX and mouseY pressed
-        self.mouseX = args[0].x()
-        self.mouseY = args[0].y()
-        self._allLightNodes.append((self._determine_nearestNodeFloor(), self.mouseY))
-        self.update()
+        #self.mouseX = args[0].x()
+        #self.mouseY = args[0].y()
+        #self._allLightNodes.append((self._determine_nearestNodeFloor(), self.mouseY))
+        #self.update()
+        self._mouseStartingPointXY = (args[0].x(), args[0].y())
     
     def _determine_nearestNodeFloor(self, i=None):
         """
@@ -134,6 +135,10 @@ class ZoneTouchWidget(QFrame):
         
     def mouseReleaseEvent(self, *args, **kwargs):
         self.isPressed = False
+        self.mouseX = args[0].x()
+        self.mouseY = args[0].y()
+        self._allLightNodes.append((self._determine_nearestNodeFloor(), self.mouseY, self._mouseStartingPointXY))
+        self.update()        
         
     def paintEvent(self, *args, **kwargs):
         """Overloaded paintEvent"""
@@ -154,7 +159,9 @@ class ZoneTouchWidget(QFrame):
         tmpPaint.begin(self)
         # Todo -- need to map in the colors from the widget into this portion of the application.
         for node in self._allLightNodes:
-            tmpPaint.fillRect(node[0], 0, 2, 26, QColor(122, 122, 122))
+            # QT callFunc footprint for fillRect(x, y, w, h, c)
+            width = 2 if -1 < node[0] - node[2][0] < 1 else node[0] - node[2][0]
+            tmpPaint.fillRect(node[2][0], 0, width, 30, QColor(0, 122, 122))
         tmpPaint.end()
         tmpPaint.restore()        
 

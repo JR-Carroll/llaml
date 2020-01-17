@@ -48,8 +48,10 @@ try:
     from systemcheck import SystemTest
     from zonewidget import *
     logging.debug("** All custom modules loaded successfully! **")
-except ImportError:
+except ImportError as error:
     logging.error("One or more of the modules was not found - check the dump for error.")
+    logging.error(error)
+    raise
 
 # Create a Qt application
 app = QApplication(sys.argv)
