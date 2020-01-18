@@ -15,6 +15,7 @@ It can be a little tricky to install LLaML in the beginnig because there is no `
 
 * Linux distro (I build/develop on Debian)
 * Python 2+ (but <3.0; port to 3 not yet planned, still finishing Python 2 implementation, maybe in 10+ years... =P)
+* Matplotlib
 * PySide (Qt4 bindings)
   To install PySide, one often needs the following as pre-reqs:
   * CMake (to compile PySide)
