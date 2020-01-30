@@ -163,7 +163,19 @@ class ZoneTouchWidget(QFrame):
             width = 2 if -1 < node[0] - node[2][0] < 1 else node[0] - node[2][0]
             tmpPaint.fillRect(node[2][0], 0, width, 30, QColor(0, 122, 122))
         tmpPaint.end()
-        tmpPaint.restore()        
+        tmpPaint.restore()
+        
+    def undraw_fromPreviousMouseEvent(self, *args):
+        '''
+        Undraw (delete/remove) from a previous draw event
+        '''
+        pass
+    
+    def _calc_collision(self, node):
+        '''
+        Determine the node that may or may not collide with the undraw/delete event
+        '''
+        pass
 
     
 class ZoneInfoDialogWidget(QDialog):
