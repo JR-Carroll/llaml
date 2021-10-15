@@ -1,8 +1,9 @@
 # !/usr/bin python
 # -*- coding: utf-8 -*-
 
-from PySide.QtGui import *
-from PySide.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtWidgets import *
 from programmgr import ProgramManager
 from scheduler import ScheduleView
 import logging

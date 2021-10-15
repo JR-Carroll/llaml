@@ -12,9 +12,10 @@ import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
 # Import PySide specific modules
-from PySide.QtGui import *
-from PySide.QtCore import *
-from PySide import *
+from PySide6.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtWidgets import *
+from PySide6 import *
 
 # import standard libraries
 import sys
@@ -249,7 +250,7 @@ class ShowDeveloperWindow(QDialog):
         try:
             request = getattr(self, _currentRequest)
             if not request:
-                print "test"
+                print("test")
             else:
                 returnMessage = request()
         except Exception as e:
@@ -277,7 +278,7 @@ class ShowDeveloperWindow(QDialog):
 
     @staticmethod
     def qt_version():
-        from PySide.QtCore import __version__
+        from PySide6.QtCore import __version__
         _expecting = "Qt ver. 4.8.2"
         _qtVersion = __version__
         return "<b>Expecting</b>: {0} <br/>" \

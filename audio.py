@@ -8,7 +8,7 @@
 import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
-from PySide.phonon import *
+from PySide6.phonon import *
 
 class LoadAudioWAV(object):
     '''Set up the audio - platform independent.'''

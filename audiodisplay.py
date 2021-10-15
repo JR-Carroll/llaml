@@ -8,13 +8,14 @@
 import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 import matplotlib.pyplot as plot
 import numpy
 import wave
-import StringIO
+from io import StringIO
 
 
 class Communicate(QObject):
@@ -115,11 +116,11 @@ class AudioWaveFormDisplay(object):
         self.openedWave = wave.open('new.wav', 'r')
         self.signal = self.openedWave.readframes(-1)
         # convert binary data to an array of int's
-        self.signal = numpy.fromstring(self.signal, 'Int16')
+        self.signal = numpy.fromstring(self.signal)
         # retrieve the framerate (from the wave header?)
         self.framerate = self.openedWave.getframerate()
         # create a stringio buffer object to store everything.
-        self._bufferedIMG = StringIO.StringIO()
+        self._bufferedIMG = StringIO()
 
     def _getDrawnWave(self, quality='low', width=50, height=10):
         """

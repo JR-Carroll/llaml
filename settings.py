@@ -22,8 +22,9 @@ import os
 import sys
 import utilities as util
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 ###################################################
 ##      APPLICATION SETTINGS - DO NOT MODIFY     ##

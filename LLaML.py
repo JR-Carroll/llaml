@@ -27,9 +27,9 @@ import logging
 
 # Import PySide specific modules
 try:
-    from PySide.QtCore import *
+    from PySide6.QtCore import *
     # TODO Don't need this right now -- consider removing?
-    from PySide.QtGui import *
+    from PySide6.QtGui import *
     logging.debug("PySide is installed and all PySide modules loaded")
 except ImportError:
     logging.error("Attempted to load PySide, PySide is not installed or is " \
@@ -41,7 +41,7 @@ try:
     from audiotoolbar import AudioToolBar
     from aboutdialog import AboutDialog
     from audiodisplay import *
-    from audio import *
+    # from audio import *
     from programmgr import ProgramManager
     from scheduler import ScheduleView
     from settings import *

@@ -6,7 +6,7 @@
   Created: 12/08/2013
 """
 
-from PySide.QtGui import *
+from PySide6.QtGui import *
 
 # Loading images once to pass around to the various classes
 # that need it.

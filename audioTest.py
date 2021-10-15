@@ -25,7 +25,7 @@ import sys
 from PySide import QtCore, QtGui
 
 try:
-    from PySide.phonon import Phonon
+    from PySide6.phonon import Phonon
 except ImportError:
     app = QtGui.QApplication(sys.argv)
     QtGui.QMessageBox.critical(None, "Music Player",

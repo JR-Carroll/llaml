@@ -9,9 +9,9 @@
 import logging
 logging.debug("Attempting to load (wait for confirmation)")
 
-from PySide.QtCore import *
-from PySide.QtGui import *
-
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 class SystemTest(QDialog):
     def __init__(self):

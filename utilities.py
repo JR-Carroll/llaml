@@ -13,13 +13,13 @@ def explode_dictKeys(dictionary):
     """
     Returns a list of all the keys nested in a dictionary.
 
-    This is useful if you need to do a 'deep equality' check
-    between multiple dictionaries.
+    This is useful if you need to do a 'deep equality' check between multiple 
+    dictionaries.
 
     Recursively crawls through a dictionary returning its keys.
 
-    Note:  order matters in lists -- you cannot compae two lists with the
-    same contents but in a different order!
+    Note: order matters in lists -- you cannot compare two lists with the same 
+    contents but in a different order!
 
     Args:
         dictionary:  the dict you want to deep-introspect.
@@ -27,7 +27,7 @@ def explode_dictKeys(dictionary):
         keyList: a list of all the keys nested within the dictionary.
     """
 
-    allKeys = dictionary.keys()
+    allKeys = list(dictionary.keys())
 
     for value in dictionary.values():
         if isinstance(value, dict):
@@ -47,4 +47,4 @@ if __name__ == '__main__':
               }
 
     v = explode_dictKeys(myDict)
-    print v
+    print(v)
