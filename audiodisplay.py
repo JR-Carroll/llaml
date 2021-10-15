@@ -77,7 +77,7 @@ class DrawAudioWaveForm(QScrollArea):
         pass
 
     def _setAudioImage(self, data):
-        return QPixmap.fromImage(QImage.fromData(data))
+        return None #QPixmap.fromImage(QImage.fromData(data))
 
     #def paintEvent(self, event):
         #'''Draw the waveform.'''
@@ -137,7 +137,7 @@ class AudioWaveFormDisplay(object):
         plot.axis('off')
         plot.tight_layout()
         # TODO:  add in dpi control rather than point-skipping
-        plot.savefig(self._bufferedIMG, format='png', dpi=30, pad_inches=(4.0), bbox_inches='tight')
+        # plot.savefig(self._bufferedIMG, format='png', dpi=30, pad_inches=(4.0), bbox_inches='tight')
         # After sending img data to buffer, seek to 0.
         self._bufferedIMG.seek(0)
         return self._bufferedIMG.getvalue()

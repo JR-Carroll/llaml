@@ -97,7 +97,7 @@ class ZoneTouchWidget(QFrame):
         self.setLayout(hbox)
         self._allLightNodes = []
         # Arbitrary 10000 ceiling.  
-        self._allZoneSteps = [a for a in xrange(0,10000, 2)]
+        self._allZoneSteps = [a for a in range(0,10000, 2)]
     
     def mousePressEvent(self, *args, **kwargs):
         self.isPressed = True
