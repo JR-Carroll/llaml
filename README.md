@@ -1,6 +1,12 @@
 # llaml
 _Lights, Lights, and More Lights_ is a pet project of mine (Justin Carroll) to automate _insert_random_doohikki_ around the house for the purposes of entertainment; the project started out as a Christmas-lights controller for the house, but has since grown in ambition for Halloween (which has motors and animatronics, etc).  As such, LLaML may have started small but has since grown to encompass anything that has a wireless signal and should be syncronized.
 
+# NOTICE -- 
+* This is in a state of bitrot (currently trying to update to Python3
+* Also trying to update to PySide6
+* This will require a TON of time.
+
+
 Main Features (most are still in development):
 * Main Server (Qt-based application for designing routines/programs)
 * Complimentary "client" (receiver) software that runs headless on an embedded/IoT device that has connectivity (think "RaspberryPi", Arduino support coming!).  GPIO pins are necessary...
